@@ -3,6 +3,8 @@ COME AT THE DAWG, BEST NOT MISS
 
 this is a build of the 1d0g system for <a href="http://twinery.org/">twine</a>.
 
+<a href="http://htmlpreview.github.io/?https://github.com/shuuki/1dog-twine/blob/master/dawg-combat.html">preview combat system</a>
+
 ###dawg stuff
 - <a href="http://codepen.io/somethingformed/pen/xbxNmx">codepen styles</a>
 - <a href="https://docs.google.com/spreadsheets/d/1C0iNMtiu_K4ef8i1-59mJp2KN7WlEbf_LwtkkoEMim8">gdocs combat system spreadsheet</a>
