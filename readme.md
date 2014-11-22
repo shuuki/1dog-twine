@@ -6,6 +6,7 @@ this is a build of the 1d0g system for <a href="http://twinery.org/">twine</a>.
 ###dawg stuff
 - <a href="http://codepen.io/somethingformed/pen/xbxNmx">codepen styles</a>
 - <a href="https://docs.google.com/spreadsheets/d/1C0iNMtiu_K4ef8i1-59mJp2KN7WlEbf_LwtkkoEMim8">gdocs combat system spreadsheet</a>
+- <a href="http://www.oxru.in/remote/dawg-webfonts/styles.css">dawg webfonts</a>
 
 ###twine reference
 - <a href="http://twinery.org/wiki/start">top of twine docs</a>
