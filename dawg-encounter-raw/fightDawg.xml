@@ -1,0 +1,79 @@
+/%a DAWG FIGHT LOOP %/
+
+/%a///////////////////////////////////////////%/
+
+/%a life check  %/
+<<if $dawg.health gt 0>>
+
+/%a stamina check  %/
+<<if $dawg.stamina gt 0>>
+
+/%a///////////////////////////////////////////%/
+
+/%a biting check %/
+<<if $dawg.dispo eq "biting">>
+<<set $dawg.stamina -=1>>
+<p><<print $dawg.name>> attacks
+
+<<set $hitDawg to random(1, 20)>>
+
+<<if $hitDawg gt $dawg.agility + $dawg.aggression - $bandit.aggression>>
+<<set $bandit.health -= 1>>
+ and succeeds!</p>
+<p><<print $bandit.name>>'s health is now <<print $bandit.health>>.</p>
+
+<<else>>
+ and fails!</p>
+<<endif>>
+
+<p>[[continue|fightBandit][$dawg.dispo = "idle"]]</p>
+
+<<endif>>
+/%a end biting check %/
+
+/%a///////////////////////////////////////////%/
+
+/%a start waiting check %/
+<<if $dawg.dispo eq "waiting">>
+<p><<print $dawg.name>> waits.</p>
+<p><<set $dawg.stamina += random(1, 4)>>stamina is now <<print $dawg.stamina>>.</p>
+<p>[[continue|fightBandit][$dawg.dispo = "idle"]]</p>
+<<endif>>
+/%a end waiting check %/
+
+/%a///////////////////////////////////////////%/
+
+/%a fleeing check %/
+<<if $dawg.dispo eq "fleeing">>
+<p><<print $dawg.name>> attempts to flee
+
+<<set $escapeDawg = ($bandit.agility + $bandit.aggression) / ($dawg.agility + $dawg.stamina)>>
+
+<<if $escapeDawg lte 1>>
+ and succeeds!</p>
+<p>[[continue|cooldown][$dawg.dispo = "escaping"]]</p>
+
+<<else>>
+ but <<print $bandit.name>> pursues!</p>
+<p>[[continue|fightBandit][$dawg.dispo = "idle"]]</p>
+<<endif>>
+<<endif>>
+/%a end fleeing check %/
+
+/%a///////////////////////////////////////////%/
+
+/%a if the stamina check fails, this happens  %/
+<<else>>
+<p><<print $dawg.name>> is exhausted.</p>
+<<set $dawg.stamina = 1>>
+<p>[[continue|fightBandit][$dawg.dispo = "idle"]]</p>/%a need more elegant waiting recovery behavior  %/
+<<endif>>
+/%a end dawg stamina check section  %/
+
+/%a///////////////////////////////////////////%/
+
+/%a if the life check fails, this happens  %/
+<<else>>
+<<print $dawg.name>> has met [[death]].
+<<endif>>
+/%a end dawg fight loop %/

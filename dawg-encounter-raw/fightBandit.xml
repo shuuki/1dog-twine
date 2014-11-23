@@ -1,0 +1,81 @@
+/%a BANDIT FIGHT LOOP %/
+
+/%a///////////////////////////////////////////%/
+
+/%a check if bandit is alive %/
+<<if $bandit.health gt 0>>
+
+/%a check bandit stamina %/
+<<if $bandit.stamina gt 0>>
+
+/%a///////////////////////////////////////////%/
+
+/%a check bandit boldness %/
+<<if $bandit.boldness gt 1>>
+
+/%a bandit attacking check %/
+<<if $dawg.dispo eq "dodging">>
+<p>you try to dodge.</p>
+<<endif>>
+
+<<set $bandit.stamina -=1>>
+<p><<print $bandit.name>> attacks
+
+<<set $hit to random(1, 20)>>
+
+<<if $hit gt $bandit.agility + $bandit.aggression - $dawg.aggression>>
+<<set $dawg.health -= 1>>
+ and <<print $bandit.pronoun>> hits you!</p>
+<p>your health is now <<print $dawg.health>>.</p>
+
+<<else>>
+ and <<print $bandit.pronoun>> misses you!</p>
+<<endif>>
+
+<p>[[bite|fightDawg][$dawg.dispo = "biting"]]<br>
+[[wait|fightDawg][$dawg.dispo = "waiting"]]<br>
+[[flee|fightDawg][$dawg.dispo = "fleeing"]]</p>
+/%a end bandit attacking check %/
+
+/%a///////////////////////////////////////////%/
+
+/%a if the boldness check fails, this happens %/
+<<else>>
+
+<p><<print $bandit.name>>
+<<set $escapeBandit = ($dawg.agility + $dawg.aggression) / ($bandit.agility + $bandit.stamina)>>
+
+<<if $escapeBandit lte 1 >>
+ flees!</p>
+<p>[[continue|cooldown][$dawg.dispo = "seeking"]]</p>
+
+<<else>>
+ struggles pitifully.</p>
+<p>[[bite|fightDawg][$dawg.dispo = "biting"]]<br>
+[[leave|cooldown][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end fleeing check %/
+<<endif>>
+/%a end boldness check %/
+
+/%a///////////////////////////////////////////%/
+
+/%a if the stamina check fails, this happens  %/
+<<else>>
+<p><<print $bandit.name>> stops moving. <<print $bandit.pronoun>> still breathes.</p>
+<<set $bandit.stamina += 2>>
+<p>[[bite|fightDawg][$dawg.dispo = "biting"]]<br>
+[[leave|cooldown][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end bandit stamina check section  %/
+
+/%a///////////////////////////////////////////%/
+
+/%a if the life check fails, this happens  %/
+<<else>>
+<p><<print $dawg.name>> kills <<print $bandit.name>>.</p>
+<<set $dawg.bodycount += 1>>
+<p>[[eat corpse|cooldown][$dawg.dispo = "consuming"]]<br>
+[[leave|cooldown][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end bandit fight loop %/

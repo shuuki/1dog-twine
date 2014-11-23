@@ -1,0 +1,28 @@
+/%a seeking %/
+<<if $dawg.dispo eq "seeking">>
+<p><<print $bandit.name>> gets away.</p>
+<p>[[leave|between][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end seeking %/
+
+/%a consuming %/
+<<if $dawg.dispo eq "consuming">>
+<<set $dawg.health = $dawg.maxHealth, $dawg.stamina = $dawg.maxStamina>>
+<p><<print $bandit.name>>'s flesh restores you.</p>
+<p>[[leave|between][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end consuming %/
+
+/%a exploring %/
+<<if $dawg.dispo eq "exploring">>
+<p>you leave <<print $bandit.name>>.</p>
+<p>[[continue|between]]</p>
+<<endif>>
+/%a end exploring %/
+
+/%a exploring %/
+<<if $dawg.dispo eq "escaping">>
+<p>you made it away from <<print $bandit.name>>.</p>
+<p>[[leave|between][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end exploring %/

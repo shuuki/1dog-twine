@@ -1,0 +1,21 @@
+/%a initialize dawg %/
+<<set $dawg= {
+
+name: "dawg",
+dispo: "exploring",
+notoriety: 1.2,
+bodycount: 0,
+
+health: random(1, 10), maxHealth: 10,
+stamina: random(1, 8), maxStamina: 8,
+agility: random(1, 6 + 2),
+aggression: random(1, 6),
+curiosity: random(1, 6),
+boldness: random(1, 6),
+
+}>>
+
+<p>you are <<print $dawg.name>>. you have an [[encounter]] while <<print $dawg.dispo>>.</p>
+
+/%a stats debug panel%/
+<div class="panel"><h1><<print $dawg.name>></h1><ul><li><<print $dawg.health>> health</li><li><<print $dawg.stamina>> stamina</li><li><<print $dawg.agility>> agility</li><li><<print $dawg.aggression>> aggression</li><li><<print $dawg.curiosity>> curiosity</li><li><<print $dawg.boldness>> boldness</li><li><<print $dawg.notoriety>> notoriety</li></ul></div>

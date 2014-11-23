@@ -1,0 +1,103 @@
+/%a  spawn bandit %/
+<<set $bandit= {
+
+	name: "bandit",
+	pronoun: "he",
+	friendliness: random(-3, 1),
+
+	health: random(1, 6),
+	stamina: random(1, 6),
+	agility: random(1, 6),
+
+	aggression: random(1, 6),
+	curiosity: random(1, 6),
+	boldness: random(1, 6)
+
+}>>
+
+/%a give bandit some different qualities %/
+<<set $bandit.name to either("bandit","banks","fish","hanna","steve","courier","dean","sam","dog","bear","bobcat","E D","farmer","villager","guard","jesse","walt")>>
+<<set $bandit.pronoun to either("he","she","ze","it")>>
+
+/%a///////////////////////////////////////////%/
+
+/%a begin encounter text %/
+<p>you encounter <<print $bandit.name>>.
+
+/%a///////////////////////////////////////////%/
+
+/%a friendliness check %/
+
+<<set $checkFriends = $bandit.friendliness * $dawg.notoriety>>
+/%a add some more nuanced options here so notoriety creates unique situations %/
+
+<<if $checkFriends lt 0>>
+<<set $encounterType = "hostile">>
+ <<print $bandit.pronoun>> smells <<print either("dangerous","mean","like death","hostile")>>.</p>
+
+<<else if $checkFriends eq 0>>
+<<set $encounterType = "neutral">>
+ <<print $bandit.pronoun>> smells <<print either("uncertain","wary","suspicious","distracted")>>.</p>
+
+<<else if $checkFriends gt 0>>
+<<set $encounterType = "friendly">>
+ <<print $bandit.pronoun>> smells <<print either("safe","ok","like food","friendly")>>.</p>
+
+<<endif>>
+
+/%a end friendliness check %/
+
+/%a///////////////////////////////////////////%/
+
+/%a encounter checks %/
+
+/%a friendly encounter%/
+<<if $encounterType eq "friendly">>
+<p>[[bite|fightDawg][$dawg.dispo = "biting"]]<br>
+/%a [[howl|fightDawg][$dawg.dispo = "howling"]]<br> %/
+/%a [[scratch|fightDawg][$dawg.dispo = "scratching"]]<br> %/
+/%a [[whine|fightDawg][$dawg.dispo = "whining"]]<br> %/
+[[leave|cooldown][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end friendly encounter%/
+
+/%a///////////////////////////////////////////%/
+
+/%a neutral encounter %/
+<<if $encounterType eq "neutral">>
+<p>[[bite|fightDawg][$dawg.dispo = "biting"]]<br>
+[[leave|cooldown][$dawg.dispo = "exploring"]]</p>
+<<endif>>
+/%a end neutral encounter %/
+
+/%a///////////////////////////////////////////%/
+
+/%a begin hostile encounter %/
+<<if $encounterType eq "hostile">>
+
+/%a initiative check  %/
+<<set $checkInitiative = ($bandit.agility * $bandit.boldness) / ($dawg.agility * $dawg.boldness)>>
+
+/%a dawg wins initiative %/
+<<if $checkInitiative lte 1>>
+<p><<print $bandit.name>> <<print either("is exposed","doesn't see you yet","turns and stumbles")>>.</p>
+<p>[[bite|fightDawg][$dawg.dispo = "biting"]]<br>
+[[wait|fightDawg][$dawg.dispo = "waiting"]]<br>
+[[flee|fightDawg][$dawg.dispo = "fleeing"]]</p>
+<<else>>
+/%a dawg loses initiative %/
+<p><<print $bandit.name>> <<print either("gets the drop on you","comes out of nowhere","sees you","takes a swing")>>.</p>
+<p>[[dig in|fightBandit][$dawg.dispo = "waiting"]]<br>
+[[dodge|fightBandit][$dawg.dispo = "dodging"]]</p>
+<<endif>>
+/%a end initiative check %/
+<<endif>>
+/%a end hostile encounter %/
+
+/%a end encounter check results %/
+
+/%a///////////////////////////////////////////%/
+
+/%a stats debug panel %/
+
+<div class="panel"><h1><<print $bandit.name>></h1><ul><li><<print $bandit.health>> health</li><li><<print $bandit.stamina>> stamina</li><li><<print $bandit.agility>> agility</li><li><<print $bandit.aggression>> aggression</li><li><<print $bandit.curiosity>> curiosity</li><li><<print $bandit.boldness>> boldness</li><li><<print $bandit.friendliness>> friendliness</li><li><<print $checkFriends>> friendliness</li><li><<print $checkInitiative>> initiative</li></ul></div>
