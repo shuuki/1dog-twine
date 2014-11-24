@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<h1>[[1D0G|dawg]]</h1>\u000a\u000a/%a initialize dawg %/\u000a<<set $dawg= {\u000a\u000aname: "dawg",\u000adispo: "exploring",\u000anotoriety: 1.2,\u000abodycount: 0,\u000a\u000ahealth: random(2, 10), maxHealth: 10,\u000astamina: random(1, 8), maxStamina: 8,\u000aagility: random(1, 6 + 2),\u000aaggression: random(1, 6),\u000acuriosity: random(1, 6),\u000aboldness: random(1, 6),\u000a\u000a}>>\u000a
+V<h1>[[1D0G|dawg]]</h1>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize dawg                              %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $dawg = {\u000a\u000aname: "dawg",\u000adispo: "exploring",\u000anotoriety: 0,\u000abodycount: 0,\u000a\u000ahealth: random(2, 10), maxHealth: 10,\u000astamina: random(1, 8), maxStamina: 8,\u000aagility: random(1, 6 + 2),\u000aaggression: random(1, 6),\u000acuriosity: random(1, 6),\u000aboldness: random(1, 6),\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize environment                       %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $env = {\u000a\u000atype: "road",\u000azone: "highway",\u000astyle: "dusty",\u000ahere: "dusty highway"\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize time                              %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $time = {\u000a\u000aclock: 0,\u000ahour: 0,\u000aphases: random(0,5),\u000alight: 0,\u000adays: 0,\u000a\u000aseason: "summer"\u000a\u000a}>>\u000a\u000a/%a for 90 days, advance season %/\u000a<<set $time.season to either("spring", "summer", "autumn", "winter")>>
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2014
 I11
+I24
+I0
 I23
-I21
-I16
-I47
-I6
-I327
+I12
+I0
+I328
 I0
 tp27
 (dp28
@@ -401,7 +401,7 @@ Tiddler
 p134
 (dp135
 g21
-Vyou have perished. your bones will litter the wasteland until they too become dust.\u000a\u000a[[restart|Start]]
+V<<print $dawg.name>> survived <<print $time>> hours before perishing. <<print $dawg.name>>'s bones will litter the wasteland until they too become dust.\u000a\u000a[[restart|Start]]
 p136
 sg23
 Vdeath
@@ -411,9 +411,9 @@ g26
 ((I2014
 I11
 I23
-I20
-I42
-I22
+I23
+I28
+I11
 I6
 I327
 I0
@@ -503,7 +503,7 @@ Tiddler
 p165
 (dp166
 g21
-V<<if $dawg.bodycount eq 1>>\u000a\u000a<p>you killed <<print $dawg.bodycount>> wastelander.</p>\u000a\u000a<<else>>\u000a\u000a<p>you have killed <<print $dawg.bodycount>> wastelanders.</p>\u000a\u000a<<endif>>\u000a\u000a<p>[[continue|dawg]]</p>\u000a\u000a\u000a\u000a/%a<p><<print $dawg.dispo>>. wasteland stink... sand, dust, rust, blood, gunpowder, rubber, human sweat. tang of small beasts' fear, whisper sweet cactus, reedy grass. water someplace near, many flavored piss... and blended, scattered, tracked, muddled, acidic blood.</p>%/\u000a\u000a/%a dawg stats debug panel%/\u000a<div class="panel"><h1><<print $dawg.name>></h1><ul><li><<print $dawg.health>> health</li><li><<print $dawg.stamina>> stamina</li><li><<print $dawg.agility>> agility</li><li><<print $dawg.aggression>> aggression</li><li><<print $dawg.curiosity>> curiosity</li><li><<print $dawg.boldness>> boldness</li><li><<print $dawg.notoriety>> notoriety</li></ul></div>\u000a\u000a
+V<<if $dawg.bodycount eq 1>>\u000a\u000a<p>you have killed <<print $dawg.bodycount>> wastelander.</p>\u000a\u000a<<else>>\u000a\u000a<p>you have killed <<print $dawg.bodycount>> wastelanders.</p>\u000a\u000a<<endif>>\u000a\u000a<p>[[continue|dawg]]</p>\u000a\u000a\u000a\u000a/%a<p><<print $dawg.dispo>>. wasteland stink... sand, dust, rust, blood, gunpowder, rubber, human sweat. tang of small beasts' fear, whisper sweet cactus, reedy grass. water someplace near, many flavored piss... and blended, scattered, tracked, muddled, acidic blood.</p>%/\u000a\u000a/%a dawg stats debug panel%/\u000a<div class="panel"><h1><<print $dawg.name>></h1><ul><li><<print $dawg.health>> health</li><li><<print $dawg.stamina>> stamina</li><li><<print $dawg.agility>> agility</li><li><<print $dawg.aggression>> aggression</li><li><<print $dawg.curiosity>> curiosity</li><li><<print $dawg.boldness>> boldness</li><li><<print $dawg.notoriety>> notoriety</li></ul></div>\u000a\u000a
 p167
 sg23
 Vbetween
@@ -513,9 +513,9 @@ g26
 ((I2014
 I11
 I23
-I19
+I23
+I20
 I9
-I11
 I6
 I327
 I0
@@ -607,7 +607,7 @@ Tiddler
 p197
 (dp198
 g21
-V/%a seeking %/\u000a<<if $dawg.dispo eq "seeking">>\u000a<p><<print $bandit.name>> gets away.</p>\u000a\u000a<ul>\u000a<li>[[leave|between][$dawg.dispo = "exploring"]]</li>\u000a</ul>\u000a<<endif>>\u000a/%a end seeking %/\u000a\u000a/%a consuming %/\u000a<<if $dawg.dispo eq "consuming">>\u000a<<set $dawg.health = $dawg.maxHealth, $dawg.stamina = $dawg.maxStamina>>\u000a<p><<print $bandit.name>>'s flesh restores you.</p>\u000a\u000a<ul>\u000a<li>[[leave|between][$dawg.dispo = "exploring"]]</li>\u000a</ul>\u000a<<endif>>\u000a/%a end consuming %/\u000a\u000a/%a exploring %/\u000a<<if $dawg.dispo eq "exploring">>\u000a<p>you [[leave|between]] <<print $bandit.name>>.</p>\u000a<<endif>>\u000a/%a end exploring %/\u000a\u000a/%a escaping %/\u000a<<if $dawg.dispo eq "escaping">>\u000a<p>you made it [[away|between][$dawg.dispo = "exploring"]] from <<print $bandit.name>>.</p>\u000a<<endif>>\u000a/%a end escaping %/
+V/%a seeking %/\u000a<<if $dawg.dispo eq "seeking">>\u000a\u000a<<set $dawg.notoriety += 0.2>>\u000a<p><<print $bandit.name>> gets away.</p>\u000a\u000a<ul>\u000a<li>[[leave|between][$dawg.dispo = "exploring"]]</li>\u000a</ul>\u000a<<endif>>\u000a/%a end seeking %/\u000a\u000a/%a consuming %/\u000a<<if $dawg.dispo eq "consuming">>\u000a\u000a<<set $dawg.health = $dawg.maxHealth, $dawg.stamina = $dawg.maxStamina>>\u000a<<set $dawg.notoriety += 0.1>>\u000a<p><<print $bandit.name>>'s flesh restores you.</p>\u000a\u000a<ul>\u000a<li>[[leave|between][$dawg.dispo = "exploring"]]</li>\u000a</ul>\u000a\u000a<<endif>>\u000a/%a end consuming %/\u000a\u000a/%a exploring %/\u000a<<if $dawg.dispo eq "exploring">>\u000a<p>you [[leave|between]] <<print $bandit.name>>.</p>\u000a<<endif>>\u000a/%a end exploring %/\u000a\u000a/%a escaping %/\u000a<<if $dawg.dispo eq "escaping">>\u000a<p>you made it [[away|between][$dawg.dispo = "exploring"]] from <<print $bandit.name>>.</p>\u000a<<endif>>\u000a/%a end escaping %/
 p199
 sg23
 Vcooldown
@@ -617,9 +617,9 @@ g26
 ((I2014
 I11
 I23
-I21
-I16
-I6
+I23
+I14
+I42
 I6
 I327
 I0
@@ -659,7 +659,7 @@ Tiddler
 p213
 (dp214
 g21
-V/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a select a random environment type             %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $envType to either("road", "natural", "wastes", "urban", "dwelling", "scary", "industrial")>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a select a thematic zone from environment type %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<if $envType is "road">>\u000a<<set $envZone to either("highway", "trail", "path", "bridge", "sidewalk", "street", "ditch", "parking lot")>>\u000a<<set $envStyle to either("dusty", "long", "cracked", "lonely")>>\u000a\u000a<<elseif $envType is "urban">>\u000a<<set $envZone to either("suburbs", "downtown", "checkpoint", "boardwalk", "building", "campus", "shop")>>\u000a<<set $envStyle to either("gritty", "bustling", "crowded", "vacant","abandoned")>>\u000a\u000a<<elseif $envType is "dwelling">>\u000a<<set $envZone to either("farm", "ranch", "camp", "caravan", "lodge", "house", "mansion", "garden", "trailer", "rv", "wreck", "shacks", "radio station")>>\u000a<<set $envStyle to either("dusty", "cramped", "run down", "old", "rusty" ,"overgrown")>>\u000a\u000a<<elseif $envType is "natural">>\u000a<<set $envZone to either("hill", "plain", "pine forest", "canyon", "crater", "foothills", "mountain", "marsh")>>\u000a<<set $envStyle to either("wet", "dry", "dusty", "lonely", "wide")>>\u000a\u000a<<elseif $envType is "wastes">>\u000a<<set $envZone to either("dust", "mud flats", "salt flats", "scrub", "battlefield", "sands")>>\u000a<<set $envStyle to either("windy", "wide", "long", "lonely", "desolate", "ruined", "still")>>\u000a\u000a<<elseif $envType is "industrial">>\u000a<<set $envZone to either("mine", "oil well", "power plant", "steel mill", "refinery", "control room", "slum")>>\u000a<<set $envStyle to either("gritty", "smoky", "putrid", "hazy", "humid", "tense")>>\u000a\u000a<<elseif $envType is "scary">>\u000a<<set $envZone to either("cave", "nest", "sewer", "tunnel", "dungeon", "bunker", "hold", "basement")>>\u000a<<set $envStyle to either("dank", "dry", "wet", "black", "glistening", "reeking")>>\u000a\u000a<<endif>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a assume dawg already exists in the universe  %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<p><<print $dawg.name>> has an [[encounter]] while <<print $dawg.dispo>> <<print $envStyle>> <<print $envZone>>.</p>\u000a\u000a\u000a/%a dawg stats debug panel %/\u000a<div class="panel"><h1><<print $dawg.name>></h1><ul><li><<print $dawg.health>> health</li><li><<print $dawg.stamina>> stamina</li><li><<print $dawg.agility>> agility</li><li><<print $dawg.aggression>> aggression</li><li><<print $dawg.curiosity>> curiosity</li><li><<print $dawg.boldness>> boldness</li><li><<print $dawg.notoriety>> notoriety</li></ul></div>\u000a
+V\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a select a random environment type             %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $env.type to either("road", "natural", "wastes", "urban", "dwelling", "scary", "industrial")>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a select a thematic zone from environment type %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<if $env.type is "road">>\u000a<<set $env.zone to either("highway", "trail", "path", "bridge", "sidewalk", "street", "ditch", "parking lot")>>\u000a<<set $env.style to either("dusty", "long", "cracked", "lonely")>>\u000a\u000a<<elseif $env.type is "urban">>\u000a<<set $env.zone to either("suburbs", "downtown", "checkpoint", "boardwalk", "building", "campus", "shop")>>\u000a<<set $env.style to either("gritty", "bustling", "crowded", "vacant","abandoned")>>\u000a\u000a<<elseif $env.type is "dwelling">>\u000a<<set $env.zone to either("farm", "ranch", "camp", "caravan", "lodge", "house", "mansion", "garden", "trailer", "rv", "wreck", "shacks", "radio station")>>\u000a<<set $env.style to either("dusty", "cramped", "run down", "old", "rusty" ,"overgrown")>>\u000a\u000a<<elseif $env.type is "natural">>\u000a<<set $env.zone to either("hill", "plain", "pine forest", "canyon", "crater", "foothills", "mountain", "marsh")>>\u000a<<set $env.style to either("wet", "dry", "dusty", "lonely", "wide")>>\u000a\u000a<<elseif $env.type is "wastes">>\u000a<<set $env.zone to either("dust", "mud flats", "salt flats", "scrub", "battlefield", "sands")>>\u000a<<set $env.style to either("windy", "wide", "long", "lonely", "desolate", "ruined", "still")>>\u000a\u000a<<elseif $env.type is "industrial">>\u000a<<set $env.zone to either("mine", "oil well", "power plant", "steel mill", "refinery", "control room", "slum")>>\u000a<<set $env.style to either("gritty", "smoky", "putrid", "hazy", "humid", "tense")>>\u000a\u000a<<elseif $env.type is "scary">>\u000a<<set $env.zone to either("cave", "nest", "sewer", "tunnel", "dungeon", "bunker", "hold", "basement")>>\u000a<<set $env.style to either("dank", "dry", "wet", "black", "glistening", "reeking")>>\u000a\u000a<<endif>>\u000a/%a end environment zone selection%/\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a update clock                                 %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $time.clock, $time.hour += 1>>\u000a\u000a/%a time of day advancement calculation %/\u000a\u000a<<if $time.hour > 3>> \u000a<<set $time.phases += 1, $time.hour -= 4>>\u000a<<endif>>\u000a\u000a<<if $time.phases > 5>>\u000a<<set $time.phases -= 6>>\u000a<<endif>>\u000a\u000a/%a daylight descriptors %/\u000a\u000a<<if $time.phases eq 0>>\u000a<<set $time.light to either("night", "midnight")>>\u000a\u000a<<elseif $time.phases eq 1>>\u000a<<set $time.light to either("dawn", "sunrise")>>\u000a\u000a<<elseif $time.phases eq 2>>\u000a<<set $time.light to either("morning", "daylight")>>\u000a\u000a<<elseif $time.phases eq 3>>\u000a<<set $time.light to either("afternoon", "midday")>>\u000a\u000a<<elseif $time.phases eq 4>>\u000a<<set $time.light to either("evening", "sunset")>>\u000a\u000a<<elseif $time.phases eq 5>>\u000a<<set $time.light to either("dusk", "twilight")>>\u000a\u000a<<endif>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a assume dawg already exists in the universe  %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<p><<print $time.light>>. <<print $dawg.name>> has an [[encounter]] while <<print $dawg.dispo>> <<print $env.style>> <<print $env.zone>>.</p>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a dawg stats debug panel                       %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<div class="panel"><h1><<print $dawg.name>></h1><ul><li><<print $dawg.health>> health</li><li><<print $dawg.stamina>> stamina</li><li><<print $dawg.agility>> agility</li><li><<print $dawg.aggression>> aggression</li><li><<print $dawg.curiosity>> curiosity</li><li><<print $dawg.boldness>> boldness</li><li><<print $dawg.notoriety>> notoriety</li></ul></div>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
 p215
 sg23
 Vdawg
@@ -668,12 +668,12 @@ sg25
 g26
 ((I2014
 I11
+I24
+I0
 I23
-I22
-I26
-I13
-I6
-I327
+I43
+I0
+I328
 I0
 tp217
 (dp218
@@ -711,7 +711,7 @@ Tiddler
 p229
 (dp230
 g21
-V/%a initialize time %/\u000a\u000a<<set $season to either("spring", "summer", "autumn", "winter")>>\u000a<<set $time = random(0, 999)>>\u000a\u000a\u000a/%a housekeeping %/\u000a<<set $time += 1>>\u000a\u000a\u000a<<set $days = $time / 24 >>\u000a\u000a\u000a<<set $hour = 18>>\u000a\u000a<p><<print $time>> hours in the wasteland.</p>\u000a\u000a<p><<print $days>> how to figure out the time of day from hours?</p>\u000a\u000a<p><<print $season>>\u000a <<if $hour gte 0 and $hour lt 3>>night\u000a <<elseif $hour gt 4 and $hour lte 7>>dawn\u000a <<elseif $hour gt 8 and $hour lte 11>>morning\u000a <<elseif $hour gt 12 and $hour lte 15>>afternoon\u000a <<elseif $hour gt 16 and $hour lte 19>>evening\u000a <<elseif $hour gt 20 and $hour lte 23>>dusk\u000a<<endif>></p>
+V/%a initialize time %/\u000a\u000a<<set $time = {\u000a\u000aclock: 0,\u000aphases: 0,\u000adays: 0,\u000alight: 0,\u000ahour: 0,\u000a\u000aseason: "summer"\u000a\u000a}>>\u000a\u000a<<set $time.season to either("spring", "summer", "autumn", "winter")>>\u000a\u000a<<set $time.clock = random(1, 999)>>\u000a\u000a<<set $time.days = $time / 24 >>\u000a<<set $time.phases = $time / 4 >>\u000a\u000a\u000a\u000a\u000a\u000a<<set $time.clock, $time.hour += 1>>\u000a\u000a\u000a/%a time of day advancement %/\u000a\u000a<<if $time.hour > 3>> \u000a<<set $time.phases += 1, $time.hour -= 4>>\u000a<<endif>>\u000a\u000a<<if $time.phases > 5>>\u000a<<set $time.phases -= 6>>\u000a<<endif>>\u000a\u000a/%a time of day expression %/\u000a\u000a<p>\u000a<<if $time.phases eq 0>>night\u000a<<elseif $time.phases eq 1>>dawn\u000a<<elseif $time.phases eq 2>>morning\u000a<<elseif $time.phases eq 3>>afternoon\u000a<<elseif $time.phases eq 4>>evening\u000a<<elseif $time.phases eq 5>>dusk\u000a<<endif>>\u000a</p>\u000a\u000a\u000a\u000a/%a demo clock for reference\u000a\u000a<<if $minutes > 59>>\u000a<<set $hour24 += 1, $minutes -= 60>>\u000a<<endif>>\u000a\u000a<<if $hour24 > 23>>\u000a<<set $hour24 -= 24>>\u000a<<endif>>\u000a\u000aThe 24 hour clock time is <<print ("0" + $hour24).slice(-2)>>:<<print ("0" + $minutes).slice(-2)>>\u000a\u000a%/\u000a\u000a\u000a\u000a\u000a/%a how to figure out the time of day from hours?\u000a\u000aoriginal version\u000a\u000a<p><<print $time.season>>\u000a <<if $time.hour gte 0 and $time.hour lt 3>>night\u000a <<elseif $time.hour gt 4 and $time.hour lte 7>>dawn\u000a <<elseif $time.hour gt 8 and $time.hour lte 11>>morning\u000a <<elseif $time.hour gt 12 and $time.hour lte 15>>afternoon\u000a <<elseif $time.hour gt 16 and $time.hour lte 19>>evening\u000a <<elseif $time.hour gt 20 and $time.hour lte 23>>dusk\u000a<<endif>></p>\u000a\u000a%/
 p231
 sg23
 Vtimekeeping
@@ -720,12 +720,12 @@ sg25
 g26
 ((I2014
 I11
-I23
-I20
-I14
-I43
-I6
-I327
+I24
+I0
+I10
+I11
+I0
+I328
 I0
 tp233
 (dp234
