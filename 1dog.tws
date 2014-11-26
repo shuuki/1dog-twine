@@ -5,7 +5,7 @@ V/Users/shuuki/projects/1dog-twine/dawg-encounter/dawg-encounter.html
 p2
 sS'saveDestination'
 p3
-V/Users/shuuki/projects/1dog-twine/dawg-encounter/dawg-encounter.tws
+V/Users/shuuki/projects/1dog-twine/1dog.tws
 p4
 sS'metadata'
 p5
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<h1 class="top">[[1D0G|dawg]]</h1>\u000a\u000a[img[0dawg]]\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize dawg                 [img[0dawg]] %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $dawg = {\u000a\u000aname: "dawg",\u000adispo: "exploring",\u000anotoriety: 1,\u000abodycount: 0,\u000asleep: 0,\u000a\u000ahealth: random(2, 10), maxHealth: 10,\u000astamina: random(1, 8), maxStamina: 8,\u000aagility: random(1, 6 + 2),\u000aaggression: random(1, 6),\u000acuriosity: random(1, 6),\u000aboldness: random(1, 6),\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize time                              %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $time = {\u000a\u000aclock: 0,\u000ahour: 0,\u000aphases: 4,\u000alight: 0,\u000ahourSeason: 0,\u000aseasonCount: 1,\u000aseason: "summer"\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize environment                       %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $env = {\u000a\u000atype: "road",\u000azone: "highway",\u000astyle: "dusty",\u000ahere: "dusty highway",\u000anext: "",\u000alog: "dusty highway"\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+V<h1 class="top">[[1D0G|dawg]]</h1>\u000a\u000a[img[0dawg]]\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize dawg                 [img[0dawg]] %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $dawg = {\u000a\u000aname: "dawg",\u000adispo: "exploring",\u000anotoriety: 1,\u000abodycount: 0,\u000asleep: 0,\u000a\u000ahealth: random(2, 10), maxHealth: 10,\u000astamina: random(1, 8), maxStamina: 8,\u000aagility: random(1, 6 + 2),\u000aaggression: random(1, 6),\u000acuriosity: random(1, 6),\u000aboldness: random(1, 6),\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize time                              %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $time = {\u000a\u000aclock: 0,\u000ahour: 0,\u000aphases: 4,\u000alight: 0,\u000ahourSeason: 0,\u000aseasonCount: 1,\u000aseason: "summer"\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a initialize environment                       %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $env = {\u000a\u000atype: "road",\u000azone: "highway",\u000astyle: "dusty",\u000ahere: "dusty highway",\u000anext: "",\u000alog: "dusty highway"\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a google analytics for oxru.in hosting         %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<script>\u000a  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\u000a  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\u000a  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\u000a  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\u000a\u000a  ga('create', 'UA-45812449-1', 'auto');\u000a  ga('send', 'pageview');\u000a\u000a</script>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
 p22
 sS'title'
 p23
@@ -52,8 +52,8 @@ p26
 I11
 I26
 I12
-I17
-I7
+I26
+I32
 I2
 I330
 I0
