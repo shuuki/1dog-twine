@@ -13,6 +13,7 @@ this is a build of the 1d0g system for <a href="http://twinery.org/">twine</a>.
 - <a href="http://alltowndata.com/living-in/Taos-New-Mexico">taos stats</a>
 
 ###twine reference
+- <a href="http://www.motoslave.net/sugarcube/docs/">sugarcube docs</a>
 - <a href="http://twinery.org/wiki/start">top of twine docs</a>
  - <a href="http://twinery.org/forum/index.php/topic,1516.0.html">objects are your friends forum post</a>
  - <a href="http://twinery.org/forum/index.php/topic,1970.msg5380.html#msg5380">randomness generator forum post</a>
