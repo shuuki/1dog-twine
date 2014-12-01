@@ -10,6 +10,7 @@ this is a build of the 1d0g system for <a href="http://twinery.org/">twine</a>.
 - <a href="http://codepen.io/somethingformed/pen/xbxNmx">codepen styles</a>
 - <a href="http://www.oxru.in/remote/dawg-webfonts/styles.css">dawg webfonts</a>
  - <a href="http://davidwalsh.name/cdn-fonts">configuring htaccess to serve webfonts</a>
+- <a href="http://alltowndata.com/living-in/Taos-New-Mexico">taos stats</a>
 
 ###twine reference
 - <a href="http://twinery.org/wiki/start">top of twine docs</a>
