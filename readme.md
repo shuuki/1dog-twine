@@ -1,9 +1,10 @@
 COME AT THE DAWG, BEST NOT MISS
 ==========
 
-this is a build of the 1d0g system for <a href="http://twinery.org/">twine</a>. 
+1D0G, a game made with <a href="http://twinery.org/">twine</a>. 
 
-<a href="http://htmlpreview.github.io/?https://github.com/shuuki/1dog-twine/blob/master/1dog.html">preview latest build of encounter system</a> (will produce an error.)
+- <a href="http://htmlpreview.github.io/?https://github.com/shuuki/1dog-twine/blob/master/v2/1dog.html">preview last stable build</a>
+- <a href="http://htmlpreview.github.io/?https://github.com/shuuki/1dog-twine/blob/master/v3/index.html">preview latest unstable build</a>
 
 ###dawg stuff
 - <a href="https://docs.google.com/spreadsheets/d/1C0iNMtiu_K4ef8i1-59mJp2KN7WlEbf_LwtkkoEMim8">gdocs system notes spreadsheet</a>
