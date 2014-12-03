@@ -12,6 +12,8 @@ COME AT THE DAWG, BEST NOT MISS
 - <a href="http://www.oxru.in/remote/dawg-webfonts/styles.css">dawg webfonts</a>
  - <a href="http://davidwalsh.name/cdn-fonts">configuring htaccess to serve webfonts</a>
  - <a href="http://www.dafont.com/pixarrows.font">arrow pixel font</a> 
+- <a href="http://codepen.io/somethingformed/pen/JoYPZw">test audio wrapper</a>
+- <a href="http://codepen.io/somethingformed/pen/myeLpL">sugarcube style dump</a>
 
 ###twine reference
 - <a href="http://www.motoslave.net/sugarcube/docs/">sugarcube docs</a>
@@ -20,7 +22,7 @@ COME AT THE DAWG, BEST NOT MISS
  - <a href="http://twinery.org/forum/index.php/topic,1970.msg5380.html#msg5380">randomness generator forum post</a>
  - <a href="http://twinery.org/forum/index.php/topic,1861.msg4939.html#msg4939">simple clock forum post</a>
  - <a href="http://twinery.org/forum/index.php/topic,2063.0.html">distributions forum post</a>
-- <a href="http://www.glorioustrainwrecks.com/node/5081">unconventional operators</a>
+- <a href="http://www.glorioustrainwrecks.com/node/5081">unconventional operators blog post</a>
 
 ###fun things
 - <a href="http://alltowndata.com/living-in/Taos-New-Mexico">taos stats</a>
