@@ -1,5 +1,7 @@
 @import url(reset.css);
 @import url(http://www.oxru.in/remote/dawg-webfonts/styles.css);
+@import url(/arrows/styles.css);
+
 
 * {
   -webkit-font-smoothing: none;
