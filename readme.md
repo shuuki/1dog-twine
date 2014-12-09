@@ -8,12 +8,13 @@ COME AT THE DAWG, BEST NOT MISS
 
 ###dawg stuff
 - <a href="https://docs.google.com/spreadsheets/d/1C0iNMtiu_K4ef8i1-59mJp2KN7WlEbf_LwtkkoEMim8">gdocs system notes spreadsheet</a>
-- <a href="http://codepen.io/somethingformed/pen/xbxNmx">codepen styles</a>
+- <a href="http://codepen.io/somethingformed/pen/xbxNmx">sugarcane styles</a>
+- <a href="http://codepen.io/somethingformed/pen/XJXYMM">minified sugarcane styles</a>
+- <a href="http://codepen.io/somethingformed/pen/myeLpL">sugarcube style dump</a>
 - <a href="http://www.oxru.in/remote/dawg-webfonts/styles.css">dawg webfonts</a>
  - <a href="http://davidwalsh.name/cdn-fonts">configuring htaccess to serve webfonts</a>
  - <a href="http://www.dafont.com/pixarrows.font">arrow pixel font</a> 
 - <a href="http://codepen.io/somethingformed/pen/JoYPZw">test audio wrapper</a>
-- <a href="http://codepen.io/somethingformed/pen/myeLpL">sugarcube style dump</a>
 
 ###twine reference
 - <a href="http://www.motoslave.net/sugarcube/docs/">sugarcube docs</a>
