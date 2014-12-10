@@ -25,6 +25,7 @@ COME AT THE DAWG, BEST NOT MISS
  - <a href="http://twinery.org/forum/index.php/topic,1861.msg4939.html#msg4939">simple clock forum post</a>
  - <a href="http://twinery.org/forum/index.php/topic,2063.0.html">distributions forum post</a>
 - <a href="http://www.glorioustrainwrecks.com/node/5081">unconventional operators blog post</a>
+- <a href="http://www.glorioustrainwrecks.com/node/5475">youtube background music macro</a>
 
 ###fun things
 - <a href="http://alltowndata.com/living-in/Taos-New-Mexico">taos stats</a>
