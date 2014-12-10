@@ -3,7 +3,7 @@ COME AT THE DAWG, BEST NOT MISS
 
 1D0G, a game made with <a href="http://twinery.org/">twine</a>. 
 
-- <a href="http://htmlpreview.github.io/?https://github.com/shuuki/1dog-twine/blob/master/v2/1dog.html">preview last stable build</a>
+- <a href="http://htmlpreview.github.io/?https://github.com/shuuki/1dog-twine/blob/master/v2/index.html">preview last stable build</a>
 - <a href="http://htmlpreview.github.io/?https://github.com/shuuki/1dog-twine/blob/master/v3/index.html">preview latest unstable build</a>
 
 ###dawg stuff
