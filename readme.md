@@ -29,4 +29,4 @@ COME AT THE DAWG, BEST NOT MISS
 - <a href="http://www.glorioustrainwrecks.com/node/5475">youtube background music macro</a>
 
 ###fun things
-- <a href="http://alltowndata.com/living-in/Taos-New-Mexico">taos stats</a>
+- <a href="http://alltowndata.com/living-in/Taos-New-Mexico">taos weather stats</a>
