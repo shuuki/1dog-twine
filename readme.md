@@ -8,6 +8,7 @@ COME AT THE DAWG, BEST NOT MISS
 
 ###dawg stuff
 - <a href="http://www.youtube.com/playlist?list=PLW7aGUgODBVZdqTs-HTPTtqvCLL80PL7t">soundtrack</a>
+ - <a href="http://www.tunestotube.com/">tunes to tube uploading service</a> 
 - <a href="https://docs.google.com/spreadsheets/d/1C0iNMtiu_K4ef8i1-59mJp2KN7WlEbf_LwtkkoEMim8">gdocs system notes spreadsheet</a>
 - <a href="http://codepen.io/somethingformed/pen/xbxNmx">sugarcane styles</a>
 - <a href="http://codepen.io/somethingformed/pen/XJXYMM">minified sugarcane styles</a>
