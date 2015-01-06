@@ -27,7 +27,7 @@ I00
 sS'pos'
 p15
 (lp16
-F430.0
+F290.0
 aF290.0
 asS'passage'
 p17
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V/%a%%%%%%%%\u000a\u000a\u000athe\u000adawg\u000a         %/\u000a\u000a/%a<h1 class="top">[[1D0G|dawg]]</h1>\u000a[img[1dawg][dawg]]%/\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a               instantiate the universe               %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a/%a clocks %/\u000a<<set $time = { clock: random(0,8764) }>>\u000a<<set $time.alive = 0>>\u000a\u000a/%a variables %/\u000a<<set $location = { style: "endless" }>>\u000a<<set $weather = { sky: "void" }>>\u000a\u000a/%a import creation %/\u000a<<display "time">>\u000a<<display "firmament">>\u000a<<display "season">>\u000a<<display "weather">>\u000a<<display "location">>\u000a\u000a/% update checks %/\u000a<<display "visibility">>\u000a\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                    create dawg                       %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $dawg = {\u000a\u000a	name: "dawg",\u000a	doing: "appearing",\u000a\u000a	health: random(2, 10),\u000a		healthMax: random(8, 12),\u000a	stamina: random(1, 8),\u000a		staminaMax: random(6, 10),\u000a	agility: random(1, 8),\u000a		agilityMax: random(6, 10),\u000a	aggression: random(1, 6),\u000a	curiosity: random(1, 6),\u000a	boldness: random(1, 6),\u000a\u000a	notoriety: 1,\u000a	bodycount: 0,\u000a	sleep: 0,\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                                                      %/\u000a/%a                                                      %/\u000a/%a                        print                         %/\u000a/%a                                                      %/\u000a/%a                                                      %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<h1 class="top">1D0G</h1>\u000a\u000a<<print $dawg.name>> <<print $dawg.doing>>.\u000a\u000a<<print $exterior.style>> <<print $exterior.zone>>. \u000a\u000a<<print $time.season>> <<print $time.sun>>. \u000a\u000a<<print $weather.temp>>. <<print $weather.wind>>. <<print $weather.sky>>. \u000a\u000a<<if $time.astronomy eq true>><<print $time.moon>> moon.<<endif>>\u000a\u000a\u000a\u000a\u000a[[*|debug]]\u000a\u000a/%a assume dawg exists in the universe %/
+V/%a%%%%%%%%\u000a\u000a\u000athe\u000adawg\u000a         %/\u000a\u000a/%a<h1 class="top">[[1D0G|dawg]]</h1>\u000a[img[1dawg][dawg]]%/\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a               instantiate the universe               %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a/%a clocks %/\u000a<<set $time = { clock: random(0,8764) }>>\u000a<<set $time.alive = 0>>\u000a\u000a/%a variables %/\u000a<<set $exterior = { style: "endless" }>>\u000a<<set $weather = { sky: "void" }>>\u000a\u000a\u000a/%a import creation %/\u000a<<display "time">>\u000a<<display "firmament">>\u000a<<display "season">>\u000a<<display "weather">>\u000a<<display "exterior">>\u000a\u000a/% update checks %/\u000a<<display "visibility">>\u000a\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                    create dawg                       %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $dawg = {\u000a\u000a	name: "dawg",\u000a	doing: "appearing",\u000a\u000a	health: random(2, 10),\u000a		healthMax: random(8, 12),\u000a	stamina: random(1, 8),\u000a		staminaMax: random(6, 10),\u000a	agility: random(1, 8),\u000a		agilityMax: random(6, 10),\u000a	aggression: random(1, 6),\u000a	curiosity: random(1, 6),\u000a	boldness: random(1, 6),\u000a\u000a	notoriety: 1,\u000a	bodycount: 0,\u000a	sleep: 0,\u000a\u000a}>>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                                                      %/\u000a/%a                                                      %/\u000a/%a                        print                         %/\u000a/%a                                                      %/\u000a/%a                                                      %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<h1 class="top">1D0G</h1>\u000a\u000a<<print $dawg.name>> <<print $dawg.doing>>.\u000a \u000a<<print $exterior.style>> <<print $exterior.zone>>. \u000a\u000a<<print $time.season>> <<print $time.sun>>. \u000a\u000a<<print $weather.temp>>. <<print $weather.wind>>. <<print $weather.sky>>. \u000a\u000a<<if $time.astronomy eq true>><<print $time.moon>> moon.<<endif>>\u000a\u000a\u000a\u000a\u000a[[*|debug]]\u000a\u000a/%a assume dawg exists in the universe %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2014
 I12
-I28
-I21
-I8
-I33
-I6
-I362
+I29
+I14
+I34
+I46
+I0
+I363
 I0
 tp27
 (dp28
@@ -204,12 +204,12 @@ sg25
 g26
 ((I2014
 I12
-I28
-I19
-I27
-I10
-I6
-I362
+I29
+I13
+I31
+I48
+I0
+I363
 I0
 tp75
 (dp76
@@ -292,7 +292,7 @@ I00
 sg15
 (lp102
 F850.0
-aF1410.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -341,8 +341,8 @@ g14
 I00
 sg15
 (lp117
-F430.0
-aF710.0
+F570.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
@@ -394,7 +394,7 @@ I00
 sg15
 (lp133
 F570.0
-aF1410.0
+aF990.0
 asg17
 (itiddlywiki
 Tiddler
@@ -410,12 +410,12 @@ sg25
 g26
 ((I2014
 I12
-I28
-I20
 I29
-I37
-I6
-I362
+I13
+I44
+I28
+I0
+I363
 I0
 tp138
 (dp139
@@ -443,8 +443,8 @@ g14
 I00
 sg15
 (lp148
-F710.0
-aF430.0
+F570.0
+aF570.0
 asg17
 (itiddlywiki
 Tiddler
@@ -493,8 +493,8 @@ g14
 I00
 sg15
 (lp163
-F990.0
-aF850.0
+F1130.0
+aF990.0
 asg17
 (itiddlywiki
 Tiddler
@@ -745,7 +745,7 @@ I00
 sg15
 (lp237
 F990.0
-aF1410.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -891,7 +891,7 @@ g14
 I00
 sg15
 (lp279
-F710.0
+F990.0
 aF710.0
 asg17
 (itiddlywiki
@@ -940,7 +940,7 @@ g14
 I00
 sg15
 (lp293
-F990.0
+F1130.0
 aF710.0
 asg17
 (itiddlywiki
@@ -1090,8 +1090,8 @@ g14
 I00
 sg15
 (lp337
-F430.0
-aF1550.0
+F990.0
+aF570.0
 asg17
 (itiddlywiki
 Tiddler
@@ -1189,7 +1189,7 @@ I00
 sg15
 (lp365
 F1130.0
-aF710.0
+aF850.0
 asg17
 (itiddlywiki
 Tiddler
@@ -1237,7 +1237,7 @@ g14
 I00
 sg15
 (lp379
-F290.0
+F710.0
 aF430.0
 asg17
 (itiddlywiki
@@ -1245,7 +1245,7 @@ Tiddler
 p380
 (dp381
 g21
-VDEBUG ####################\u000a\u000aseed time <<print $time.clock>>. \u000ait is <<print $time.day>>:00 in the wasteland. \u000a<<print $time.month>> hours into this month. \u000a<<print $time.year>> hours into this year. \u000alived <<print $time.alive>> hours.\u000a\u000a[[>|Start]]\u000a
+VDEBUG ####################\u000a\u000aseed time <<print $time.clock>>. \u000ait is <<print $time.day>>:00 in the wasteland. \u000a<<print $time.month>> hours into this month. \u000a<<print $time.year>> hours into this year. \u000alived <<print $time.alive>> hours.\u000a\u000a[[>restart|Start]]\u000a
 p382
 sg23
 Vdebug
@@ -1254,12 +1254,12 @@ sg25
 g26
 ((I2014
 I12
-I28
-I20
-I50
-I15
-I6
-I362
+I29
+I14
+I36
+I5
+I0
+I363
 I0
 tp384
 (dp385
@@ -1375,15 +1375,15 @@ g14
 I00
 sg15
 (lp420
-F150.0
-aF990.0
+F290.0
+aF710.0
 asg17
 (itiddlywiki
 Tiddler
 p421
 (dp422
 g21
-V/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                     exteriors                        %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<display "exterior">>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                    interiors                         %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<display "interior">>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                    encounters                        %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $env.next = $env.style + " " + $env.zone>>\u000a\u000a<<set $encounter = {\u000a	chance: random(0, 2),\u000a	count: random(0, 5),\u000a}>>\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a/%a\u000aBELOW THIS LINE IS THE HOT MESS IMPORTED FROM V2\u000a\u000aWILL NEED SOME TLC.\u000a\u000aTHINK MORE ABOUT QUESTS AND HOW THEY CAN BE UPDATED ELSEWHERE, THEN LOADED BASED ON CHECKS HERE\u000a\u000aIF QUEST\u000aIF NPC\u000aKINDS OF ENCOUNTERS\u000aINTERIOR / EXTERIOR\u000aALSO WIN STATES\u000a\u000a\u000a\u000a\u000a%/\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a\u000a/%a\u000a\u000anotes: \u000a\u000aencounter type based on environment type \u000ahumans, animals, machines \u000adifferent name classes\u000a\u000aeither bobcat, bear, \u000aeither farmer, guard \u000aeither sentry, drone\u000aetc \u000a\u000astore individual log of environments to return and continue encounters?\u000a\u000a%/\u000a\u000a\u000a\u000a
+V/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                     exteriors                        %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<display "exterior">>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                    interiors                         %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<display "interior">>\u000a\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                    encounters                        %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a\u000a\u000a/%a\u000a\u000aCHECK FOR ACTIVE QUEST\u000a\u000aCHECK FOR ZONE PORTAL\u000a\u000aCHECK FOR NPC\u000a\u000aCHECK FOR ENCOUNTER CHANCE\u000aLOAD ENCOUNTER TYPE\u000aSHOW LINK TO ENCOUNTER\u000a\u000a\u000a<<set $env.next = $env.style + " " + $env.zone>>\u000a\u000a<<set $encounter = {\u000a	chance: random(0, 2),\u000a	count: random(0, 5),\u000a}>>\u000a\u000aTHINK MORE ABOUT QUESTS AND HOW THEY CAN BE UPDATED ELSEWHERE, THEN LOADED BASED ON CHECKS HERE\u000a\u000aIF QUEST\u000aIF NPC\u000aKINDS OF ENCOUNTERS\u000aINTERIOR / EXTERIOR\u000aALSO WIN STATES\u000a\u005c%/\u000a\u000a/%a\u000anotes: \u000a\u000aencounter type based on environment type \u000ahumans, animals, machines \u000adifferent name classes\u000a\u000aeither bobcat, bear, \u000aeither farmer, guard \u000aeither sentry, drone\u000aetc \u000a\u000astore individual log of environments to return and continue encounters?\u000a\u000a%/\u000a\u000a
 p423
 sg23
 Vlocation
@@ -1392,12 +1392,12 @@ sg25
 g26
 ((I2014
 I12
-I28
-I21
-I15
-I31
-I6
-I362
+I29
+I14
+I13
+I57
+I0
+I363
 I0
 tp425
 (dp426
@@ -1427,8 +1427,8 @@ g14
 I00
 sg15
 (lp436
-F150.0
-aF1550.0
+F290.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -1479,8 +1479,8 @@ g14
 I00
 sg15
 (lp452
-F850.0
-aF1270.0
+F710.0
+aF990.0
 asg17
 (itiddlywiki
 Tiddler
@@ -1528,8 +1528,8 @@ g14
 I00
 sg15
 (lp466
-F150.0
-aF1270.0
+F290.0
+aF570.0
 asg17
 (itiddlywiki
 Tiddler
@@ -1581,14 +1581,14 @@ I00
 sg15
 (lp482
 F290.0
-aF1270.0
+aF850.0
 asg17
 (itiddlywiki
 Tiddler
 p483
 (dp484
 g21
-V/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                     interior                         %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $interior.type to either("dwelling", "scary", "industrial")>>\u000a\u000a<<if $interior.type is "dwelling">>\u000a	<<set $interior.zone to either("farm", "ranch", "camp", "caravan", "lodge", "house", "mansion", "garden", "trailer", "rv", "wreck", "shacks", "radio station")>>\u000a	<<set $interior.style to either("dusty", "cramped", "rundown", "old", "rusty" ,"overgrown")>>\u000a\u000a<<elseif $interior.type is "scary">>\u000a	<<set $interior.zone to either("cave", "nest", "sewer", "tunnel", "dungeon", "bunker", "hold", "basement")>>\u000a	<<set $interior.style to either("dank", "dry", "wet", "black", "glistening", "reeking")>>\u000a\u000a<<elseif $interior.type is "industrial">>\u000a	<<set $interior.zone to either("mine", "oil well", "power plant", "steel mill", "refinery", "control room", "slum")>>\u000a	<<set $interior.style to either("gritty", "smoky", "putrid", "hazy", "humid", "tense")>>\u000a\u000a<<endif>>
+V/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a/%a                     interior                         %/\u000a/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/\u000a\u000a<<set $interior.type to either("dwelling", "scary", "industrial", "portal")>>\u000a\u000a<<if $interior.type is "dwelling">>\u000a	<<set $interior.zone to either("farm", "ranch", "camp", "caravan", "lodge", "house", "mansion", "garden", "trailer", "rv", "wreck", "shacks", "radio station")>>\u000a	<<set $interior.style to either("dusty", "cramped", "rundown", "old", "rusty" ,"overgrown")>>\u000a\u000a<<elseif $interior.type is "scary">>\u000a	<<set $interior.zone to either("cave", "nest", "sewer", "tunnel", "dungeon", "bunker", "hold", "basement")>>\u000a	<<set $interior.style to either("dank", "dry", "wet", "black", "glistening", "reeking")>>\u000a\u000a<<elseif $interior.type is "industrial">>\u000a	<<set $interior.zone to either("mine", "oil well", "power plant", "steel mill", "refinery", "control room", "slum")>>\u000a	<<set $interior.style to either("gritty", "smoky", "putrid", "hazy", "humid", "tense")>>\u000a\u000a<<elseif $interior.type is "portal">>\u000a	<<set $interior.zone to either("door", "grate", "vent", "gate", "hole")>>\u000a	<<set $interior.style to either("dusty", "cramped", "old", "rusty","overgrown")>>\u000a\u000a\u000a<<endif>>
 p485
 sg23
 Vinterior
@@ -1597,12 +1597,12 @@ sg25
 g26
 ((I2014
 I12
-I28
-I20
-I28
-I42
-I6
-I362
+I29
+I14
+I23
+I21
+I0
+I363
 I0
 tp487
 (dp488

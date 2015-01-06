@@ -763,7 +763,7 @@ Tiddler
 p245
 (dp246
 g21
-V<<if visited() gt 1>>\u000a<p><<print either("been here before...","this is the time...","this is the place...")>></p>\u000a<<endif>>\u000a\u000a<<if visited() gt 2>>\u000a<p><<print either("...smelled her on the wind...","...seen her face in the sun...","...touched her hand to say hello...")>></p>\u000a<<endif>>\u000a\u000a<<if visited() gt 4>>\u000a<<print either("", "", "")>>\u000a<<endif>>\u000a\u000a<<if visited() gt 6>>\u000a<<print either("", "", "")>>\u000a<<endif>>\u000a\u000a<ul>\u000a<li>[[what?!|dawg]]</li>\u000a</ul>
+V<<if visited() gt 1>>\u000a<p><<print either("been here before...","this is the time...","this is the place...")>></p>\u000a<<endif>>\u000a\u000a<<if visited() gt 2>>\u000a<p><<print either("...smelled on the wind...","...seen in the sun...","...touched to say hello...")>></p>\u000a<<endif>>\u000a\u000a<<if visited() gt 4>>\u000a<<print either("", "", "")>>\u000a<<endif>>\u000a\u000a<<if visited() gt 6>>\u000a<<print either("", "", "")>>\u000a<<endif>>\u000a\u000a<ul>\u000a<li>[[what?!|dawg]]</li>\u000a</ul>
 p247
 sg23
 Vdreaming
@@ -771,13 +771,13 @@ p248
 sg25
 g26
 ((I2014
-I11
-I30
-I14
-I27
-I45
+I12
+I29
+I10
 I6
-I334
+I18
+I0
+I363
 I0
 tp249
 (dp250
@@ -1914,8 +1914,8 @@ g14
 I00
 sg15
 (lp594
-F290.0
-aF710.0
+F10.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -1953,8 +1953,8 @@ g14
 I00
 sg15
 (lp606
-F10.0
-aF710.0
+F150.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -1991,8 +1991,8 @@ g14
 I00
 sg15
 (lp617
-F10.0
-aF990.0
+F290.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -2029,8 +2029,8 @@ g14
 I00
 sg15
 (lp628
-F150.0
-aF570.0
+F430.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -2067,8 +2067,8 @@ g14
 I00
 sg15
 (lp639
-F150.0
-aF710.0
+F570.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
@@ -2105,8 +2105,8 @@ g14
 I00
 sg15
 (lp650
-F150.0
-aF850.0
+F710.0
+aF1130.0
 asg17
 (itiddlywiki
 Tiddler
