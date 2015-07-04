@@ -59,7 +59,7 @@
 }
 
 @font-face {
-	font-family: '5px Death';
+	font-family: '5 Pixdeath';
 	src: url('5pixdeath-webfont.eot');
 	src: url('5pixdeath-webfont.eot?#iefix') format('embedded-opentype'),
 		url('5pixdeath-webfont.woff2') format('woff2'),
@@ -71,7 +71,7 @@
 }
 
 @font-face {
-	font-family: '04b_03';
+	font-family: '04b03';
 	src: url('04b03-webfont.eot');
 	src: url('04b03-webfont.eot?#iefix') format('embedded-opentype'),
 		url('04b03-webfont.woff2') format('woff2'),
@@ -96,7 +96,7 @@
 }
 
 @font-face {
-	font-family: 'Pixel Arrows';
+	font-family: 'PixArrows';
 	src: url('pixarrows-webfont.eot');
 	src: url('pixarrows-webfont.eot?#iefix') format('embedded-opentype'),
 		url('pixarrows-webfont.woff2') format('woff2'),
