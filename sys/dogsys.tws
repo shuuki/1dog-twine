@@ -1,11 +1,11 @@
 (dp0
 S'buildDestination'
 p1
-S''
+V/Users/shuuki/projects/DAWG/sys/dogsys.html
 p2
 sS'saveDestination'
 p3
-V/Users/shuuki/Desktop/dog sys.tws
+V/Users/shuuki/projects/DAWG/sys/dogsys.tws
 p4
 sS'metadata'
 p5
@@ -625,13 +625,13 @@ p200
 sg25
 g26
 ((I2015
-I6
-I30
-I1
-I15
-I53
-I1
-I181
+I7
+I4
+I12
+I52
+I36
+I5
+I185
 I1
 tp201
 (dp202
@@ -1595,7 +1595,7 @@ tp490
 Rp491
 sbsa(dp492
 g14
-I00
+I01
 sg15
 (lp493
 F1193.6666666666665
@@ -1606,7 +1606,7 @@ Tiddler
 p494
 (dp495
 g21
-Vlosing health state. maybe hunger. dying, get help.\u000a\u000a[[hunger]]\u000a\u000a[[thirst]]\u000a\u000a[[excrement]]\u000a\u000a[[wounds]]\u000a\u000ahygeine\u000a\u000aoverall health\u000a\u000aadded effects equipped by things like dust baths, mud, or getting bathed\u000a\u000a
+Voverall health\u000ahealth is a number derived from stamina\u000a\u000ahealthPercent { something }\u000a\u000aeach negative effect drains health \u000aor influences stamina?\u000aif stamina is 0 you don't die?\u000abut when health is 0  you die?\u000a\u000alosing health state. maybe hunger. dying, get help.\u000a\u000a[[hunger]]\u000ahunger and thirst increase with activity\u000a[[thirst]]\u000a\u000a[[excrement]]\u000a\u000a[[wounds]]\u000a\u000ahygeine something to do with influence, socializing?\u000aadded effects equipped by things like dust baths, mud, or getting bathed?\u000a\u000a
 p496
 sg23
 Vbody
@@ -1615,12 +1615,12 @@ sg25
 g26
 ((I2015
 I7
-I2
-I23
-I27
-I58
-I3
-I183
+I4
+I12
+I56
+I11
+I5
+I185
 I1
 tp498
 (dp499
