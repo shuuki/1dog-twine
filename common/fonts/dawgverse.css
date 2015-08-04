@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'dawgverse';
-	src:url('dawgverse.eot?x4i99y');
-	src:url('dawgverse.eot?#iefixx4i99y') format('embedded-opentype'),
-		url('dawgverse.woff2?x4i99y') format('woff2'),
-		url('dawgverse.ttf?x4i99y') format('truetype'),
-		url('dawgverse.woff?x4i99y') format('woff'),
-		url('dawgverse.svg?x4i99y#dawgverse') format('svg');
+	src:url('dawgverse.eot?zbxmex');
+	src:url('dawgverse.eot?#iefixzbxmex') format('embedded-opentype'),
+		url('dawgverse.woff2?zbxmex') format('woff2'),
+		url('dawgverse.ttf?zbxmex') format('truetype'),
+		url('dawgverse.woff?zbxmex') format('woff'),
+		url('dawgverse.svg?zbxmex#dawgverse') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -33,20 +33,23 @@
 	content: "\2190";
 }
 .dawgverse-block-5:before {
-	content: "\66";
+	content: "\40";
 }
 .dawgverse-block-4:before {
 	content: "\65";
 }
 .dawgverse-block-3:before {
-	content: "\64";
+	content: "\63";
 }
 .dawgverse-block-2:before {
-	content: "\63";
+	content: "\64";
 }
 .dawgverse-block-1:before {
 	content: "\62";
 }
 .dawgverse-block-0:before {
+	content: "\66";
+}
+.dawgverse-block-null:before {
 	content: "\61";
 }
