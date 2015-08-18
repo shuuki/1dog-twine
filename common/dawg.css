@@ -18,7 +18,7 @@
 }
 
 body {
-	background-color: #010101;
+	background-color: #1f1f1f;
 	color: #f2c313;
 	font-family: 'Nokia Cellphone', monospace;
 	padding: 1em;
@@ -31,7 +31,7 @@ body {
 
 a:hover {
 	background: none;
-	border-bottom: 2px solid;
+	/*border-bottom: 2px solid;*/
 	text-decoration: none;
 	color: white;
 	padding: 0;
