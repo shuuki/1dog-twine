@@ -243,7 +243,7 @@ Tiddler
 p85
 (dp86
 g21
-Vthe [[wasteland]]. <<print $time.season>> <<print $time.sun>>. <<print $weather.wind>>, <<print $weather.sky>>, <<print $weather.temp>>. <<if $time.astronomy is true>><<print $time.moon>> moon.<<endif>> main stats. description of health. current feeling. passive leveling. <<display "update">> [[*|debug]]\u000a\u000a[[stats]]\u000a[[inventory]]\u000a[[quest]]\u000a\u000a[[map]]\u000a[[explore]] \u000a[[stay|home]]\u000a\u000a[[sleep]]\u000a\u000a\u000a/%\u000aadd classes to spans\u000acreate persistent UI space with css trickery\u000alayers of dog for each dispo: weather, light, moon, interactions. \u000a%/
+V[[wasteland:|wasteland]] <<print $time.season>> <<print $time.sun>>. <<print $weather.wind>>, <<print $weather.sky>>, <<print $weather.temp>>. <<if $time.astronomy is true>><<print $time.moon>> moon.<<endif>> main stats. description of health. current feeling. passive leveling. <<display "update">> [[*|debug]]\u000a\u000a[[stats]]\u000a[[inventory]]\u000a[[quest]]\u000a\u000a[[map]]\u000a[[explore]] \u000a[[stay|home]]\u000a\u000a[[sleep]]\u000a\u000a\u000a/%\u000aadd classes to spans\u000acreate persistent UI space with css trickery\u000alayers of dog for each dispo: weather, light, moon, interactions. \u000a%/
 p87
 sg23
 Vdawg
@@ -252,12 +252,12 @@ sg25
 g26
 ((I2015
 I8
-I15
-I15
-I6
-I35
-I5
-I227
+I17
+I21
+I49
+I58
+I0
+I229
 I1
 tp89
 (dp90
@@ -12784,7 +12784,7 @@ Tiddler
 p3837
 (dp3838
 g21
-V<div class="map">\u000a<<for $i to 0; $i lt $map.length; $i++>>\u000a	<<for $k to 0; $k lt $map[$i].length; $k++>>\u000a    	<<if $k eq $posX and $i eq $posY>>\u000a        	<<print "@">>/%a player %/\u000a        <<elseif $map[$i][$k] eq -1>>\u000a        	<<print "e">>/%a square, closed %/\u000a        <<elseif $map[$i][$k] eq 0>>\u000a        	<<print "f">>/%a blank wall %/\u000a        <<elseif $map[$i][$k] lte 2>>\u000a			<<print "d">>/%a plus, tree %/\u000a        <<elseif $map[$i][$k] eq 3>>\u000a        	<<print "c">>/%a grid, water %/\u000a        <<elseif $map[$i][$k] lte 9>>\u000a        	<<print "b">>/%a dot, grass %/\u000a        <<elseif $map[$i][$k] gte 10>>\u000a        	<<print "a">>/%a blank, clear %/\u000a		<</if>>\u000a	<</for>>\u000a	<br>\u000a<</for>>\u000a</div>\u000a\u000a\u000awater meat loot encounter\u000a\u000a\u000a0.2% water\u000a\u000a\u000a
+V<div class="map">\u000a<<for $i to 0; $i lt $map.length; $i++>>\u000a	<<for $k to 0; $k lt $map[$i].length; $k++>>\u000a    	<<if $k eq $posX and $i eq $posY>>\u000a        	<<print "@">>/%a player %/\u000a        <<elseif $map[$i][$k] eq -1>>\u000a        	<<print "e">>/%a square, closed %/\u000a        <<elseif $map[$i][$k] eq 0>>\u000a        	<<print "f">>/%a blank wall %/\u000a        <<elseif $map[$i][$k] lte 2>>\u000a			<<print "d">>/%a plus, tree %/\u000a        <<elseif $map[$i][$k] eq 3>>\u000a        	<<print "c">>/%a grid, water %/\u000a        <<elseif $map[$i][$k] lte 9>>\u000a        	<<print "b">>/%a dot, grass %/\u000a        <<elseif $map[$i][$k] gte 10>>\u000a        	<<print "a">>/%a blank, clear %/\u000a		<</if>>\u000a	<</for>>\u000a	<br>\u000a<</for>>\u000a</div>\u000a\u000a\u000awater meat loot encounter\u000a\u000a\u000a1% water (actually it's 0.2%)\u000a11% tree\u000a\u000a\u000a\u000a1/500 water\u000a2/500 meat\u000a56/500 tree\u000a\u000a\u000a<<if $map.containsAny("water", "meat")>>\u000asmells good\u000a<</if>>\u000a
 p3839
 sg23
 Vmap-draw
@@ -12793,12 +12793,12 @@ sg25
 g26
 ((I2015
 I8
-I16
-I16
-I54
-I36
-I6
-I228
+I17
+I22
+I48
+I15
+I0
+I229
 I1
 tp3841
 (dp3842
