@@ -16969,6 +16969,7 @@ tp5078
 (dp5079
 tp5080
 Rp5081
+<<<<<<< HEAD
 sbsa(dp5082
 >>>>>>> parent of 7c7fbb3... tweaked rebuild, may be broken
 g14
@@ -17019,10 +17020,13 @@ tp5092
 (dp5093
 tp5094
 Rp5095
+=======
+>>>>>>> parent of 67cb826... forgot one
 sbsasS'scale'
-p5096
+p5082
 F0.6000000000000001
 sS'snapping'
+<<<<<<< HEAD
 <<<<<<< HEAD
 p5169
 =======
@@ -17044,5 +17048,8 @@ p5083
 =======
 p5097
 >>>>>>> parent of 7c7fbb3... tweaked rebuild, may be broken
+=======
+p5083
+>>>>>>> parent of 67cb826... forgot one
 I01
 ss.
