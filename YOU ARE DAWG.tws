@@ -16966,6 +16966,7 @@ I58
 I2
 I238
 I1
+<<<<<<< HEAD
 tp5083
 (dp5084
 tp5085
@@ -17257,5 +17258,16 @@ p5168
 F0.6000000000000001
 sS'snapping'
 p5169
+=======
+tp5078
+(dp5079
+tp5080
+Rp5081
+sbsasS'scale'
+p5082
+F0.6000000000000001
+sS'snapping'
+p5083
+>>>>>>> parent of 67cb826... forgot one
 I01
 ss.
