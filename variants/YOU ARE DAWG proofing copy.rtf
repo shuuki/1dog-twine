@@ -1,0 +1,2335 @@
+{\rtf1\ansi\ansicpg1251
+{\fonttbl\f0\fswiss\fcharset0 Arial;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red128\green128\blue128;\red51\green51\blue204;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx792
+\tx8640\ql\qnatural\pardirnatural\pgnx720\pgny720
+\fs24\b1 junkyard dawg\b0\fs20 \
+\
+\
+\fs24\b1 defecate\b0\fs20 \
+\
+\
+\fs24\b1 track\b0\fs20 \
+find something or someone\
+go tell quest giver where it is\
+\
+\fs24\b1 a dawg's life\b0\fs20 \
+\
+\
+\fs24\b1 thirst\b0\fs20 \
+slow draining, need for healing.\
+\
+\fs24\b1 hunger\b0\fs20 \
+hunger\
+\
+slowly lose. actions drain. below a certain level, lose stamina. below another level, lose life.\
+\
+\
+\fs24\b1 the one about the flower\b0\fs20 \
+flower\
+\
+\fs24\b1 the one about the beast\b0\fs20 \
+beast\
+\
+\fs24\b1 the one about the void\b0\fs20 \
+alone\
+\
+\fs24\b1 deliver\b0\fs20 \
+requires bags\
+take something somewhere\
+\
+\fs24\b1 escort\b0\fs20 \
+take someone somewhere\
+\
+\fs24\b1 collect\b0\fs20 \
+grab something\
+\
+\fs24\b1 chapter\b0\fs20 \
+chapters\
+\
+intro\
+\
+\f1\cf1 <<display "dog unchained">>\cf0\f0 \
+\f1\cf1 <<display "well i'll be double-dogged">>\cf0\f0 \
+\f1\cf1 <<display "a girl and her dog">>\cf0\f0 \
+\
+main quest\
+\
+\f1\cf1 <<display "gone to the dogs">>\cf0\f0 \
+\f1\cf1 <<display "dog with two bones">>\cf0\f0 \
+\
+sidequests \
+\
+\f1\cf1 <<display "love me love my dog">>\cf0\f0 \
+\f1\cf1 <<display "come at the dog you best not miss">>\cf0\f0 \
+\
+\f1\cf1 <<display "two dog night">>\cf0\f0 \
+\f1\cf1 <<display "dog tired">>\cf0\f0 \
+\
+climax \
+\
+\f1\cf1 <<display "hair of the dog">>\cf0\f0 \
+\f1\cf1 <<display "dog in the dead city">>\cf0\f0 \
+\
+endings\
+\
+\f1\cf1 <<display "going to see a man about a dog">>\cf0\f0 \
+\f1\cf1 <<display "even the devil can't fool a dog">>\cf0\f0 \
+\f1\cf1 <<display "once and future dog">>\cf0\f0 \
+\
+\fs24\b1 place\b0\fs20 \
+reset everything place related\
+\
+check current zone\
+\
+if zone is 1, \b\cf2 \ul trail\ulnone \cf0 \b0 \
+if zone is 2, trail+\b\cf2 \ul road\ulnone \cf0 \b0 \
+if zone is 3, trail+road+\b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+if zone is 4, trail+road+sidewalk+\b\cf2 \ul highway\ulnone \cf0 \b0 \
+if zone is 5, \b\cf2 \ul path\ulnone \cf0 \b0 \
+if zone is 6, trail+road+sidewalk+highway+path\
+\
+\
+is it wasteland or special \
+weighted chances for specials\
+\
+\
+set $place_chance to array generated from zones and regions\
+\f1\cf1 <<set $place_roller to random(1,$place_chance)>>\cf0\f0 \
+\f1\cf1 <<print $place_roller>>\cf0\f0 \
+\
+set active \
+\
+Array.random($place)\
+\
+\f1\cf1 <<if $zone eq 1>>\cf0\f0 \
+\f1\cf1 <<display "trail">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+\
+\
+\
+\
+\
+\fs24\b1 nature\b0\fs20 \
+wasteland creation\
+\
+\f1\cf1 <<set $currentLoops = [] >>\cf0\f0 \
+\f1\cf1 <<set $march = "march.mp3">>\cf0\f0 \
+\
+\f1\cf1 <<print $currentLoops>>\cf0\f0 \
+  \
+  Add a parade...\
+\f1\cf1 <<set $currentLoops.push($march)>>\cf0\f0 \
+\f1\cf1 <<print $currentLoops>>\cf0\f0 \
+Now remove it...\
+\f1\cf1 <<set $currentLoops.splice($currentLoops.indexOf($march),1)>>\cf0\f0 \
+\f1\cf1 <<print $currentLoops>>\cf0\f0 \
+\
+Array.random($pies)\
+\
+\fs24\b1 npc\b0\fs20 \
+animal\
+human\
+machine\
+\
+\
+attack\
+\
+stats\
+\
+\
+\
+\fs24\b1 companion\b0\fs20 \
+\
+\
+\fs24\b1 animal\b0\fs20 \
+\
+\
+\fs24\b1 item\b0\fs20 \
+show active items.\
+\
+\
+\
+\fs24\b1 daddy can't take a dawg\b0\fs20 \
+\
+\
+\fs24\b1 remember\b0\fs20 \
+\
+\
+\fs24\b1 notoriety\b0\fs20 \
+notoriety\
+\
+kills\
+\
+description\
+\
+hygeine modifier.\
+\
+\fs24\b1 wounds\b0\fs20 \
+wounds\
+\
+fracture\
+laceration\
+stab\
+cut\
+burn\
+\
+\
+effects\
+\
+bleeding\
+electrocution\
+poison\
+radiation\
+\
+\
+(frome flame and flood)\
+drown\
+dehydration\
+starving\
+hypothermia\
+exhausted\
+sepsis\
+\
+laceration\
+broken bone\
+drowning\
+exhausted\
+burned\
+staph infection\
+starving\
+dehydration\
+\
+\fs24\b1 the one about the spider\b0\fs20 \
+spider\
+\
+\fs24\b1 the one about the girl\b0\fs20 \
+girl\
+\
+\fs24\b1 the one about the bomb\b0\fs20 \
+bomb\
+\
+\fs24\b1 kill\b0\fs20 \
+make someone go away\
+\
+\fs24\b1 fetch\b0\fs20 \
+grab something\
+bring it back\
+\
+\
+\fs24\b1 visit\b0\fs20 \
+go somewhere\
+just check in\
+\
+\fs24\b1 a girl and her dog\b0\fs20 \
+\f1\cf1 <<if visited() eq 1>>\cf0\f0 \
+intro text.\
+\
+\f1\cf1 <<set $quest_active to 1>>\cf0\f0 \
+\
+\f1\cf1 <\f1\cf1 <else>\cf0\f0 >\cf0\f0 \
+\f1\cf1 <h2>\cf0\f0 a girl and her dog\f1\cf1 </h2>\cf0\f0 \
+\
+if done unlock \b\cf2 \ul love me love my dog\ulnone \cf0 \b0 \
+\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 dog unchained\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 dog unchained\f1\cf1 </h2>\cf0\f0 \
+"there are things within us all that can never be unleashed."\
+\
+if done advance to \b\cf2 \ul gone to the dogs\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 trail\b0\fs20 \
+connects\
+\b\cf2 \ul scrub\ulnone \cf0 \b0   \
+\b\cf2 \ul hill\ulnone \cf0 \b0 \
+\b\cf2 \ul shacks\ulnone \cf0 \b0 \
+\b\cf2 \ul marsh\ulnone \cf0 \b0 \
+\b\cf2 \ul cave\ulnone \cf0 \b0 \
+\b\cf2 \ul stream\ulnone \cf0 \b0 \
+\b\cf2 \ul chasm\ulnone \cf0 \b0 \
+\b\cf2 \ul bridge\ulnone \cf0 \b0 \
+\
+\
+set region size\
+set chance for wasteland\
+\
+\
+\fs24\b1 hill\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+\fs24\b1 cave\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+\fs24\b1 scrub\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+\fs24\b1 shacks\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul granny\ulnone \cf0 \b0  lives here\
+\
+\fs24\b1 beast\b0\fs20 \
+beast\
+beast strong\
+beast always return\
+\
+\fs24\b1 granny\b0\fs20 \
+\
+\
+\fs24\b1 shopping list\b0\fs20 \
+\
+\
+\fs24\b1 bone\b0\fs20 \
+\
+\
+\fs24\b1 stick\b0\fs20 \
+gather for \b\cf2 \ul sticks\ulnone \cf0 \b0 \
+\
+\fs24\b1 StoryAuthor\b0\fs20 \
+@MZXIO\
+\
+\fs24\b1 StoryTitle\b0\fs20 \
+YOU ARE DAWG.\
+\
+\fs24\b1 Untitled Passage 209\b0\fs20 \
+health\
+stamina\
+agility\
+\
+aggression\
+curiosity\
+boldness\
+\
+charm\
+cunning\
+insight\
+\
+\fs24\b1 health\b0\fs20 \
+health\
+\f1\cf1 <<display "thirst">>\cf0\f0 \
+\f1\cf1 <<display "hunger">>\cf0\f0 \
+\f1\cf1 <<display "wounds">>\cf0\f0 \
+\
+overall health\
+health is a number derived from stamina\
+\
+healthPercent { something }\
+\
+each negative effect drains health \
+or influences stamina?\
+if stamina is 0 you don't die?\
+but when health is 0  you die?\
+\
+losing health state. maybe hunger. dying, get help.\
+hunger and thirst increase with activity\
+hygeine something to do with influence, socializing?\
+added effects equipped by things like dust baths, mud, or getting bathed?\
+\
+\
+arousal:\
+\
+aroused\
+excited\
+happy\
+calm\
+quiet\
+tired\
+unhappy\
+fearful\
+\
+\fs24\b1 dreams\b0\fs20 \
+could be\
+\f1\cf1 <<display "the one about the girl">>\cf0\f0 \
+or \f1\cf1 <<display "the one about the beast">>\cf0\f0 \
+or \f1\cf1 <<display "the one about the spider">>\cf0\f0 \
+or \f1\cf1 <<display "the one about the flower">>\cf0\f0 \
+or \f1\cf1 <<display "the one about the bomb">>\cf0\f0 \
+or \f1\cf1 <<display "the one about the void">>\cf0\f0 \
+\
+\
+gamble d20\
+something good, something bad \
+chance for nothing, bonus, or \b\cf2 \ul death\ulnone \cf0 \b0 \
+\
+\fs24\b1 stray\b0\fs20 \
+radiant random quests\
+\f1\cf1 <<display "fetch">>\cf0\f0 \
+\f1\cf1 <<display "kill">>\cf0\f0 \
+\f1\cf1 <<display "visit">>\cf0\f0 \
+\f1\cf1 <<display "escort">>\cf0\f0 \
+\f1\cf1 <<display "deliver">>\cf0\f0 \
+\f1\cf1 <<display "collect">>\cf0\f0 \
+\f1\cf1 <<display "track">>\cf0\f0 \
+\
+\
+\fs24\b1 well i'll be double-dogged\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 well i'll be double-dogged\f1\cf1 </h2>\cf0\f0 \
+\
+\
+\
+\fs24\b1 bridge\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+portal to the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\fs24\b1 chasm\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+\fs24\b1 marsh\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+\fs24\b1 stream\b0\fs20 \
+on the \b\cf2 \ul trail\ulnone \cf0 \b0 \
+\
+\fs24\b1 collapsed tunnel\b0\fs20 \
+\
+\
+\fs24\b1 bandit\b0\fs20 \
+general random hostile raider escapee\
+\
+\fs24\b1 antelope\b0\fs20 \
+\
+\
+\fs24\b1 worn bandana\b0\fs20 \
+\
+\
+\fs24\b1 spiked collar\b0\fs20 \
+\
+\
+\fs24\b1 gun bullets\b0\fs20 \
+\
+\
+\fs24\b1 StoryStyles\b0\fs20 \
+@import url(common/dawg.css);\
+\
+/* hide sidebar */\
+#ui-bar { display: none; }\
+\
+/* kill passage transition */\
+.passage { transition: none; }\
+\
+.error { font-family: '04b03'; }\
+\
+/*make visited areas different to add interest*/\
+.seek a { color: white; }\
+.seek a:visited { color: cyan; }\
+.seek a:hover { color: inherit; text-decoration: none; }\
+\
+\
+/*special ascii seek map*/\
+.map {\
+  font-family: 'dawgverse';\
+  font-size: 32px;\
+  line-height: 1;\
+  letter-spacing: -8px;\
+ -webkit-user-select: none;\
+}\
+.map-controls {\
+  font-family: 'dawgverse';\
+  font-size: 32px;\
+  display: block;\
+  position: relative;\
+  height: 96px;\
+  width: 96px;\
+  -webkit-user-select: none;\
+}\
+.map-controls span {\
+  display: block;\
+  height: 32px;\
+  width: 32px;\
+  position: absolute;\
+  line-height: 32px;\
+  text-align: center;\
+}\
+.map-controls .north {\
+  left: 32px;\
+  top: 0;\
+}\
+.map-controls .east {\
+  right: 0;\
+  top: 32px;\
+}\
+.map-controls .south {\
+  bottom: 0;\
+  left: 32px;\
+}\
+.map-controls .west {\
+  left: 0;\
+  top: 32px;\
+}\
+\
+\
+\
+\fs24\b1 keith\b0\fs20 \
+at the \b\cf2 \ul canyon\ulnone \cf0 \b0 \
+\
+starts \b\cf2 \ul well i'll be double-dogged\ulnone \cf0 \b0 \
+\
+\fs24\b1 goose\b0\fs20 \
+\
+\
+\fs24\b1 prarie dog\b0\fs20 \
+\
+\
+\fs24\b1 ragged collar\b0\fs20 \
+\
+\
+\fs24\b1 Start\b0\fs20 \
+you are \b\cf2 \ul dawg\ulnone \cf0 \b0 .\
+\b\cf2 \ul *\ulnone \cf0 \b0 \
+\
+\f1\cf1 <\f1\cf1 <silently>\cf0\f0 >\cf0\f0 \f1\cf1 <<display "initialize">>\cf0\f0 \f1\cf1 <\f1\cf1 </silently>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 wake\b0\fs20 \
+\b\cf2 \ul ...\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 dream\b0\fs20 \
+\f1\cf1 <<display "dreams">>\cf0\f0 \
+\b\cf2 \ul wake\ulnone \cf0 \b0 \
+\
+\fs24\b1 death\b0\fs20 \
+no more dawg. final stats.\
+no more dreams. no more stories.\
+\
+\b\cf2 \ul begin\ulnone \cf0 \b0  again\
+\
+\fs24\b1 gone to the dogs\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 gone to the dogs\f1\cf1 </h2>\cf0\f0 \
+\
+if done advance to \b\cf2 \ul dog with two bones\ulnone \cf0 \b0 \
+\
+\fs24\b1 road\b0\fs20 \
+connects\
+\b\cf2 \ul caravan\ulnone \cf0 \b0 \
+\b\cf2 \ul garden\ulnone \cf0 \b0 \
+\b\cf2 \ul trailer\ulnone \cf0 \b0 \
+\b\cf2 \ul sands\ulnone \cf0 \b0 \
+\b\cf2 \ul checkpoint\ulnone \cf0 \b0 \
+\b\cf2 \ul range\ulnone \cf0 \b0 \
+\b\cf2 \ul rv\ulnone \cf0 \b0 \
+\b\cf2 \ul shop\ulnone \cf0 \b0 \
+\b\cf2 \ul airstrip\ulnone \cf0 \b0 \
+\b\cf2 \ul ranch\ulnone \cf0 \b0 \
+\b\cf2 \ul radio station\ulnone \cf0 \b0 \
+\b\cf2 \ul village\ulnone \cf0 \b0 \
+\b\cf2 \ul bunker\ulnone \cf0 \b0 \
+\b\cf2 \ul homestead\ulnone \cf0 \b0 \
+\b\cf2 \ul canyon\ulnone \cf0 \b0 \
+\
+\fs24\b1 caravan\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\fs24\b1 garden\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\fs24\b1 trailer\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\fs24\b1 sands\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\fs24\b1 checkpoint\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\fs24\b1 range\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul cow\ulnone \cf0 \b0  is here\
+\b\cf2 \ul cowboy\ulnone \cf0 \b0  too\
+\
+\fs24\b1 rose\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+gives you \b\cf2 \ul shopping list\ulnone \cf0 \b0 \
+\
+rose\
+friendly\
+\
+\fs24\b1 doctor\b0\fs20 \
+with the \b\cf2 \ul caravan\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 lilly\b0\fs20 \
+on the \b\cf2 \ul mountain\ulnone \cf0 \b0 \
+\
+\fs24\b1 cowboy\b0\fs20 \
+on the \b\cf2 \ul range\ulnone \cf0 \b0 \
+\
+\fs24\b1 scavenger\b0\fs20 \
+\
+\
+\fs24\b1 cow\b0\fs20 \
+\
+\
+\fs24\b1 terrain\b0\fs20 \
+\f1\cf1 <<display "map-generate">>\cf0\f0 \
+\f1\cf1 <<set $posY to random(1,10)>>\cf0\f0 \
+\f1\cf1 <<set $posX to random(1,8)>>\cf0\f0 \
+\
+\fs24\b1 doggie\b0\fs20 \
+<<set $dawg = {\
+\
+	name: "dawg",\
+\
+	dispo: "appearing",\
+\
+	health: random(2, 10),\
+		health_max: random(8, 12),\
+\
+	stamina: random(1, 8),\
+		stamina_max: random(6, 10),\
+\
+	agility: random(1, 8),\
+		agility_max: random(6, 10),\
+\
+	aggression: random(1, 6),\
+	curiosity: random(1, 6),\
+	boldness: random(1, 6),\
+\
+	notoriety: 1,\
+	bodycount: 0,\
+	sleep: 0,\
+\
+}>>\
+\
+\
+\
+\fs24\b1 debug\b0\fs20 \
+DEBUG ####################\
+\
+seed time \f1\cf1 <<print $time.clock>>\cf0\f0 . \
+it is \f1\cf1 <<print $time.day>>\cf0\f0 :00 in the wasteland. \
+\f1\cf1 <<print $time.month>>\cf0\f0  hours into this month. \
+\f1\cf1 <<print $time.year>>\cf0\f0  hours into this year. \
+lived \f1\cf1 <<print $time.alive.toFixed(0)>>\cf0\f0  hours.\
+\
+\b\cf2 \ul restart\ulnone \cf0 \b0  / \b\cf2 \ul dawg\ulnone \cf0 \b0  / \b\cf2 \ul stats\ulnone \cf0 \b0 \
+\f1\cf1 <div class="fourbee">\cf0\f0 \
+\
+\
+\f1\cf1 <<print $exterior.style>>\cf0\f0 \
+\f1\cf1 <<print $weather.sky>>\cf0\f0 \
+\
+\f1\cf1 <h3>\cf0\f0 time\f1\cf1 </h3>\cf0\f0 \
+alive \f1\cf1 <<print $time.alive>>\cf0\f0 \
+clock \f1\cf1 <<print $time.clock>>\cf0\f0 \
+day \f1\cf1 <<print $time.day>>\cf0\f0 \
+sun \f1\cf1 <<print $time.sun>>\cf0\f0 \
+astronomy \f1\cf1 <<print $time.astronomy>>\cf0\f0 \
+month \f1\cf1 <<print $time.month>>\cf0\f0 \
+moon \f1\cf1 <<print $time.moon>>\cf0\f0 \
+season \f1\cf1 <<print $time.season>>\cf0\f0 \
+year \f1\cf1 <<print $time.year>>\cf0\f0 \
+\
+\f1\cf1 <h3>\cf0\f0 weatherChance\f1\cf1 </h3>\cf0\f0 \
+cold \f1\cf1 <<print $weatherChance.cold>>\cf0\f0 \
+cool \f1\cf1 <<print $weatherChance.cool>>\cf0\f0 \
+mild \f1\cf1 <<print $weatherChance.mild>>\cf0\f0 \
+warm \f1\cf1 <<print $weatherChance.warm>>\cf0\f0 \
+hot \f1\cf1 <<print $weatherChance.hot>>\cf0\f0 \
+scorching \f1\cf1 <<print $weatherChance.scorching>>\cf0\f0 \
+rain \f1\cf1 <<print $weatherChance.rain>>\cf0\f0 \
+snow \f1\cf1 <<print $weatherChance.snow>>\cf0\f0 \
+calm \f1\cf1 <<print $weatherChance.calm>>\cf0\f0 \
+breezy \f1\cf1 <<print $weatherChance.breezy>>\cf0\f0 \
+windy \f1\cf1 <<print $weatherChance.windy>>\cf0\f0 \
+gusty \f1\cf1 <<print $weatherChance.gusty>>\cf0\f0 \
+clear \f1\cf1 <<print $weatherChance.clear>>\cf0\f0 \
+hazy \f1\cf1 <<print $weatherChance.hazy>>\cf0\f0 \
+cloudy \f1\cf1 <<print $weatherChance.cloudy>>\cf0\f0 \
+overcast \f1\cf1 <<print $weatherChance.overcast>>\cf0\f0 \
+temp \f1\cf1 <<print $weatherChance.temp>>\cf0\f0 \
+tempRoller \f1\cf1 <<print $weatherChance.tempRoller>>\cf0\f0 \
+precip \f1\cf1 <<print $weatherChance.precip>>\cf0\f0 \
+precipRoller \f1\cf1 <<print $weatherChance.precipRoller>>\cf0\f0 \
+wind \f1\cf1 <<print $weatherChance.wind>>\cf0\f0 \
+windRoller \f1\cf1 <<print $weatherChance.windRoller>>\cf0\f0 \
+sky \f1\cf1 <<print $weatherChance.sky>>\cf0\f0 \
+skyRoller \f1\cf1 <<print $weatherChance.skyRoller>>\cf0\f0 \
+\
+\f1\cf1 <h3>\cf0\f0 weather\f1\cf1 </h3>\cf0\f0 \
+temp \f1\cf1 <<print $weather.temp>>\cf0\f0 \
+precip \f1\cf1 <<print $weather.precip>>\cf0\f0 \
+wind \f1\cf1 <<print $weather.wind>>\cf0\f0 \
+sky \f1\cf1 <<print $weather.sky>>\cf0\f0 \
+\
+\f1\cf1 </div>\cf0\f0 \
+\
+\fs24\b1 stats\b0\fs20 \
+\b\cf2 \ul <\ulnone \cf0 \b0 \
+\f1\cf1 <<display "health">>\cf0\f0 \
+\f1\cf1 <<display "notoriety">>\cf0\f0 \
+\
+\
+\
+\
+<<set $stats to {\
+\
+name: "",\
+\
+dispo: "",\
+\
+\
+health_max: ,\
+stamina_max: ,\
+agility_max: ,\
+\
+\
+health: ,\
+stamina: ,\
+agility: ,\
+\
+aggression: ,\
+curiosity: ,\
+boldness: ,\
+\
+cunning: ,\
+insight: ,\
+charm: ,\
+\
+\
+\
+notoriety: ,\
+bodycount: ,\
+sleep: ,\
+\
+\
+\
+pronoun: ,\
+friendliness: ,\
+\
+\
+}>>\
+\
+\
+\
+\
+physical\
+	agility\
+	stamina\
+	health\
+mental\
+	boldness\
+	aggression\
+	curiosity\
+social\
+	cunning\
+	insight\
+	charm\
+\
+\fs24\b1 sleep\b0\fs20 \
+rest. chance for healing\
+\b\cf2 \ul wake\ulnone \cf0 \b0 \
+or chance to \b\cf2 \ul dream\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 two dog night\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 two dog night\f1\cf1 </h2>\cf0\f0 \
+\
+it's cold. really cold.\
+\
+if done go to \b\cf2 \ul hair of the dog\ulnone \cf0 \b0 \
+\
+\
+\
+\fs24\b1 rv\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul jesse\ulnone \cf0 \b0  is here\
+\
+\fs24\b1 radio station\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul dana\ulnone \cf0 \b0  is here\
+\
+\fs24\b1 shop\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul carlos\ulnone \cf0 \b0  is here\
+\
+\fs24\b1 airstrip\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\fs24\b1 ranch\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul rancher\ulnone \cf0 \b0  lives here\
+\
+\fs24\b1 village\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul villager\ulnone \cf0 \b0  lives here\
+\
+\fs24\b1 joshua\b0\fs20 \
+in the \b\cf2 \ul garden\ulnone \cf0 \b0 \
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\
+\
+joshua\
+gardener\
+gives things\
+\
+\fs24\b1 jesse\b0\fs20 \
+with the \b\cf2 \ul rv\ulnone \cf0 \b0 \
+\
+\fs24\b1 carlos\b0\fs20 \
+in the \b\cf2 \ul shop\ulnone \cf0 \b0 \
+\
+\
+\
+carlos\
+shopkeeper\
+trades\
+\
+\fs24\b1 dana\b0\fs20 \
+in the \b\cf2 \ul radio station\ulnone \cf0 \b0 \
+\
+\fs24\b1 rancher\b0\fs20 \
+on the \b\cf2 \ul ranch\ulnone \cf0 \b0 \
+\
+\fs24\b1 guard\b0\fs20 \
+everywhere\
+\
+\fs24\b1 hawk\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 198\b0\fs20 \
+\
+\
+\fs24\b1 sun\b0\fs20 \
+\f1\cf1 <<if $time.day gte 0 and $time.day lte 5>>\cf0\f0 \
+	\f1\cf1 <<set $time.sun to "night">>\cf0\f0 \
+\f1\cf1 <<elseif $time.day gte 6 and $time.day lte 7>>\cf0\f0 \
+	\f1\cf1 <<set $time.sun to "dawn">>\cf0\f0 \
+\f1\cf1 <<elseif $time.day gte 8 and $time.day lte 11>>\cf0\f0 \
+	\f1\cf1 <<set $time.sun to "morning">>\cf0\f0 \
+\f1\cf1 <<elseif $time.day gte 12 and $time.day lte 15>>\cf0\f0 \
+	\f1\cf1 <<set $time.sun to "afternoon">>\cf0\f0 \
+\f1\cf1 <<elseif $time.day gte 16 and $time.day lte 19>>\cf0\f0 \
+	\f1\cf1 <<set $time.sun to "evening">>\cf0\f0 \
+\f1\cf1 <<elseif $time.day gte 20 and $time.day lte 21>>\cf0\f0 \
+	\f1\cf1 <<set $time.sun to "twilight">>\cf0\f0 \
+\f1\cf1 <<elseif $time.day gte 22 and $time.day lte 24>>\cf0\f0 \
+	\f1\cf1 <<set $time.sun to "night">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 firmament\b0\fs20 \
+\f1\cf1 <<display "sun">>\cf0\f0 \
+\f1\cf1 <<display "moon">>\cf0\f0 \
+\
+\
+\fs24\b1 time\b0\fs20 \
+\f1\cf1 <<set $time.day to $time.clock % 24>>\cf0\f0 \
+\f1\cf1 <<set $time.month to $time.clock % 720>>\cf0\f0 \
+\f1\cf1 <<set $time.year to $time.clock % 8764>>\cf0\f0 \
+\
+\fs24\b1 initialize\b0\fs20 \
+silently initialize the universe. set the stage.\
+\
+\
+\
+\f1\cf1 <<set $time = { clock: random(0,8764) }>>\cf0\f0 \
+\f1\cf1 <<set $time.alive = 0>>\cf0\f0 \
+\
+\
+\f1\cf1 <<set $exterior = { style: "endless" }>>\cf0\f0 \
+\f1\cf1 <<set $weather = { sky: "void" }>>\cf0\f0 \
+\
+\
+\f1\cf1 <<display "update">>\cf0\f0 \
+\f1\cf1 <<display "terrain">>\cf0\f0 \
+\f1\cf1 <<display "doggie">>\cf0\f0 \
+\
+\fs24\b1 story\b0\fs20 \
+quest\
+.active "quest  name"\
+\
+chapter\
+.finished true/false\
+\
+\f1\cf1 <<display "stray">>\cf0\f0 \
+\f1\cf1 <<display "chapter">>\cf0\f0 \
+\
+\
+\
+\
+\
+\fs24\b1 love me love my dog\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 love me, love my dog\f1\cf1 </h2>\cf0\f0 \
+if done go to \b\cf2 \ul come at the dog you best not miss\ulnone \cf0 \b0 \
+\
+\fs24\b1 tunnel\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+portal to the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 farm\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul farmer\ulnone \cf0 \b0  and \b\cf2 \ul farmhand\ulnone \cf0 \b0  live here\
+\
+\fs24\b1 bunker\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\fs24\b1 canyon\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul keith\ulnone \cf0 \b0  is here\
+\
+\fs24\b1 homestead\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul homesteader\ulnone \cf0 \b0  lives here\
+\
+there's a \b\cf2 \ul basement\ulnone \cf0 \b0 \
+\
+\fs24\b1 basement\b0\fs20 \
+in the \b\cf2 \ul homestead\ulnone \cf0 \b0 \
+\
+\fs24\b1 villager\b0\fs20 \
+in the \b\cf2 \ul village\ulnone \cf0 \b0 \
+at the \b\cf2 \ul market\ulnone \cf0 \b0 \
+\
+\fs24\b1 homesteader\b0\fs20 \
+\
+\
+\fs24\b1 chief\b0\fs20 \
+in the \b\cf2 \ul village\ulnone \cf0 \b0 \
+\
+\fs24\b1 door lock\b0\fs20 \
+in the \b\cf2 \ul bunker\ulnone \cf0 \b0 \
+\
+\fs24\b1 farmhand\b0\fs20 \
+on the \b\cf2 \ul farm\ulnone \cf0 \b0 \
+\
+\fs24\b1 badger\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 185\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 190\b0\fs20 \
+\
+\
+\fs24\b1 moon\b0\fs20 \
+\f1\cf1 <<if $time.month gte 0 and $time.month lte 89>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "new">>\cf0\f0 \
+\f1\cf1 <<elseif $time.month gte 90 and $time.month lte 179>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "crescent">>\cf0\f0 \
+\f1\cf1 <<elseif $time.month gte 180 and $time.month lte 269>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "first quarter">>\cf0\f0 \
+\f1\cf1 <<elseif $time.month gte 270 and $time.month lte 359>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "gibbous">>\cf0\f0 \
+\f1\cf1 <<elseif $time.month gte 360 and $time.month lte 449>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "full">>\cf0\f0 \
+\f1\cf1 <<elseif $time.month gte 450 and $time.month lte 539>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "disseminating">>\cf0\f0 \
+\f1\cf1 <<elseif $time.month gte 540 and $time.month lte 629>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "last quarter">>\cf0\f0 \
+\f1\cf1 <<elseif $time.month gte 630 and $time.month lte 720>>\cf0\f0 \
+	\f1\cf1 <<set $time.moon to "balsamic">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 weather\b0\fs20 \
+\
+\
+\
+\
+\f1\cf1 <<set $weatherChance.temp = $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm + $weatherChance.hot + $weatherChance.scorching>>\cf0\f0 \
+\f1\cf1 <<set $weatherChance.tempRoller to random(1, $weatherChance.temp)>>\cf0\f0 \
+\
+\f1\cf1 <<if $weatherChance.tempRoller lte $weatherChance.cold>>\cf0\f0 \
+	\f1\cf1 <<set $weather.temp = "cold">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.tempRoller gt $weatherChance.cold and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool>>\cf0\f0 \
+	\f1\cf1 <<set $weather.temp = "cool">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool + $weatherChance.mild>>\cf0\f0 \
+	\f1\cf1 <<set $weather.temp = "mild">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool + $weatherChance.mild and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm>>\cf0\f0 \
+	\f1\cf1 <<set $weather.temp = "warm">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm + $weatherChance.hot>>\cf0\f0 \
+	\f1\cf1 <<set $weather.temp = "hot">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm + $weatherChance.hot>>\cf0\f0 \
+	\f1\cf1 <<set $weather.temp = "scorching">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\
+\
+\
+\
+\f1\cf1 <<set $weatherChance.precip = $weatherChance.clear + $weatherChance.rain + $weatherChance.snow>>\cf0\f0 \
+\f1\cf1 <<set $weatherChance.precipRoller to random(1, $weatherChance.precip)>>\cf0\f0 \
+\
+\f1\cf1 <<if $weatherChance.precipRoller lte $weatherChance.clear>>\cf0\f0 \
+	\f1\cf1 <<set $weather.precip = "dry">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.precipRoller gt $weatherChance.clear and $weatherChance.precipRoller lte $weatherChance.clear + $weatherChance.rain>>\cf0\f0 \
+	\f1\cf1 <<set $weather.precip = either("rain", "thunderstorm")>>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.precipRoller gt $weatherChance.clear + $weatherChance.rain>>\cf0\f0 \
+	\f1\cf1 <<set $weather.precip = either("snow", "blizzard")>>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\
+\
+\
+\
+\f1\cf1 <<set $weatherChance.wind = $weatherChance.calm + $weatherChance.breezy + $weatherChance.windy + $weatherChance.gusty>>\cf0\f0 \
+\f1\cf1 <<set $weatherChance.windRoller to random(1, $weatherChance.wind)>>\cf0\f0 \
+\
+\f1\cf1 <<if $weatherChance.windRoller lte $weatherChance.calm>>\cf0\f0 \
+	\f1\cf1 <<set $weather.wind = "calm">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.windRoller gt $weatherChance.calm and $weatherChance.windRoller lte $weatherChance.calm + $weatherChance.breezy>>\cf0\f0 \
+	\f1\cf1 <<set $weather.wind = "breezy">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.windRoller gt $weatherChance.calm + $weatherChance.breezy and $weatherChance.windRoller lte $weatherChance.calm + $weatherChance.breezy + $weatherChance.windy>>\cf0\f0 \
+	\f1\cf1 <<set $weather.wind = "windy">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.windRoller gt $weatherChance.calm + $weatherChance.breezy + $weatherChance.windy>>\cf0\f0 \
+	\f1\cf1 <<set $weather.wind = "gusty">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\
+\
+\
+\
+\f1\cf1 <<set $weatherChance.sky = $weatherChance.clear + $weatherChance.hazy + $weatherChance.cloudy + $weatherChance.overcast>>\cf0\f0 \
+\f1\cf1 <<set $weatherChance.skyRoller to random(1, $weatherChance.sky)>>\cf0\f0 \
+\
+\f1\cf1 <<if $weatherChance.skyRoller lte $weatherChance.clear>>\cf0\f0 \
+	\f1\cf1 <<set $weather.sky = "clear">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.skyRoller gt $weatherChance.clear and $weatherChance.skyRoller lte $weatherChance.clear + $weatherChance.hazy>>\cf0\f0 \
+	\f1\cf1 <<set $weather.sky = "hazy">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.skyRoller gt $weatherChance.clear + $weatherChance.hazy and $weatherChance.skyRoller lte $weatherChance.clear + $weatherChance.hazy + $weatherChance.cloudy>>\cf0\f0 \
+	\f1\cf1 <<set $weather.sky = "cloudy">>\cf0\f0 \
+\f1\cf1 <<elseif $weatherChance.skyRoller gt $weatherChance.clear + $weatherChance.hazy + $weatherChance.cloudy>>\cf0\f0 \
+	\f1\cf1 <<set $weather.sky = "overcast">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 season\b0\fs20 \
+\f1\cf1 <<if $time.year gte 0 and $time.year lte 2191>>\cf0\f0 \
+	\f1\cf1 <<set $time.season to "summer">>\cf0\f0 \
+	<<set $weatherChance to {\
+		cold: 0, cool: 0, mild: 0, warm: 1, hot: 12, scorching: 78, \
+		rain: 11, snow: 1,\
+		calm: 53, breezy: 12, windy: 12, gusty: 15,\
+		clear: 55, hazy: 5, cloudy: 14, overcast: 4\
+	}>>\
+\f1\cf1 <<elseif $time.year gte 2192 and $time.year lte 4382>>\cf0\f0 \
+	\f1\cf1 <<set $time.season to "autumn">>\cf0\f0 \
+	<<set $weatherChance to {\
+		cold: 0, cool: 12, mild: 22, warm: 22, hot: 35, scorching: 1,\
+		rain: 8, snow: 2,\
+		calm: 59, breezy: 32, windy: 1, gusty: 1,\
+		clear: 57, hazy: 4, cloudy: 12, overcast: 9\
+	}>>\
+\f1\cf1 <<elseif $time.year gte 4383 and $time.year lte 6572>>\cf0\f0 \
+	\f1\cf1 <<set $time.season to "winter">>\cf0\f0 \
+	<<set $weatherChance to {\
+		cold: 52, cool: 38, mild: 1, warm: 0, hot: 0, scorching: 0,\
+		rain: 5, snow: 9,\
+		calm: 80, breezy: 10, windy: 0, gusty: 0,\
+		clear: 57, hazy: 3, cloudy: 12, overcast: 12\
+	}>>\
+\f1\cf1 <<elseif $time.year gte 6573 and $time.year lte 8764>>\cf0\f0 \
+	\f1\cf1 <<set $time.season to "spring">>\cf0\f0 \
+	<<set $weatherChance to {\
+		cold: 0, cool: 14, mild: 36, warm: 19, hot: 22, scorching: 0,\
+		rain: 6, snow: 1,\
+		calm: 0, breezy: 66, windy: 11, gusty: 15,\
+		clear: 51, hazy: 5, cloudy: 15, overcast: 10\
+	}>>\
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 update\b0\fs20 \
+\f1\cf1 <\f1\cf1 <silently>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<display "time">>\cf0\f0 \
+\f1\cf1 <<display "firmament">>\cf0\f0 \
+\f1\cf1 <<display "season">>\cf0\f0 \
+\f1\cf1 <<display "weather">>\cf0\f0 \
+\f1\cf1 <<display "visibility">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 </silently>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 dawg\b0\fs20 \
+\f1\cf1 <<print $time.season>>\cf0\f0  \f1\cf1 <<print $time.sun>>\cf0\f0 . \f1\cf1 <<print $weather.wind>>\cf0\f0 , \f1\cf1 <<print $weather.sky>>\cf0\f0 , \f1\cf1 <<print $weather.temp>>\cf0\f0 . \f1\cf1 <<if $time.astronomy is true>>\cf0\f0 \f1\cf1 <<print $time.moon>>\cf0\f0  moon.\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0  main stats. description of health. current feeling. passive leveling. \f1\cf1 <<display "update">>\cf0\f0  \b\cf2 \ul *\ulnone \cf0 \b0 \
+\
+\f1\cf1 <<if visited() is 1>>\cf0\f0 \
+\b\cf2 \ul go on.\ulnone \cf0 \b0 \
+\f1\cf1 <\f1\cf1 <else>\cf0\f0 >\cf0\f0 \
+\
+\b\cf2 \ul stats\ulnone \cf0 \b0 \
+\b\cf2 \ul inventory\ulnone \cf0 \b0 \
+\b\cf2 \ul quest\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul map\ulnone \cf0 \b0 \
+\b\cf2 \ul explore\ulnone \cf0 \b0  \
+\b\cf2 \ul stay\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul sleep\ulnone \cf0 \b0 \
+\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+\
+\
+\fs24\b1 dog with two bones\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 dog with two bones\f1\cf1 </h2>\cf0\f0 \
+\
+if done unlock \b\cf2 \ul dog in the dead city\ulnone \cf0 \b0 \
+\
+\
+\f1\cf1 <p class="rose">\cf0\f0 "Take the road. The road will lead you to a garden. You will meet Joshua there. He will give you bones. Take this letter to Joshua. Bring me back the bones. If you do, I will share my soup with you."\f1\cf1 </p>\cf0\f0 \
+\
+\fs24\b1 farmer\b0\fs20 \
+on the \b\cf2 \ul farm\ulnone \cf0 \b0 \
+at the \b\cf2 \ul market\ulnone \cf0 \b0 \
+\
+\fs24\b1 drone\b0\fs20 \
+\
+\
+\fs24\b1 coyote\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 189\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 182\b0\fs20 \
+\
+\
+\fs24\b1 visibility\b0\fs20 \
+\f1\cf1 <<if $time.day gte 20 or $time.day lte 6>>\cf0\f0 \
+	\f1\cf1 <<if $weather.sky eq "clear" or $weather.sky eq "hazy">>\cf0\f0 \
+		\f1\cf1 <<set $time.astronomy = true >>\cf0\f0 \
+	\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\f1\cf1 <\f1\cf1 <else>\cf0\f0 >\cf0\f0 \
+	\f1\cf1 <<set $time.astronomy = false >>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\fs24\b1 quest\b0\fs20 \
+\b\cf2 \ul <\ulnone \cf0 \b0 \
+\
+check for active quest\
+\
+show unfinished quests\
+toggle one to active\
+\
+show all finished quests\
+\
+storytelling\
+\f1\cf1 <<display "story">>\cf0\f0 \
+\
+\
+enabled vs disabled\
+if enabled, incomplete vs complete\
+if incomplete, active vs inactive\
+\
+\
+quests based on location. find the nearest X, do A, get B\
+\
+quest.giver\
+quest.giverLocation\
+quest.reward\
+\
+level up based on stats\
+if curiosity gt 4\
+get bonus\
+elseif curiosity gt 9\
+bigger bonus \
+else\
+no bonus\
+etc\
+\
+\
+\fs24\b1 flee\b0\fs20 \
+check something agility\
+\b\cf2 \ul explore\ulnone \cf0 \b0  if able to escape \
+\b\cf2 \ul fight\ulnone \cf0 \b0  if they chase you\
+play dead in desperation?\
+\
+\fs24\b1 back\b0\fs20 \
+they do some things\
+run all your checks\
+make choices\
+it's done \b\cf2 \ul finish\ulnone \cf0 \b0 \
+if health runs out \b\cf2 \ul death\ulnone \cf0 \b0 \
+get out \b\cf2 \ul flee\ulnone \cf0 \b0 \
+respond \b\cf2 \ul forth\ulnone \cf0 \b0 \
+\
+\
+\
+\fs24\b1 dog in the night\b0\fs20 \
+\
+\
+\fs24\b1 hair of the dog\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 hair of the dog\f1\cf1 </h2>\cf0\f0 \
+\
+unlocks \b\cf2 \ul mate\ulnone \cf0 \b0 \
+\
+shortcut to \b\cf2 \ul dog in the dead city\ulnone \cf0 \b0 \
+\
+\fs24\b1 sidewalk\b0\fs20 \
+connects\
+\b\cf2 \ul boardwalk\ulnone \cf0 \b0 \
+\b\cf2 \ul church\ulnone \cf0 \b0 \
+\b\cf2 \ul market\ulnone \cf0 \b0 \
+\b\cf2 \ul lab\ulnone \cf0 \b0 \
+\b\cf2 \ul construction site\ulnone \cf0 \b0 \
+\b\cf2 \ul downtown\ulnone \cf0 \b0 \
+\b\cf2 \ul dumpster\ulnone \cf0 \b0 \
+\b\cf2 \ul alley\ulnone \cf0 \b0 \
+\b\cf2 \ul bowling alley\ulnone \cf0 \b0 \
+\b\cf2 \ul slum\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 boardwalk\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul big man\ulnone \cf0 \b0  and \b\cf2 \ul little man\ulnone \cf0 \b0  are here\
+\
+\fs24\b1 church\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 alley\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 market\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 lab\b0\fs20 \
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\fs24\b1 construction site\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 ginger\b0\fs20 \
+in the \b\cf2 \ul lab\ulnone \cf0 \b0 \
+\
+\fs24\b1 priest\b0\fs20 \
+in the \b\cf2 \ul church\ulnone \cf0 \b0 \
+\
+\fs24\b1 little man\b0\fs20 \
+on the \b\cf2 \ul boardwalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 foreman\b0\fs20 \
+at the \b\cf2 \ul construction site\ulnone \cf0 \b0 \
+\
+\fs24\b1 wild dog\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 193\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 191\b0\fs20 \
+\
+\
+\fs24\b1 seek\b0\fs20 \
+\
+\
+\fs24\b1 wasteland\b0\fs20 \
+\b\cf2 \ul <\ulnone \cf0 \b0  \b\cf2 \ul map\ulnone \cf0 \b0 \
+\
+check location. \f1\cf1 <<display "zone">>\cf0\f0 \
+\
+\f1\cf1 <<if visited() eq 1>>\cf0\f0 \
+have to \b\cf2 \ul keep going.\ulnone \cf0 \b0 \
+\f1\cf1 <\f1\cf1 <else>\cf0\f0 >\cf0\f0 \
+\
+go somewhere else \b\cf2 \ul explore\ulnone \cf0 \b0 \
+stop here maybe this is a good place to \b\cf2 \ul build\ulnone \cf0 \b0 \
+\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+\
+\
+\fs24\b1 explore\b0\fs20 \
+\f1\cf1 <<if visited() is 1>>\cf0\f0 \
+\
+\f1\cf1 <\f1\cf1 <silently>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<display "a girl and her dog">>\cf0\f0  \
+\f1\cf1 <\f1\cf1 </silently>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+\
+\b\cf2 \ul <\ulnone \cf0 \b0 \
+\
+check if questing, active location reminder\
+check for \b\cf2 \ul encounter\ulnone \cf0 \b0  someone/something is here\
+\
+seek out \b\cf2 \ul map\ulnone \cf0 \b0 \
+generate new location.\
+\f1\cf1 <\f1\cf1 <silently>\cf0\f0 >\cf0\f0 \
+\f1\cf1 <<display "terrain">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 </silently>\cf0\f0 >\cf0\f0 \
+\
+stop here maybe this is a good place to \b\cf2 \ul build\ulnone \cf0 \b0 \
+move on keep walking keep going \b\cf2 \ul explore\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 fight\b0\fs20 \
+turn based. stats plus luck/randomness. initiative check, who has higher? \
+\
+if they get you \b\cf2 \ul back\ulnone \cf0 \b0 \
+or you get them \b\cf2 \ul forth\ulnone \cf0 \b0 \
+or pass escape check to \b\cf2 \ul flee\ulnone \cf0 \b0 \
+\
+\fs24\b1 forth\b0\fs20 \
+you do some things\
+run all their checks\
+see the consequences\
+if it's done \b\cf2 \ul finish\ulnone \cf0 \b0 \
+check if they respond \b\cf2 \ul back\ulnone \cf0 \b0 \
+if they flee and get away \b\cf2 \ul wasteland\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 dog in the dead city\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 dog in the dead city\f1\cf1 </h2>\cf0\f0 \
+\
+\
+you're a dog, who gives a fuck about human things? they can do whatever they're doing. \
+\
+leads to \b\cf2 \ul dog days of summer\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 distillery\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 dumpster\b0\fs20 \
+in the \b\cf2 \ul alley\ulnone \cf0 \b0 \
+\
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\fs24\b1 arena\b0\fs20 \
+in the \b\cf2 \ul alley\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul fighter\ulnone \cf0 \b0  is here\
+\
+\fs24\b1 bowling alley\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul cecil\ulnone \cf0 \b0  is here\
+\
+\fs24\b1 prospector\b0\fs20 \
+\
+\
+\fs24\b1 fighter\b0\fs20 \
+in the \b\cf2 \ul arena\ulnone \cf0 \b0 \
+\
+\fs24\b1 cecil\b0\fs20 \
+in the \b\cf2 \ul bowling alley\ulnone \cf0 \b0 \
+\
+\fs24\b1 big man\b0\fs20 \
+on the \b\cf2 \ul boardwalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 warlord\b0\fs20 \
+\b\cf2 \ul downtown\ulnone \cf0 \b0 \
+\
+\fs24\b1 bear\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 192\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 202\b0\fs20 \
+\
+\
+\fs24\b1 map-world\b0\fs20 \
+save map to memory when necessary, create organic world map\
+x/y\
+check if x/y exists\
+if no, save\
+if yes, load\
+display worldmap grid at 25% size \
+    []\
+think about slime mold\
+expanding until finding randomly generated spaces\
+checks if something exists or not to determine if should continue some element\
+how to different road surfaces; highway etc?\
+\
+\
+\
+\
+\fs24\b1 encounter\b0\fs20 \
+check zone, check quest, generate encounter.\
+\
+approach, avoid\
+\
+if hostile, could be a \b\cf2 \ul fight\ulnone \cf0 \b0 \
+if neutral, can take off in \b\cf2 \ul pursuit\ulnone \cf0 \b0 \
+if friendly, chance to \b\cf2 \ul socialize\ulnone \cf0 \b0 \
+if you can leave, back to \b\cf2 \ul wasteland\ulnone \cf0 \b0 \
+or back to \b\cf2 \ul map\ulnone \cf0 \b0 \
+\
+\fs24\b1 pursuit\b0\fs20 \
+you're chasing someone \
+if they run away you're back in the \b\cf2 \ul wasteland\ulnone \cf0 \b0 \
+pass a check to \b\cf2 \ul fight\ulnone \cf0 \b0 \
+or maybe they want to \b\cf2 \ul socialize\ulnone \cf0 \b0 \
+or back to \b\cf2 \ul wasteland\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 finish\b0\fs20 \
+chance for \b\cf2 \ul pursuit\ulnone \cf0 \b0  if they ran away\
+check for \b\cf2 \ul reward\ulnone \cf0 \b0 \
+\
+\
+\
+\
+\fs24\b1 come at the dog you best not miss\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 come at the dog, you best not miss.\f1\cf1 </h2>\cf0\f0 \
+\
+\fs24\b1 downtown\b0\fs20 \
+\
+\
+\fs24\b1 refuge\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 school\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 backroom\b0\fs20 \
+door to \b\cf2 \ul dungeon\ulnone \cf0 \b0 \
+\
+\fs24\b1 slum\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 office\b0\fs20 \
+\
+\
+\fs24\b1 distiller\b0\fs20 \
+in the \b\cf2 \ul distillery\ulnone \cf0 \b0 \
+\
+\fs24\b1 janitor\b0\fs20 \
+in the \b\cf2 \ul office\ulnone \cf0 \b0 \
+in the \b\cf2 \ul school\ulnone \cf0 \b0 \
+\b\cf2 \ul downtown\ulnone \cf0 \b0 \
+\
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\fs24\b1 manager\b0\fs20 \
+working late at the \b\cf2 \ul office\ulnone \cf0 \b0 \
+\
+\fs24\b1 sentry\b0\fs20 \
+\
+\
+\fs24\b1 bobcat\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 208\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 203\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 210\b0\fs20 \
+snippet map n stats\
+\
+<<set $map to [\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,0,0,0,0,0,0,0,0,0,0,0]\
+]>>\
+\
+\
+\
+\
+\
+\
+\
+\
+<<set $npc to {\
+\
+name: "",\
+\
+dispo: "",\
+\
+\
+health_max: ,\
+stamina_max: ,\
+agility_max: ,\
+\
+\
+health: ,\
+stamina: ,\
+agility: ,\
+\
+\
+\
+\
+aggression: ,\
+curiosity: ,\
+boldness: ,\
+\
+notoriety: ,\
+bodycount: ,\
+sleep: ,\
+\
+\
+\
+pronoun: ,\
+friendliness: ,\
+\
+\
+}>>\
+\
+\
+\
+\
+\
+\
+\fs24\b1 leave\b0\fs20 \
+\f1\cf1 <<display "map-generate">>\cf0\f0 \
+\f1\cf1 <<display "map">>\cf0\f0 \
+\
+\fs24\b1 map-draw\b0\fs20 \
+\f1\cf1 <div class="map">\cf0\f0 \
+\f1\cf1 <<for $i to 0; $i lt $map.length; $i++>>\cf0\f0 \
+	\f1\cf1 <<for $k to 0; $k lt $map[$i].length; $k++>>\cf0\f0 \
+    	\f1\cf1 <<if $k eq $posX and $i eq $posY>>\cf0\f0 \
+        	\f1\cf1 <<print "@">>\cf0\f0 \
+        \f1\cf1 <<elseif $map[$i][$k] eq -1>>\cf0\f0 \
+        	\f1\cf1 <<print "e">>\cf0\f0 \
+        \f1\cf1 <<elseif $map[$i][$k] eq 0>>\cf0\f0 \
+        	\f1\cf1 <<print "f">>\cf0\f0 \
+        \f1\cf1 <<elseif $map[$i][$k] lte 2>>\cf0\f0 \
+			\f1\cf1 <<print "d">>\cf0\f0 \
+        \f1\cf1 <<elseif $map[$i][$k] eq 3>>\cf0\f0 \
+        	\f1\cf1 <<print "c">>\cf0\f0 \
+        \f1\cf1 <<elseif $map[$i][$k] lte 9>>\cf0\f0 \
+        	\f1\cf1 <<print "b">>\cf0\f0 \
+        \f1\cf1 <<elseif $map[$i][$k] gte 10>>\cf0\f0 \
+        	\f1\cf1 <<print "a">>\cf0\f0 \
+		\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+	\f1\cf1 <\f1\cf1 </for>\cf0\f0 >\cf0\f0 \
+	\f1\cf1 <br>\cf0\f0 \
+\f1\cf1 <\f1\cf1 </for>\cf0\f0 >\cf0\f0 \
+\f1\cf1 </div>\cf0\f0 \
+\
+\
+water meat loot encounter\
+\
+\
+1% water (actually it's 0.2%)\
+11% tree\
+\
+\
+\
+1/500 water\
+1/500 meat\
+56/500 tree\
+23/500 sticks\
+\
+\
+\f1\cf1 <<if $map.containsAny("water", "meat")>>\cf0\f0 \
+smells good\
+\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+\
+\
+\fs24\b1 map-generate\b0\fs20 \
+<<set $map to [\
+[0,0,0,0,0,0,0,0,0,0,0,0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],\
+[0,0,0,0,0,0,0,0,0,0,0,0]\
+]>>\
+\
+\
+\
+\fs24\b1 zone\b0\fs20 \
+zone\
+\f1\cf1 <<display "section">>\cf0\f0  in \f1\cf1 <<display "location">>\cf0\f0 \
+\
+check for \f1\cf1 <<display "resource">>\cf0\f0 \
+\
+\fs24\b1 home\b0\fs20 \
+\b\cf2 \ul <\ulnone \cf0 \b0 \
+stay\
+\b\cf2 \ul pack\ulnone \cf0 \b0  is here\
+if more improvements to make, choice to \b\cf2 \ul build\ulnone \cf0 \b0 \
+if settled somewhere with npc, \b\cf2 \ul socialize\ulnone \cf0 \b0 \
+\
+\fs24\b1 build\b0\fs20 \
+textfield input for making ascii \b\cf2 \ul home\ulnone \cf0 \b0 \
+\
+\fs24\b1 socialize\b0\fs20 \
+\b\cf2 \ul talk\ulnone \cf0 \b0 \
+\b\cf2 \ul trade\ulnone \cf0 \b0 \
+\b\cf2 \ul quest\ulnone \cf0 \b0  if active\
+back to \b\cf2 \ul wasteland\ulnone \cf0 \b0 \
+\
+\fs24\b1 talk\b0\fs20 \
+dialog. checks. anything could happen.\
+\
+could unlock a chance to \b\cf2 \ul trade\ulnone \cf0 \b0 \
+could start a \b\cf2 \ul fight\ulnone \cf0 \b0 \
+or back to \b\cf2 \ul socialize\ulnone \cf0 \b0 \
+\
+\fs24\b1 dog days of summer\b0\fs20 \
+if done unlock \b\cf2 \ul even the devil can't fool a dog\ulnone \cf0 \b0 \
+\
+\fs24\b1 suburbs\b0\fs20 \
+portal to the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+set zone to 4\
+\
+\fs24\b1 sewer\b0\fs20 \
+on the \b\cf2 \ul sidewalk\ulnone \cf0 \b0 \
+\
+\fs24\b1 dungeon\b0\fs20 \
+get out through the \b\cf2 \ul backroom\ulnone \cf0 \b0 \
+\
+\fs24\b1 legionnaire\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+in the \b\cf2 \ul camp\ulnone \cf0 \b0 \
+at the \b\cf2 \ul market\ulnone \cf0 \b0 \
+\
+\fs24\b1 chipmunk\b0\fs20 \
+\
+\
+\fs24\b1 sparrow\b0\fs20 \
+you find a sparrow. it chirps at you, hops, and gives you the side eye.\
+\
+\fs24\b1 Untitled Passage 206\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 201\b0\fs20 \
+\
+\
+\fs24\b1 north\b0\fs20 \
+\f1\cf1 <<set $posY -= 1>>\cf0\f0 \
+\f1\cf1 <<display "map">>\cf0\f0 \
+\
+\fs24\b1 section\b0\fs20 \
+1 2 3 4 or 5\
+\
+\fs24\b1 location\b0\fs20 \
+either \f1\cf1 <<display "exterior">>\cf0\f0  or \f1\cf1 <<display "interior">>\cf0\f0 \
+\
+exterior or interior. atmosphere, climate, weather, vibe, temperature, humidity, light.\
+\
+\fs24\b1 trade\b0\fs20 \
+check \b\cf2 \ul inventory\ulnone \cf0 \b0 \
+\b\cf2 \ul socialize\ulnone \cf0 \b0 \
+\
+leave \b\cf2 \ul wasteland\ulnone \cf0 \b0 \
+\
+\fs24\b1 dog tired\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 dog tired\f1\cf1 </h2>\cf0\f0 \
+\
+\fs24\b1 mountain lion\b0\fs20 \
+\
+\
+\fs24\b1 moth\b0\fs20 \
+\
+\
+\fs24\b1 rat\b0\fs20 \
+\
+\
+\fs24\b1 Untitled Passage 207\b0\fs20 \
+\
+\
+\fs24\b1 west\b0\fs20 \
+\f1\cf1 <<set $posX -= 1>>\cf0\f0 \
+\f1\cf1 <<display "map">>\cf0\f0 \
+\
+\fs24\b1 map\b0\fs20 \
+\b\cf2 \ul <\ulnone \cf0 \b0 \
+\
+\f1\cf1 <<set $time.alive += 0.05 >>\cf0\f0 \
+\f1\cf1 <<print $time.alive.toFixed(0)>>\cf0\f0 \
+\
+\
+\f1\cf1 <<display "map-draw">>\cf0\f0 \
+\
+\f1\cf1 <div class="map-controls">\cf0\f0 \
+\
+\
+\
+\f1\cf1 <<if $map[$posY-1][$posX] gte 3>>\cf0\f0 \
+\f1\cf1 <span class="north">\cf0\f0 \b\cf2 \ul \u8593?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY][$posX+1] gte 3>>\cf0\f0 \
+\f1\cf1 <span class="east">\cf0\f0 \b\cf2 \ul \u8594?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY+1][$posX] gte 3>>\cf0\f0 \
+\f1\cf1 <span class="south">\cf0\f0 \b\cf2 \ul \u8595?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY][$posX-1] gte 3>>\cf0\f0 \
+\f1\cf1 <span class="west">\cf0\f0 \b\cf2 \ul \u8592?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\
+\
+\f1\cf1 <<if $map[$posY-1][$posX] eq 0>>\cf0\f0 \
+\f1\cf1 <span class="north">\cf0\f0 \b\cf2 \ul \u8593?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY][$posX+1] eq 0>>\cf0\f0 \
+\f1\cf1 <span class="east">\cf0\f0 \b\cf2 \ul \u8594?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY+1][$posX] eq 0>>\cf0\f0 \
+\f1\cf1 <span class="south">\cf0\f0 \b\cf2 \ul \u8595?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY][$posX-1] eq 0>>\cf0\f0 \
+\f1\cf1 <span class="west">\cf0\f0 \b\cf2 \ul \u8592?\ulnone \cf0 \b0 \f1\cf1 </span>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 </div>\cf0\f0 \
+\
+\f1\cf1 <div class="map-actions">\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY][$posX] eq 3>>\cf0\f0 \
+\f1\cf1 <<display "map-specials">>\cf0\f0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 <<if $map[$posY][$posX] lte 9>>\cf0\f0 \
+\b\cf2 \ul relieve yourself\ulnone \cf0 \b0 \
+\f1\cf1 <\f1\cf1 <endif>\cf0\f0 >\cf0\f0 \
+\
+\f1\cf1 </div>\cf0\f0 \
+\
+\fs24\b1 east\b0\fs20 \
+\f1\cf1 <<set $posX += 1>>\cf0\f0 \
+\f1\cf1 <<display "map">>\cf0\f0 \
+\
+\fs24\b1 exterior\b0\fs20 \
+exterior\
+explore seek\
+\
+\fs24\b1 interior\b0\fs20 \
+interior\
+is climate control yes no\
+\
+\fs24\b1 inventory\b0\fs20 \
+\b\cf2 \ul <\ulnone \cf0 \b0  \b\cf2 \ul map\ulnone \cf0 \b0 \
+\
+limited space\
+only one thing at a time\
+either \b\cf2 \ul resource\ulnone \cf0 \b0  or \b\cf2 \ul item\ulnone \cf0 \b0 \
+\
+\fs24\b1 loot\b0\fs20 \
+something good to sell or use.\
+stuff and things for your \b\cf2 \ul inventory\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul map\ulnone \cf0 \b0 \
+\
+\fs24\b1 reward\b0\fs20 \
+some kind of bonus\
+chance for \f1\cf1 <<display "loot">>\cf0\f0 \
+tiny chance for \f1\cf1 <<display "artifact">>\cf0\f0 \
+\
+stats bonus.\
+\
+stats for talking or trading or questing or fighting or exploring or seeking.\
+\
+\fs24\b1 reservoir dawg\b0\fs20 \
+\
+\
+\fs24\b1 was that the dog\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 was that the dog?\f1\cf1 </h2>\cf0\f0 \
+\
+\fs24\b1 highway\b0\fs20 \
+connects\
+\b\cf2 \ul camp\ulnone \cf0 \b0 \
+\b\cf2 \ul oil well\ulnone \cf0 \b0 \
+\b\cf2 \ul store\ulnone \cf0 \b0 \
+\b\cf2 \ul power plant\ulnone \cf0 \b0 \
+\b\cf2 \ul motel\ulnone \cf0 \b0 \
+\b\cf2 \ul mill\ulnone \cf0 \b0 \
+\b\cf2 \ul junkyard\ulnone \cf0 \b0 \
+\b\cf2 \ul refinery\ulnone \cf0 \b0 \
+\b\cf2 \ul gas station\ulnone \cf0 \b0 \
+\b\cf2 \ul desert\ulnone \cf0 \b0 \
+\b\cf2 \ul river\ulnone \cf0 \b0 \
+\b\cf2 \ul pine forest\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 camp\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+\fs24\b1 oil well\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+\fs24\b1 store\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+\fs24\b1 power plant\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+there's a \b\cf2 \ul control room\ulnone \cf0 \b0 \
+\
+\fs24\b1 control room\b0\fs20 \
+in the \b\cf2 \ul power plant\ulnone \cf0 \b0 \
+\
+\fs24\b1 motel\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+shelters \b\cf2 \ul proprietor\ulnone \cf0 \b0  and \b\cf2 \ul guest\ulnone \cf0 \b0 \
+\
+\fs24\b1 guest\b0\fs20 \
+at the \b\cf2 \ul motel\ulnone \cf0 \b0 \
+\
+\fs24\b1 proprietor\b0\fs20 \
+\
+\
+\fs24\b1 juan\b0\fs20 \
+at the \b\cf2 \ul power plant\ulnone \cf0 \b0 \
+\
+\fs24\b1 ninja kitty\b0\fs20 \
+\
+\
+\fs24\b1 snail\b0\fs20 \
+\
+\
+\fs24\b1 fox\b0\fs20 \
+\
+\
+\fs24\b1 south\b0\fs20 \
+\f1\cf1 <<set $posY += 1>>\cf0\f0 \
+\f1\cf1 <<display "map">>\cf0\f0 \
+\
+\fs24\b1 pine forest\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+conceals the \b\cf2 \ul compound\ulnone \cf0 \b0 \
+\
+\fs24\b1 compound\b0\fs20 \
+in the \b\cf2 \ul pine forest\ulnone \cf0 \b0 \
+\
+\fs24\b1 enclaver\b0\fs20 \
+in the \b\cf2 \ul compound\ulnone \cf0 \b0 \
+\
+\fs24\b1 duck\b0\fs20 \
+\
+\
+\fs24\b1 frog\b0\fs20 \
+\
+\
+\fs24\b1 skinwalker\b0\fs20 \
+\
+\
+\fs24\b1 even the devil can't fool a dog\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 even the devil can't fool a dog\f1\cf1 </h2>\cf0\f0 \
+\
+choose a gate in the fence.\
+\
+\b\cf2 \ul dog gone\ulnone \cf0 \b0 \
+\
+\fs24\b1 river\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+portal to the \b\cf2 \ul path\ulnone \cf0 \b0 \
+once you cross the river, you don't come back\
+set zone to 5\
+\
+\fs24\b1 desert\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+chance to find \b\cf2 \ul vending machine\ulnone \cf0 \b0 \
+\
+\fs24\b1 gas station\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\fs24\b1 mill\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+\fs24\b1 junkyard\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+\fs24\b1 refinery\b0\fs20 \
+on the \b\cf2 \ul highway\ulnone \cf0 \b0 \
+\
+\fs24\b1 vending machine\b0\fs20 \
+in the \b\cf2 \ul desert\ulnone \cf0 \b0 \
+\
+chance for \b\cf2 \ul artifact\ulnone \cf0 \b0 \
+\
+nonverbal, makes noises\
+\
+\fs24\b1 armadillo\b0\fs20 \
+\
+\
+\fs24\b1 map-specials\b0\fs20 \
+\f1\cf1 <<set $map_special to random(1,20)>>\cf0\f0 \
+\f1\cf1 <<if $map_special eq 1>>\cf0\f0 \
+\b\cf2 \ul reward\ulnone \cf0 \b0 \
+\f1\cf1 <<elseif $map_special lte 3>>\cf0\f0 \
+\b\cf2 \ul encounter\ulnone \cf0 \b0 \
+\f1\cf1 <<elseif $map_special lte 5>>\cf0\f0 \
+\b\cf2 \ul loot\ulnone \cf0 \b0 \
+\f1\cf1 <<elseif $map_special lte 9>>\cf0\f0 \
+\b\cf2 \ul consume\ulnone \cf0 \b0  meat\
+\f1\cf1 <<elseif $map_special lte 14>>\cf0\f0 \
+\b\cf2 \ul drink\ulnone \cf0 \b0  water\
+\f1\cf1 <<elseif $map_special gte 15>>\cf0\f0 \
+nothing\
+\
+\f1\cf1 <\f1\cf1 </if>\cf0\f0 >\cf0\f0 \
+\
+\
+\
+\
+\fs24\b1 pack\b0\fs20 \
+if completed love quest, option to \b\cf2 \ul mate\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 resource\b0\fs20 \
+resources\
+\
+consume: heal, feed.\
+\
+\f1\cf1 <<display "water">>\cf0\f0 \
+\
+river, lake, stream\
+\
+utilize: grow, harvest?\
+\
+\fs24\b1 achievement\b0\fs20 \
+\f1\cf1 <<display "dawg's best friend">>\cf0\f0 \
+\f1\cf1 <<display "dawg of wasteville">>\cf0\f0 \
+\f1\cf1 <<display "air dawg">>\cf0\f0 \
+\f1\cf1 <<display "yo dawg">>\cf0\f0 \
+\f1\cf1 <<display "ghost dawg">>\cf0\f0 \
+\f1\cf1 <<display "one dawg plus two">>\cf0\f0 \
+\f1\cf1 <<display "old dawg new tricks">>\cf0\f0 \
+\f1\cf1 <<display "rex">>\cf0\f0 \
+\f1\cf1 <<display "grab your gun and bring in the dawg">>\cf0\f0 \
+\f1\cf1 <<display "dawg pack">>\cf0\f0 \
+\
+\
+\fs24\b1 artifact\b0\fs20 \
+a special thing.\
+\
+could be\
+\f1\cf1 <<display "cranium">>\cf0\f0 \
+\f1\cf1 <<display "jawbone">>\cf0\f0 \
+\f1\cf1 <<display "joints">>\cf0\f0 \
+\f1\cf1 <<display "brain">>\cf0\f0 \
+\f1\cf1 <<display "armor">>\cf0\f0 \
+\f1\cf1 <<display "pack">>\cf0\f0 \
+\f1\cf1 <<display "teeth">>\cf0\f0 \
+\f1\cf1 <<display "claws">>\cf0\f0 \
+\
+\
+\fs24\b1 snake\b0\fs20 \
+\
+\
+\fs24\b1 skunk\b0\fs20 \
+\
+\
+\fs24\b1 deer\b0\fs20 \
+\
+\
+\fs24\b1 dog gone\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 dog gone\f1\cf1 </h2>\cf0\f0 \
+\b\cf2 \ul going to see a man about a dog\ulnone \cf0 \b0 \
+become the \b\cf2 \ul once and future dog\ulnone \cf0 \b0 \
+\b\cf2 \ul dog stay, lie down, roll over\ulnone \cf0 \b0 \
+they say \b\cf2 \ul all dogs go to heaven\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 path\b0\fs20 \
+connects\
+\b\cf2 \ul mesa\ulnone \cf0 \b0 \
+\b\cf2 \ul wells\ulnone \cf0 \b0 \
+\b\cf2 \ul battlefield\ulnone \cf0 \b0 \
+\b\cf2 \ul crash\ulnone \cf0 \b0 \
+\b\cf2 \ul bivuac\ulnone \cf0 \b0 \
+\b\cf2 \ul windfarm\ulnone \cf0 \b0 \
+\b\cf2 \ul crater\ulnone \cf0 \b0 \
+\
+\fs24\b1 wells\b0\fs20 \
+on the \b\cf2 \ul path\ulnone \cf0 \b0 \
+\
+dry\
+\
+\fs24\b1 windfarm\b0\fs20 \
+on the \b\cf2 \ul path\ulnone \cf0 \b0 \
+still\
+\
+\fs24\b1 crater\b0\fs20 \
+on the \b\cf2 \ul path\ulnone \cf0 \b0 \
+\
+\b\cf2 \ul ruins\ulnone \cf0 \b0 \
+\
+\fs24\b1 old gray tail\b0\fs20 \
+\
+\
+\fs24\b1 crow\b0\fs20 \
+\
+\
+\fs24\b1 lizard\b0\fs20 \
+\
+\
+\fs24\b1 owl\b0\fs20 \
+\
+\
+\fs24\b1 beaver\b0\fs20 \
+\
+\
+\fs24\b1 consume\b0\fs20 \
+ate the meat\
+hunger bonus\
+health bonus\
+\
+\b\cf2 \ul map\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 puppies\b0\fs20 \
+new life in the \b\cf2 \ul pack\ulnone \cf0 \b0 \
+\
+neonatal 10 days\
+transitional 7 days\
+socialization 90 days\
+juvenile 90 days\
+adolescent 2 years\
+adult ++\
+\
+\
+\
+\fs24\b1 mate\b0\fs20 \
+chance to \b\cf2 \ul reproduce\ulnone \cf0 \b0 \
+\
+\fs24\b1 water\b0\fs20 \
+\
+\
+\b\cf2 \ul drink\ulnone \cf0 \b0 \
+\
+\
+goes to \b\cf2 \ul health\ulnone \cf0 \b0 \
+\
+windmill\
+storage tank\
+water trough\
+\
+\
+\fs24\b1 meat\b0\fs20 \
+\b\cf2 \ul eat\ulnone \cf0 \b0 \
+\
+goes to \b\cf2 \ul health\ulnone \cf0 \b0 \
+\
+\fs24\b1 sticks\b0\fs20 \
+\b\cf2 \ul gather\ulnone \cf0 \b0  ?\
+\
+for \b\cf2 \ul build\ulnone \cf0 \b0 \
+\
+\fs24\b1 cranium\b0\fs20 \
+armored skullcap\
+better defense\
+\
+\fs24\b1 jawbone\b0\fs20 \
+exoskeleton\
+better attack\
+\
+\fs24\b1 teeth\b0\fs20 \
+titanium grill\
+more damage\
+\
+\fs24\b1 yo dawg\b0\fs20 \
+reproduce\
+\
+\fs24\b1 dawg's best friend\b0\fs20 \
+get a human companion\
+\
+\fs24\b1 one dawg plus two equals\b0\fs20 \
+inspire the man at the radio station\
+\
+\fs24\b1 Untitled Passage 211\b0\fs20 \
+\
+\
+\fs24\b1 going to see a man about a dog\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 going to see a man about a dog\f1\cf1 </h2>\cf0\f0 \
+\
+leave the wastes on the highway.\
+\
+\fs24\b1 bivuac\b0\fs20 \
+on the \b\cf2 \ul path\ulnone \cf0 \b0 \
+\
+\fs24\b1 mesa\b0\fs20 \
+on the \b\cf2 \ul path\ulnone \cf0 \b0 \
+\
+conceals \b\cf2 \ul clifftown\ulnone \cf0 \b0 \
+\
+\fs24\b1 battlefield\b0\fs20 \
+on the \b\cf2 \ul path\ulnone \cf0 \b0 \
+\
+recent\
+but not fresh\
+\
+what's left of \b\cf2 \ul war machine\ulnone \cf0 \b0 \
+\
+\fs24\b1 crash\b0\fs20 \
+on the \b\cf2 \ul path\ulnone \cf0 \b0 \
+\
+explore the \b\cf2 \ul wreckage\ulnone \cf0 \b0 \
+\
+\fs24\b1 ruins\b0\fs20 \
+in the \b\cf2 \ul crater\ulnone \cf0 \b0 \
+\
+conceals the \b\cf2 \ul hold\ulnone \cf0 \b0 \
+\
+\fs24\b1 eagle\b0\fs20 \
+\
+\
+\fs24\b1 squirrel\b0\fs20 \
+\
+\
+\fs24\b1 marten\b0\fs20 \
+\
+\
+\fs24\b1 excrement\b0\fs20 \
+occasional demand. easily remedied.\
+\
+\b\cf2 \ul map\ulnone \cf0 \b0 \
+\
+\fs24\b1 reproduce\b0\fs20 \
+make \b\cf2 \ul puppies\ulnone \cf0 \b0 \
+\
+63+-9 days gestation\
+\
+\
+\
+\fs24\b1 straw\b0\fs20 \
+\b\cf2 \ul gather\ulnone \cf0 \b0 \
+\
+\
+\
+\fs24\b1 dirt\b0\fs20 \
+\b\cf2 \ul dig\ulnone \cf0 \b0 \
+\
+\fs24\b1 joints\b0\fs20 \
+exoskeleton\
+better agility\
+\
+\fs24\b1 claws\b0\fs20 \
+titanium claws\
+more damage\
+\
+\fs24\b1 old dawg new tricks\b0\fs20 \
+max out a skill after n time\
+\
+\fs24\b1 dawg of wasteville\b0\fs20 \
+terrorize the denizens of the wastes\
+\
+\fs24\b1 grab your gun and bring in the dawg\b0\fs20 \
+find your missing girl\
+\
+"what do you hear?" "nothing but the rain."\
+\
+\
+\
+\fs24\b1 grass\b0\fs20 \
+\b\cf2 \ul gather\ulnone \cf0 \b0 \
+\b\cf2 \ul eat\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 once and future dog\b0\fs20 \
+\f1\cf1 <h2>\cf0\f0 once and future dog\f1\cf1 </h2>\cf0\f0 \
+\
+dog is lord of all wastes.\
+live or die at dog's mercy.\
+dog is a warlord with nukes.\
+\
+\fs24\b1 clifftown\b0\fs20 \
+in the \b\cf2 \ul mesa\ulnone \cf0 \b0 \
+\
+"paintings left on the walls from thousands of years ago no people ust animals the sun the moon whatever they thought important enough to remember" \
+\
+\fs24\b1 war machine\b0\fs20 \
+on the \b\cf2 \ul battlefield\ulnone \cf0 \b0 \
+\
+\fs24\b1 wreckage\b0\fs20 \
+in the \b\cf2 \ul crash\ulnone \cf0 \b0 \
+\
+\fs24\b1 hold\b0\fs20 \
+out to \b\cf2 \ul ruins\ulnone \cf0 \b0 \
+\
+one last remaining \b\cf2 \ul hold dweller\ulnone \cf0 \b0 \
+\
+\
+\
+\fs24\b1 hold dweller\b0\fs20 \
+in the \b\cf2 \ul hold\ulnone \cf0 \b0 .\
+\
+has something to say. something about yesterday.\
+\
+start or maybe finish \b\cf2 \ul all dogs go to heaven\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 wolf\b0\fs20 \
+\
+\
+\fs24\b1 drink\b0\fs20 \
+drank the water\
+thirst bonus\
+health bonus\
+\
+\b\cf2 \ul map\ulnone \cf0 \b0 \
+\
+\
+\
+\fs24\b1 feed\b0\fs20 \
+\b\cf2 \ul eat\ulnone \cf0 \b0 \
+\
+\fs24\b1 saddle bags\b0\fs20 \
+unlocks delivery quests\
+\
+\fs24\b1 armor\b0\fs20 \
+flexible plates\
+better defense\
+\
+\fs24\b1 brain\b0\fs20 \
+data port\
+improved mental stats\
+\
+\fs24\b1 ghost dawg\b0\fs20 \
+kill your master\
+\
+"sometimes you gotta stick with the ancient ways, the oldschool ways."\
+\
+\fs24\b1 air dawg\b0\fs20 \
+swish.\
+\
+get some serious airtime.\
+\
+\
+\
+\fs24\b1 dawg is always dawg\b0\fs20 \
+ahh, that's better.\
+\
+piss on everything.\
+\
+relieve yourself on all unique tiles.\
+\
+\
+\
+\fs24\b1 clay\b0\fs20 \
+\b\cf2 \ul dig\ulnone \cf0 \b0 \
+\
+\fs24\b1 dog stay, lie down, roll over\b0\fs20 \
+continue on.\
+\
+\fs24\b1 all dogs go to heaven\b0\fs20 \
+unlock \b\cf2 \ul grab your gun and bring in the dawg\ulnone \cf0 \b0 \
+\
+\fs24\b1 traveler\b0\fs20 \
+\
+\
+\fs24\b1 rex\b0\fs20 \
+get all upgrades\
+\
+\fs24\b1 dawg pack\b0\fs20 \
+\
+\
+\fs24\b1 sand\b0\fs20 \
+\b\cf2 \ul dig\ulnone \cf0 \b0 \
+\
+\fs24\b1 dung\b0\fs20 \
+\b\cf2 \ul dig\ulnone \cf0 \b0 \
+\b\cf2 \ul eat\ulnone \cf0 \b0 \
+\b\cf2 \ul gather\ulnone \cf0 \b0 \
+\
+"you can do everything with shit." -m\
+\
+\fs24\b1 like a dawg in the street\b0\fs20 \
+\
+\
+\fs24\b1 foothills\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+\
+leads to the \b\cf2 \ul mountain\ulnone \cf0 \b0  and the \b\cf2 \ul lake\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 lake\b0\fs20 \
+in the \b\cf2 \ul foothills\ulnone \cf0 \b0 \
+\
+\
+\fs24\b1 dog day afternoon\b0\fs20 \
+\
+\
+\fs24\b1 mad dog\b0\fs20 \
+\
+\
+\fs24\b1 cafe\b0\fs20 \
+\
+\
+\fs24\b1 wigwam\b0\fs20 \
+\
+\
+\fs24\b1 mountain\b0\fs20 \
+in the \b\cf2 \ul foothills\ulnone \cf0 \b0 \
+the \b\cf2 \ul lake\ulnone \cf0 \b0  is here\
+\
+leads to the \b\cf2 \ul pass\ulnone \cf0 \b0 \
+\
+\fs24\b1 growl\b0\fs20 \
+chance to inflict fear, -boldness\
+\
+\fs24\b1 bark\b0\fs20 \
++/- any mental stat\
+depending on known/liked\
+\
+\fs24\b1 bite\b0\fs20 \
+chance to -health\
+chance to +aggression\
+\
+\fs24\b1 dig\b0\fs20 \
+related to \b\cf2 \ul build\ulnone \cf0 \b0 \
+\
+also \b\cf2 \ul excrement\ulnone \cf0 \b0 \
+\
+maybe \b\cf2 \ul fetch\ulnone \cf0 \b0  too\
+\
+\fs24\b1 gather\b0\fs20 \
+goes to \b\cf2 \ul build\ulnone \cf0 \b0 \
+\
+\fs24\b1 eat\b0\fs20 \
+goes to \b\cf2 \ul health\ulnone \cf0 \b0 \
+\
+( but not really cuz dogs eating grass = ??? )\
+\
+\fs24\b1 vengeful dawg\b0\fs20 \
+\
+\
+\fs24\b1 whine\b0\fs20 \
+chance to + or - aggression\
+\
+\fs24\b1 scratch\b0\fs20 \
+chance to -health -boldness\
+\
+\fs24\b1 cavern\b0\fs20 \
+\
+\
+\fs24\b1 summit\b0\fs20 \
+on the \b\cf2 \ul mountain\ulnone \cf0 \b0 \
+\
+\fs24\b1 pass\b0\fs20 \
+on the \b\cf2 \ul road\ulnone \cf0 \b0 \
+and the \b\cf2 \ul mountain\ulnone \cf0 \b0 \
+\
+}

@@ -1,0 +1,2692 @@
+﻿:: junkyard dawg
+
+
+
+:: defecate
+
+
+
+:: track
+find something or someone
+go tell quest giver where it is
+
+
+:: a dawg's life
+
+
+
+:: thirst
+slow draining, need for healing.
+
+
+:: hunger
+hunger
+
+slowly lose. actions drain. below a certain level, lose stamina. below another level, lose life.
+
+
+
+:: the one about the flower
+flower
+
+
+:: the one about the beast
+beast
+
+
+:: the one about the void
+alone
+
+
+:: deliver
+requires bags
+take something somewhere
+
+
+:: escort
+take someone somewhere
+
+
+:: collect
+grab something
+
+
+:: chapter
+chapters
+
+intro
+
+<<display "dog unchained">>
+<<display "well i'll be double-dogged">>
+<<display "a girl and her dog">>
+
+main quest
+
+<<display "gone to the dogs">>
+<<display "dog with two bones">>
+
+sidequests 
+
+<<display "love me love my dog">>
+<<display "come at the dog you best not miss">>
+
+<<display "two dog night">>
+<<display "dog tired">>
+
+climax 
+
+<<display "hair of the dog">>
+<<display "dog in the dead city">>
+
+endings
+
+<<display "going to see a man about a dog">>
+<<display "even the devil can't fool a dog">>
+<<display "once and future dog">>
+
+
+:: place
+reset everything place related
+
+check current zone
+
+if zone is 1, [[trail]]
+if zone is 2, trail+[[road]]
+if zone is 3, trail+road+[[sidewalk]]
+if zone is 4, trail+road+sidewalk+[[highway]]
+if zone is 5, [[path]]
+if zone is 6, trail+road+sidewalk+highway+path
+
+
+is it wasteland or special 
+weighted chances for specials
+
+
+set $place_chance to array generated from zones and regions
+<<set $place_roller to random(1,$place_chance)>>
+<<print $place_roller>>
+
+set active 
+
+Array.random($place)
+
+<<if $zone eq 1>>
+<<display "trail">>
+<</if>>
+
+
+
+
+
+
+:: nature
+wasteland creation
+
+<<set $currentLoops = [] >>
+<<set $march = "march.mp3">>
+
+<<print $currentLoops>>
+  
+  Add a parade...
+<<set $currentLoops.push($march)>>
+<<print $currentLoops>>
+Now remove it...
+<<set $currentLoops.splice($currentLoops.indexOf($march),1)>>
+<<print $currentLoops>>
+
+Array.random($pies)
+
+
+:: npc
+animal
+human
+machine
+
+
+attack
+
+stats
+
+
+
+
+:: companion
+
+
+
+:: animal
+
+
+
+:: item
+show active items.
+
+
+
+
+:: daddy can't take a dawg
+
+
+
+:: remember
+
+
+
+:: notoriety
+notoriety
+
+kills
+
+description
+
+hygeine modifier.
+
+
+:: wounds
+wounds
+
+fracture
+laceration
+stab
+cut
+burn
+
+
+effects
+
+bleeding
+electrocution
+poison
+radiation
+
+
+(frome flame and flood)
+drown
+dehydration
+starving
+hypothermia
+exhausted
+sepsis
+
+laceration
+broken bone
+drowning
+exhausted
+burned
+staph infection
+starving
+dehydration
+
+
+:: the one about the spider
+spider
+
+
+:: the one about the girl
+girl
+
+
+:: the one about the bomb
+bomb
+
+
+:: kill
+make someone go away
+
+
+:: fetch
+grab something
+bring it back
+
+
+
+:: visit
+go somewhere
+just check in
+
+
+:: a girl and her dog [story intro sidequest]
+<<if visited() eq 1>>
+intro text.
+
+/%%/<<set $quest_active to 1>>
+
+<<else>>
+<h2>a girl and her dog</h2>
+
+if done unlock [[love me love my dog]]
+<</if>>
+
+
+:: dog unchained [story intro]
+<h2>dog unchained</h2>
+"there are things within us all that can never be unleashed."
+
+if done advance to [[gone to the dogs]]
+
+
+
+:: trail [region]
+connects
+[[scrub]]  
+[[hill]]
+[[shacks]]
+[[marsh]]
+[[cave]]
+[[stream]]
+[[chasm]]
+[[bridge]]
+
+
+set region size
+set chance for wasteland
+
+
+
+:: hill
+on the [[trail]]
+
+
+:: cave [scary]
+on the [[trail]]
+
+
+:: scrub
+on the [[trail]]
+
+
+:: shacks
+on the [[trail]]
+
+[[granny]] lives here
+
+
+:: beast
+beast
+beast strong
+beast always return
+
+
+:: granny
+
+
+
+:: shopping list
+
+
+
+:: bone
+
+
+
+:: stick
+gather for [[sticks]]
+
+
+:: StoryAuthor
+@MZXIO
+
+
+:: StoryTitle
+YOU ARE DAWG.
+
+
+:: Untitled Passage 209
+health
+stamina
+agility
+
+aggression
+curiosity
+boldness
+
+charm
+cunning
+insight
+
+
+:: health
+health
+<<display "thirst">>
+<<display "hunger">>
+<<display "wounds">>
+
+overall health
+health is a number derived from stamina
+
+healthPercent { something }
+
+each negative effect drains health 
+or influences stamina?
+if stamina is 0 you don't die?
+but when health is 0  you die?
+
+losing health state. maybe hunger. dying, get help.
+hunger and thirst increase with activity
+hygeine something to do with influence, socializing?
+added effects equipped by things like dust baths, mud, or getting bathed?
+
+
+arousal:
+
+aroused
+excited
+happy
+calm
+quiet
+tired
+unhappy
+fearful
+
+
+:: dreams
+could be
+<<display "the one about the girl">>
+or <<display "the one about the beast">>
+or <<display "the one about the spider">>
+or <<display "the one about the flower">>
+or <<display "the one about the bomb">>
+or <<display "the one about the void">>
+
+
+gamble d20
+something good, something bad 
+chance for nothing, bonus, or [[death]]
+
+
+:: stray
+radiant random quests
+<<display "fetch">>
+<<display "kill">>
+<<display "visit">>
+<<display "escort">>
+<<display "deliver">>
+<<display "collect">>
+<<display "track">>
+
+
+
+:: well i'll be double-dogged [story intro sidequest]
+<h2>well i'll be double-dogged</h2>
+
+
+
+
+:: bridge
+on the [[trail]]
+
+portal to the [[road]]
+
+
+:: chasm [scary]
+on the [[trail]]
+
+
+:: marsh [nature]
+on the [[trail]]
+
+
+:: stream
+on the [[trail]]
+
+
+:: collapsed tunnel
+
+
+
+:: bandit
+general random hostile raider escapee
+
+
+:: antelope
+
+
+
+:: worn bandana
+
+
+
+:: spiked collar
+
+
+
+:: gun bullets
+
+
+
+:: StoryStyles [stylesheet]
+@import url(common/dawg.css);
+
+/* hide sidebar */
+#ui-bar { display: none; }
+
+/* kill passage transition */
+.passage { transition: none; }
+
+.error { font-family: '04b03'; }
+
+/*make visited areas different to add interest*/
+.seek a { color: white; }
+.seek a:visited { color: cyan; }
+.seek a:hover { color: inherit; text-decoration: none; }
+
+
+/*special ascii seek map*/
+.map {
+  font-family: 'dawgverse';
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -8px;
+ -webkit-user-select: none;
+}
+.map-controls {
+  font-family: 'dawgverse';
+  font-size: 32px;
+  display: block;
+  position: relative;
+  height: 96px;
+  width: 96px;
+  -webkit-user-select: none;
+}
+.map-controls span {
+  display: block;
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  line-height: 32px;
+  text-align: center;
+}
+.map-controls .north {
+  left: 32px;
+  top: 0;
+}
+.map-controls .east {
+  right: 0;
+  top: 32px;
+}
+.map-controls .south {
+  bottom: 0;
+  left: 32px;
+}
+.map-controls .west {
+  left: 0;
+  top: 32px;
+}
+
+
+
+
+:: keith [questgiver]
+at the [[canyon]]
+
+starts [[well i'll be double-dogged]]
+
+
+:: goose
+
+
+
+:: prarie dog
+
+
+
+:: ragged collar
+
+
+
+:: Start
+you are [[dawg]].
+[[*|debug]]
+
+<<silently>><<display "initialize">><</silently>>
+
+
+:: wake
+[[...|dawg]]
+
+
+
+:: dream
+<<display "dreams">>
+[[wake]]
+
+
+:: death
+no more dawg. final stats.
+no more dreams. no more stories.
+
+[[begin|Start]] again
+
+
+:: gone to the dogs [story main]
+<h2>gone to the dogs</h2>
+
+if done advance to [[dog with two bones]]
+
+
+:: road [region]
+connects
+[[caravan]]
+[[garden]]
+[[trailer]]
+[[sands]]
+[[checkpoint]]
+[[range]]
+[[rv]]
+[[shop]]
+[[airstrip]]
+[[ranch]]
+[[radio station]]
+[[village]]
+[[bunker]]
+[[homestead]]
+[[canyon]]
+
+
+:: caravan
+on the [[road]]
+
+chance for [[artifact]]
+
+
+:: garden
+on the [[road]]
+
+
+:: trailer [scary]
+on the [[road]]
+
+
+:: sands
+on the [[road]]
+
+
+:: checkpoint
+on the [[road]]
+
+
+:: range
+on the [[road]]
+
+[[cow]] is here
+[[cowboy]] too
+
+
+:: rose [questgiver]
+on the [[road]]
+
+gives you [[shopping list]]
+
+rose
+friendly
+
+
+:: doctor
+with the [[caravan]]
+
+
+
+:: lilly
+on the [[mountain]]
+
+
+:: cowboy
+on the [[range]]
+
+
+:: scavenger
+
+
+
+:: cow
+
+
+
+:: terrain
+<<display "map-generate">>
+<<set $posY to random(1,10)>>
+<<set $posX to random(1,8)>>
+
+
+:: doggie
+<<set $dawg = {
+
+	name: "dawg",
+
+	dispo: "appearing",
+
+	health: random(2, 10),
+		health_max: random(8, 12),
+
+	stamina: random(1, 8),
+		stamina_max: random(6, 10),
+
+	agility: random(1, 8),
+		agility_max: random(6, 10),
+
+	aggression: random(1, 6),
+	curiosity: random(1, 6),
+	boldness: random(1, 6),
+
+	notoriety: 1,
+	bodycount: 0,
+	sleep: 0,
+
+}>>
+
+
+
+
+:: debug
+DEBUG ####################
+
+seed time <<print $time.clock>>. 
+it is <<print $time.day>>:00 in the wasteland. 
+<<print $time.month>> hours into this month. 
+<<print $time.year>> hours into this year. 
+lived <<print $time.alive.toFixed(0)>> hours.
+
+[[restart|Start]] / [[dawg]] / [[stats]]
+<div class="fourbee">
+
+
+<<print $exterior.style>>
+<<print $weather.sky>>
+
+<h3>time</h3>
+alive <<print $time.alive>>
+clock <<print $time.clock>>
+day <<print $time.day>>
+sun <<print $time.sun>>
+astronomy <<print $time.astronomy>>
+month <<print $time.month>>
+moon <<print $time.moon>>
+season <<print $time.season>>
+year <<print $time.year>>
+
+<h3>weatherChance</h3>
+cold <<print $weatherChance.cold>>
+cool <<print $weatherChance.cool>>
+mild <<print $weatherChance.mild>>
+warm <<print $weatherChance.warm>>
+hot <<print $weatherChance.hot>>
+scorching <<print $weatherChance.scorching>>
+rain <<print $weatherChance.rain>>
+snow <<print $weatherChance.snow>>
+calm <<print $weatherChance.calm>>
+breezy <<print $weatherChance.breezy>>
+windy <<print $weatherChance.windy>>
+gusty <<print $weatherChance.gusty>>
+clear <<print $weatherChance.clear>>
+hazy <<print $weatherChance.hazy>>
+cloudy <<print $weatherChance.cloudy>>
+overcast <<print $weatherChance.overcast>>
+temp <<print $weatherChance.temp>>
+tempRoller <<print $weatherChance.tempRoller>>
+precip <<print $weatherChance.precip>>
+precipRoller <<print $weatherChance.precipRoller>>
+wind <<print $weatherChance.wind>>
+windRoller <<print $weatherChance.windRoller>>
+sky <<print $weatherChance.sky>>
+skyRoller <<print $weatherChance.skyRoller>>
+
+<h3>weather</h3>
+temp <<print $weather.temp>>
+precip <<print $weather.precip>>
+wind <<print $weather.wind>>
+sky <<print $weather.sky>>
+
+</div>
+
+
+:: stats
+[[<|dawg]]
+<<display "health">>
+<<display "notoriety">>
+
+
+
+
+<<set $stats to {
+
+name: "",
+
+dispo: "",
+
+
+health_max: ,
+stamina_max: ,
+agility_max: ,
+
+
+health: ,
+stamina: ,
+agility: ,
+
+aggression: ,
+curiosity: ,
+boldness: ,
+
+cunning: ,
+insight: ,
+charm: ,
+
+
+
+notoriety: ,
+bodycount: ,
+sleep: ,
+
+
+
+pronoun: ,
+friendliness: ,
+
+
+}>>
+
+
+
+
+physical
+	agility
+	stamina
+	health
+mental
+	boldness
+	aggression
+	curiosity
+social
+	cunning
+	insight
+	charm
+
+
+:: sleep
+rest. chance for healing
+[[wake]]
+or chance to [[dream]]
+
+
+
+:: two dog night [story sidequest]
+<h2>two dog night</h2>
+
+it's cold. really cold.
+
+if done go to [[hair of the dog]]
+
+
+
+
+:: rv
+on the [[road]]
+
+[[jesse]] is here
+
+
+:: radio station
+on the [[road]]
+
+[[dana]] is here
+
+
+:: shop
+on the [[road]]
+
+[[carlos]] is here
+
+
+:: airstrip
+on the [[road]]
+
+chance for [[artifact]]
+
+
+:: ranch
+on the [[road]]
+
+[[rancher]] lives here
+
+
+:: village
+on the [[road]]
+
+[[villager]] lives here
+
+
+:: joshua
+in the [[garden]]
+chance for [[artifact]]
+
+
+
+joshua
+gardener
+gives things
+
+
+:: jesse
+with the [[rv]]
+
+
+:: carlos [questgiver]
+in the [[shop]]
+
+
+
+carlos
+shopkeeper
+trades
+
+
+:: dana
+in the [[radio station]]
+
+
+:: rancher
+on the [[ranch]]
+
+
+:: guard
+everywhere
+
+
+:: hawk
+
+
+
+:: Untitled Passage 198
+
+
+
+:: sun
+<<if $time.day gte 0 and $time.day lte 5>>
+	<<set $time.sun to "night">>
+<<elseif $time.day gte 6 and $time.day lte 7>>
+	<<set $time.sun to "dawn">>
+<<elseif $time.day gte 8 and $time.day lte 11>>
+	<<set $time.sun to "morning">>
+<<elseif $time.day gte 12 and $time.day lte 15>>
+	<<set $time.sun to "afternoon">>
+<<elseif $time.day gte 16 and $time.day lte 19>>
+	<<set $time.sun to "evening">>
+<<elseif $time.day gte 20 and $time.day lte 21>>
+	<<set $time.sun to "twilight">>
+<<elseif $time.day gte 22 and $time.day lte 24>>
+	<<set $time.sun to "night">>
+<<endif>>
+
+
+:: firmament
+<<display "sun">>
+<<display "moon">>
+
+
+
+:: time
+<<set $time.day to $time.clock % 24>>
+<<set $time.month to $time.clock % 720>>
+<<set $time.year to $time.clock % 8764>>
+
+
+:: initialize [nobr]
+silently initialize the universe. set the stage.
+
+
+/%a clocks %/
+<<set $time = { clock: random(0,8764) }>>
+<<set $time.alive = 0>>
+
+/%a variables %/
+<<set $exterior = { style: "endless" }>>
+<<set $weather = { sky: "void" }>>
+
+
+<<display "update">>
+<<display "terrain">>
+<<display "doggie">>
+
+
+:: story
+quest
+.active "quest  name"
+
+chapter
+.finished true/false
+
+<<display "stray">>
+<<display "chapter">>
+
+
+
+
+
+
+:: love me love my dog [story sidequest]
+<h2>love me, love my dog</h2>
+if done go to [[come at the dog you best not miss]]
+
+
+:: tunnel [scary]
+on the [[road]]
+
+portal to the [[sidewalk]]
+
+
+:: farm
+on the [[road]]
+
+[[farmer]] and [[farmhand]] live here
+
+
+:: bunker [scary]
+on the [[road]]
+
+
+:: canyon
+on the [[road]]
+
+[[keith]] is here
+
+
+:: homestead
+on the [[road]]
+
+[[homesteader]] lives here
+
+there's a [[basement]]
+
+
+:: basement [scary]
+in the [[homestead]]
+
+
+:: villager
+in the [[village]]
+at the [[market]]
+
+
+:: homesteader
+
+
+
+:: chief
+in the [[village]]
+
+
+:: door lock
+in the [[bunker]]
+
+
+:: farmhand
+on the [[farm]]
+
+
+:: badger
+
+
+
+:: Untitled Passage 185
+
+
+
+:: Untitled Passage 190
+
+
+
+:: moon
+<<if $time.month gte 0 and $time.month lte 89>>
+	<<set $time.moon to "new">>
+<<elseif $time.month gte 90 and $time.month lte 179>>
+	<<set $time.moon to "crescent">>
+<<elseif $time.month gte 180 and $time.month lte 269>>
+	<<set $time.moon to "first quarter">>
+<<elseif $time.month gte 270 and $time.month lte 359>>
+	<<set $time.moon to "gibbous">>
+<<elseif $time.month gte 360 and $time.month lte 449>>
+	<<set $time.moon to "full">>
+<<elseif $time.month gte 450 and $time.month lte 539>>
+	<<set $time.moon to "disseminating">>
+<<elseif $time.month gte 540 and $time.month lte 629>>
+	<<set $time.moon to "last quarter">>
+<<elseif $time.month gte 630 and $time.month lte 720>>
+	<<set $time.moon to "balsamic">>
+<<endif>>
+
+
+:: weather [system nobr]
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+/%a                    temperature                       %/
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+
+<<set $weatherChance.temp = $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm + $weatherChance.hot + $weatherChance.scorching>>
+<<set $weatherChance.tempRoller to random(1, $weatherChance.temp)>>
+
+<<if $weatherChance.tempRoller lte $weatherChance.cold>>
+	<<set $weather.temp = "cold">>
+<<elseif $weatherChance.tempRoller gt $weatherChance.cold and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool>>
+	<<set $weather.temp = "cool">>
+<<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool + $weatherChance.mild>>
+	<<set $weather.temp = "mild">>
+<<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool + $weatherChance.mild and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm>>
+	<<set $weather.temp = "warm">>
+<<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm and $weatherChance.tempRoller lte $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm + $weatherChance.hot>>
+	<<set $weather.temp = "hot">>
+<<elseif $weatherChance.tempRoller gt $weatherChance.cold + $weatherChance.cool + $weatherChance.mild + $weatherChance.warm + $weatherChance.hot>>
+	<<set $weather.temp = "scorching">>
+<<endif>>
+
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+/%a                     precipitation                    %/
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+
+<<set $weatherChance.precip = $weatherChance.clear + $weatherChance.rain + $weatherChance.snow>>
+<<set $weatherChance.precipRoller to random(1, $weatherChance.precip)>>
+
+<<if $weatherChance.precipRoller lte $weatherChance.clear>>
+	<<set $weather.precip = "dry">>
+<<elseif $weatherChance.precipRoller gt $weatherChance.clear and $weatherChance.precipRoller lte $weatherChance.clear + $weatherChance.rain>>
+	<<set $weather.precip = either("rain", "thunderstorm")>>
+<<elseif $weatherChance.precipRoller gt $weatherChance.clear + $weatherChance.rain>>
+	<<set $weather.precip = either("snow", "blizzard")>>
+<<endif>>
+
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+/%a                         wind                         %/
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+
+<<set $weatherChance.wind = $weatherChance.calm + $weatherChance.breezy + $weatherChance.windy + $weatherChance.gusty>>
+<<set $weatherChance.windRoller to random(1, $weatherChance.wind)>>
+
+<<if $weatherChance.windRoller lte $weatherChance.calm>>
+	<<set $weather.wind = "calm">>
+<<elseif $weatherChance.windRoller gt $weatherChance.calm and $weatherChance.windRoller lte $weatherChance.calm + $weatherChance.breezy>>
+	<<set $weather.wind = "breezy">>
+<<elseif $weatherChance.windRoller gt $weatherChance.calm + $weatherChance.breezy and $weatherChance.windRoller lte $weatherChance.calm + $weatherChance.breezy + $weatherChance.windy>>
+	<<set $weather.wind = "windy">>
+<<elseif $weatherChance.windRoller gt $weatherChance.calm + $weatherChance.breezy + $weatherChance.windy>>
+	<<set $weather.wind = "gusty">>
+<<endif>>
+
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+/%a                         sky                          %/
+/%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+
+<<set $weatherChance.sky = $weatherChance.clear + $weatherChance.hazy + $weatherChance.cloudy + $weatherChance.overcast>>
+<<set $weatherChance.skyRoller to random(1, $weatherChance.sky)>>
+
+<<if $weatherChance.skyRoller lte $weatherChance.clear>>
+	<<set $weather.sky = "clear">>
+<<elseif $weatherChance.skyRoller gt $weatherChance.clear and $weatherChance.skyRoller lte $weatherChance.clear + $weatherChance.hazy>>
+	<<set $weather.sky = "hazy">>
+<<elseif $weatherChance.skyRoller gt $weatherChance.clear + $weatherChance.hazy and $weatherChance.skyRoller lte $weatherChance.clear + $weatherChance.hazy + $weatherChance.cloudy>>
+	<<set $weather.sky = "cloudy">>
+<<elseif $weatherChance.skyRoller gt $weatherChance.clear + $weatherChance.hazy + $weatherChance.cloudy>>
+	<<set $weather.sky = "overcast">>
+<<endif>>
+
+
+:: season
+<<if $time.year gte 0 and $time.year lte 2191>>
+	<<set $time.season to "summer">>
+	<<set $weatherChance to {
+		cold: 0, cool: 0, mild: 0, warm: 1, hot: 12, scorching: 78, 
+		rain: 11, snow: 1,
+		calm: 53, breezy: 12, windy: 12, gusty: 15,
+		clear: 55, hazy: 5, cloudy: 14, overcast: 4
+	}>>
+<<elseif $time.year gte 2192 and $time.year lte 4382>>
+	<<set $time.season to "autumn">>
+	<<set $weatherChance to {
+		cold: 0, cool: 12, mild: 22, warm: 22, hot: 35, scorching: 1,
+		rain: 8, snow: 2,
+		calm: 59, breezy: 32, windy: 1, gusty: 1,
+		clear: 57, hazy: 4, cloudy: 12, overcast: 9
+	}>>
+<<elseif $time.year gte 4383 and $time.year lte 6572>>
+	<<set $time.season to "winter">>
+	<<set $weatherChance to {
+		cold: 52, cool: 38, mild: 1, warm: 0, hot: 0, scorching: 0,
+		rain: 5, snow: 9,
+		calm: 80, breezy: 10, windy: 0, gusty: 0,
+		clear: 57, hazy: 3, cloudy: 12, overcast: 12
+	}>>
+<<elseif $time.year gte 6573 and $time.year lte 8764>>
+	<<set $time.season to "spring">>
+	<<set $weatherChance to {
+		cold: 0, cool: 14, mild: 36, warm: 19, hot: 22, scorching: 0,
+		rain: 6, snow: 1,
+		calm: 0, breezy: 66, windy: 11, gusty: 15,
+		clear: 51, hazy: 5, cloudy: 15, overcast: 10
+	}>>
+<<endif>>
+
+
+:: update [nobr]
+<<silently>>
+/% set all the things. %/
+<<display "time">>
+<<display "firmament">>
+<<display "season">>
+<<display "weather">>
+<<display "visibility">>
+<</silently>>
+
+
+:: dawg
+<<print $time.season>> <<print $time.sun>>. <<print $weather.wind>>, <<print $weather.sky>>, <<print $weather.temp>>. <<if $time.astronomy is true>><<print $time.moon>> moon.<<endif>> main stats. description of health. current feeling. passive leveling. <<display "update">> [[*|debug]]
+
+<<if visited() is 1>>
+[[go on.|wasteland]]
+<<else>>
+
+[[stats]]
+[[inventory]]
+[[quest]]
+
+[[map]]
+[[explore]] 
+[[stay|home]]
+
+[[sleep]]
+<</if>>
+/%
+add classes to spans
+create persistent UI space with css trickery
+layers of dog for each dispo: weather, light, moon, interactions. 
+%/
+
+
+:: dog with two bones [story main]
+<h2>dog with two bones</h2>
+
+if done unlock [[dog in the dead city]]
+
+
+<p class="rose">"Take the road. The road will lead you to a garden. You will meet Joshua there. He will give you bones. Take this letter to Joshua. Bring me back the bones. If you do, I will share my soup with you."</p>
+
+
+:: farmer
+on the [[farm]]
+at the [[market]]
+
+
+:: drone
+
+
+
+:: coyote
+
+
+
+:: Untitled Passage 189
+
+
+
+:: Untitled Passage 182
+
+
+
+:: visibility
+<<if $time.day gte 20 or $time.day lte 6>>
+	<<if $weather.sky eq "clear" or $weather.sky eq "hazy">>
+		<<set $time.astronomy = true >>
+	<<endif>>
+<<else>>
+	<<set $time.astronomy = false >>
+<<endif>>
+
+
+:: quest
+[[<|dawg]]
+
+check for active quest
+
+show unfinished quests
+toggle one to active
+
+show all finished quests
+
+storytelling
+<<display "story">>
+
+
+enabled vs disabled
+if enabled, incomplete vs complete
+if incomplete, active vs inactive
+
+
+quests based on location. find the nearest X, do A, get B
+
+quest.giver
+quest.giverLocation
+quest.reward
+
+level up based on stats
+if curiosity gt 4
+get bonus
+elseif curiosity gt 9
+bigger bonus 
+else
+no bonus
+etc
+
+
+
+:: flee
+check something agility
+[[explore]] if able to escape 
+[[fight]] if they chase you
+play dead in desperation?
+
+
+:: back
+they do some things
+run all your checks
+make choices
+it's done [[finish]]
+if health runs out [[death]]
+get out [[flee]]
+respond [[forth]]
+
+
+
+
+:: dog in the night [sidequest]
+
+
+
+:: hair of the dog [story sidequest]
+<h2>hair of the dog</h2>
+
+unlocks [[mate]]
+
+shortcut to [[dog in the dead city]]
+
+
+:: sidewalk [region]
+connects
+[[boardwalk]]
+[[church]]
+[[market]]
+[[lab]]
+[[construction site]]
+[[downtown]]
+[[dumpster]]
+[[alley]]
+[[bowling alley]]
+[[slum]]
+
+
+
+:: boardwalk
+on the [[sidewalk]]
+
+[[big man]] and [[little man]] are here
+
+
+:: church
+on the [[sidewalk]]
+
+
+:: alley
+on the [[sidewalk]]
+
+
+:: market
+on the [[sidewalk]]
+
+
+:: lab
+chance for [[artifact]]
+
+
+:: construction site
+on the [[sidewalk]]
+
+
+:: ginger
+in the [[lab]]
+
+
+:: priest
+in the [[church]]
+
+
+:: little man
+on the [[boardwalk]]
+
+
+:: foreman
+at the [[construction site]]
+
+
+:: wild dog
+
+
+
+:: Untitled Passage 193
+
+
+
+:: Untitled Passage 191
+
+
+
+:: seek
+
+
+
+:: wasteland
+[[<|dawg]] [[map]]
+
+check location. <<display "zone">>
+
+<<if visited() eq 1>>
+have to [[keep going.|explore]]
+<<else>>
+
+go somewhere else [[explore]]
+stop here maybe this is a good place to [[build]]
+<</if>>
+
+
+
+:: explore
+<<if visited() is 1>>
+
+<<silently>>
+/% start storyline %/
+<<display "a girl and her dog">> 
+<</silently>>
+
+<</if>>
+
+[[<|dawg]]
+
+check if questing, active location reminder
+check for [[encounter]] someone/something is here
+
+seek out [[map]]
+generate new location.
+<<silently>>
+<<display "terrain">>
+<</silently>>
+
+stop here maybe this is a good place to [[build]]
+move on keep walking keep going [[explore]]
+
+
+
+:: fight
+turn based. stats plus luck/randomness. initiative check, who has higher? 
+
+if they get you [[back]]
+or you get them [[forth]]
+or pass escape check to [[flee]]
+
+
+:: forth
+you do some things
+run all their checks
+see the consequences
+if it's done [[finish]]
+check if they respond [[back]]
+if they flee and get away [[wasteland]]
+
+
+
+:: dog in the dead city [story main]
+<h2>dog in the dead city</h2>
+
+
+you're a dog, who gives a fuck about human things? they can do whatever they're doing. 
+
+leads to [[dog days of summer]]
+
+
+
+:: distillery
+on the [[sidewalk]]
+
+
+:: dumpster
+in the [[alley]]
+
+chance for [[artifact]]
+
+
+:: arena [scary]
+in the [[alley]]
+
+[[fighter]] is here
+
+
+:: bowling alley
+on the [[sidewalk]]
+
+[[cecil]] is here
+
+
+:: prospector
+
+
+
+:: fighter
+in the [[arena]]
+
+
+:: cecil
+in the [[bowling alley]]
+
+
+:: big man
+on the [[boardwalk]]
+
+
+:: warlord
+[[downtown]]
+
+
+:: bear
+
+
+
+:: Untitled Passage 192
+
+
+
+:: Untitled Passage 202
+
+
+
+:: map-world
+save map to memory when necessary, create organic world map
+x/y
+check if x/y exists
+if no, save
+if yes, load
+display worldmap grid at 25% size 
+    []
+think about slime mold
+expanding until finding randomly generated spaces
+checks if something exists or not to determine if should continue some element
+how to different road surfaces; highway etc?
+
+
+
+
+
+:: encounter
+check zone, check quest, generate encounter.
+
+approach, avoid
+
+if hostile, could be a [[fight]]
+if neutral, can take off in [[pursuit]]
+if friendly, chance to [[socialize]]
+if you can leave, back to [[wasteland]]
+or back to [[map][$map[$posY][$posX] to -1]]
+
+
+:: pursuit
+you're chasing someone 
+if they run away you're back in the [[wasteland]]
+pass a check to [[fight]]
+or maybe they want to [[socialize]]
+or back to [[wasteland]]
+
+
+
+:: finish
+chance for [[pursuit]] if they ran away
+check for [[reward]]
+
+
+
+
+
+:: come at the dog you best not miss [story sidequest]
+<h2>come at the dog, you best not miss.</h2>
+
+
+:: downtown
+
+
+
+:: refuge
+on the [[sidewalk]]
+
+
+:: school
+on the [[sidewalk]]
+
+
+:: backroom
+door to [[dungeon]]
+
+
+:: slum [scary]
+on the [[sidewalk]]
+
+
+:: office
+
+
+
+:: distiller
+in the [[distillery]]
+
+
+:: janitor
+in the [[office]]
+in the [[school]]
+[[downtown]]
+
+chance for [[artifact]]
+
+
+:: manager
+working late at the [[office]]
+
+
+:: sentry
+
+
+
+:: bobcat
+
+
+
+:: Untitled Passage 208
+
+
+
+:: Untitled Passage 203
+
+
+
+:: Untitled Passage 210
+snippet map n stats
+
+<<set $map to [
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0]
+]>>
+
+
+
+
+
+
+
+
+<<set $npc to {
+
+name: "",
+
+dispo: "",
+
+
+health_max: ,
+stamina_max: ,
+agility_max: ,
+
+
+health: ,
+stamina: ,
+agility: ,
+
+
+
+
+aggression: ,
+curiosity: ,
+boldness: ,
+
+notoriety: ,
+bodycount: ,
+sleep: ,
+
+
+
+pronoun: ,
+friendliness: ,
+
+
+}>>
+
+
+
+
+
+
+
+:: leave [nobr]
+<<display "map-generate">>
+<<display "map">>
+
+
+:: map-draw [nobr]
+<div class="map">
+<<for $i to 0; $i lt $map.length; $i++>>
+	<<for $k to 0; $k lt $map[$i].length; $k++>>
+    	<<if $k eq $posX and $i eq $posY>>
+        	<<print "@">>/%a player %/
+        <<elseif $map[$i][$k] eq -1>>
+        	<<print "e">>/%a square, closed %/
+        <<elseif $map[$i][$k] eq 0>>
+        	<<print "f">>/%a blank wall %/
+        <<elseif $map[$i][$k] lte 2>>
+			<<print "d">>/%a plus, tree %/
+        <<elseif $map[$i][$k] eq 3>>
+        	<<print "c">>/%a grid, water %/
+        <<elseif $map[$i][$k] lte 9>>
+        	<<print "b">>/%a dot, grass %/
+        <<elseif $map[$i][$k] gte 10>>
+        	<<print "a">>/%a blank, clear %/
+		<</if>>
+	<</for>>
+	<br>
+<</for>>
+</div>
+
+
+water meat loot encounter
+
+
+1% water (actually it's 0.2%)
+11% tree
+
+
+
+1/500 water
+1/500 meat
+56/500 tree
+23/500 sticks
+
+
+<<if $map.containsAny("water", "meat")>>
+smells good
+<</if>>
+
+
+
+:: map-generate [nobr]
+<<set $map to [
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),random(1,20),0],
+[0,0,0,0,0,0,0,0,0,0,0,0]
+]>>
+
+/%<<set $map to [
+[0,0,0,0,0,0,0,0,0,0,0,0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),random(1,500),0],
+[0,0,0,0,0,0,0,0,0,0,0,0]
+]>>%/
+
+
+:: zone
+zone
+<<display "section">> in <<display "location">>
+
+check for <<display "resource">>
+
+
+:: home
+[[<|dawg]]
+stay
+[[pack]] is here
+if more improvements to make, choice to [[build]]
+if settled somewhere with npc, [[socialize]]
+
+
+:: build
+textfield input for making ascii [[home]]
+
+
+:: socialize [system]
+[[talk]]
+[[trade]]
+[[quest]] if active
+back to [[wasteland]]
+
+
+:: talk [system]
+dialog. checks. anything could happen.
+
+could unlock a chance to [[trade]]
+could start a [[fight]]
+or back to [[socialize]]
+
+
+:: dog days of summer [story main]
+if done unlock [[even the devil can't fool a dog]]
+
+
+:: suburbs
+portal to the [[highway]]
+set zone to 4
+
+
+:: sewer [scary]
+on the [[sidewalk]]
+
+
+:: dungeon [scary]
+get out through the [[backroom]]
+
+
+:: legionnaire
+on the [[road]]
+in the [[camp]]
+at the [[market]]
+
+
+:: chipmunk
+
+
+
+:: sparrow
+you find a sparrow. it chirps at you, hops, and gives you the side eye.
+
+
+:: Untitled Passage 206
+
+
+
+:: Untitled Passage 201
+
+
+
+:: north [nobr]
+<<set $posY -= 1>>
+<<display "map">>
+
+
+:: section
+1 2 3 4 or 5
+
+
+:: location
+either <<display "exterior">> or <<display "interior">>
+
+exterior or interior. atmosphere, climate, weather, vibe, temperature, humidity, light.
+
+
+:: trade [system]
+check [[inventory]]
+[[socialize]]
+
+leave [[wasteland]]
+
+
+:: dog tired [story sidequest]
+<h2>dog tired</h2>
+
+
+:: mountain lion
+
+
+
+:: moth
+
+
+
+:: rat
+
+
+
+:: Untitled Passage 207
+
+
+
+:: west [nobr]
+<<set $posX -= 1>>
+<<display "map">>
+
+
+:: map [nobr]
+[[<|dawg]]
+
+<<set $time.alive += 0.05 >>
+<<print $time.alive.toFixed(0)>>
+
+
+<<display "map-draw">>
+
+<div class="map-controls">
+
+/% navigate map, cardinal directions %/
+
+<<if $map[$posY-1][$posX] gte 3>>
+<span class="north">[[↑|north]]</span>
+<<endif>>
+
+<<if $map[$posY][$posX+1] gte 3>>
+<span class="east">[[→|east]]</span>
+<<endif>>
+
+<<if $map[$posY+1][$posX] gte 3>>
+<span class="south">[[↓|south]]</span>
+<<endif>>
+
+<<if $map[$posY][$posX-1] gte 3>>
+<span class="west">[[←|west]]</span>
+<<endif>>
+
+/% leave and rebuild map, fix position so new map looks right %/
+
+<<if $map[$posY-1][$posX] eq 0>>
+<span class="north">[[↑|leave][$posY to 10]]</span>
+<<endif>>
+
+<<if $map[$posY][$posX+1] eq 0>>
+<span class="east">[[→|leave][$posX to 1]]</span>
+<<endif>>
+
+<<if $map[$posY+1][$posX] eq 0>>
+<span class="south">[[↓|leave][$posY to 1]]</span>
+<<endif>>
+
+<<if $map[$posY][$posX-1] eq 0>>
+<span class="west">[[←|leave][$posX to 10]]</span>
+<<endif>>
+
+</div>
+
+<div class="map-actions">
+
+<<if $map[$posY][$posX] eq 3>>
+<<display "map-specials">>
+<<endif>>
+
+<<if $map[$posY][$posX] lte 9>>
+[[relieve yourself|map][$map[$posY][$posX] to -1]]
+<<endif>>
+
+</div>
+
+
+:: east [nobr]
+<<set $posX += 1>>
+<<display "map">>
+
+
+:: exterior
+exterior
+explore seek
+
+
+:: interior
+interior
+is climate control yes no
+
+
+:: inventory
+[[<|dawg]] [[map]]
+
+limited space
+only one thing at a time
+either [[resource]] or [[item]]
+
+
+:: loot
+something good to sell or use.
+stuff and things for your [[inventory]]
+
+[[map][$map[$posY][$posX] to -1]]
+
+
+:: reward
+some kind of bonus
+chance for <<display "loot">>
+tiny chance for <<display "artifact">>
+
+stats bonus.
+
+stats for talking or trading or questing or fighting or exploring or seeking.
+
+
+:: reservoir dawg
+
+
+
+:: was that the dog [story sidequest]
+<h2>was that the dog?</h2>
+
+
+:: highway [region]
+connects
+[[camp]]
+[[oil well]]
+[[store]]
+[[power plant]]
+[[motel]]
+[[mill]]
+[[junkyard]]
+[[refinery]]
+[[gas station]]
+[[desert]]
+[[river]]
+[[pine forest]]
+
+
+
+:: camp [exterior settlement]
+on the [[highway]]
+
+
+:: oil well
+on the [[highway]]
+
+
+:: store
+on the [[highway]]
+
+
+:: power plant
+on the [[highway]]
+
+there's a [[control room]]
+
+
+:: control room [scary]
+in the [[power plant]]
+
+
+:: motel
+on the [[highway]]
+
+shelters [[proprietor]] and [[guest]]
+
+
+:: guest
+at the [[motel]]
+
+
+:: proprietor
+
+
+
+:: juan
+at the [[power plant]]
+
+
+:: ninja kitty
+
+
+
+:: snail
+
+
+
+:: fox
+
+
+
+:: south [nobr]
+<<set $posY += 1>>
+<<display "map">>
+
+
+:: pine forest
+on the [[highway]]
+
+conceals the [[compound]]
+
+
+:: compound [settlement]
+in the [[pine forest]]
+
+
+:: enclaver
+in the [[compound]]
+
+
+:: duck
+
+
+
+:: frog
+
+
+
+:: skinwalker
+
+
+
+:: even the devil can't fool a dog [story main]
+<h2>even the devil can't fool a dog</h2>
+
+choose a gate in the fence.
+
+[[dog gone]]
+
+
+:: river
+on the [[highway]]
+
+portal to the [[path]]
+once you cross the river, you don't come back
+set zone to 5
+
+
+:: desert
+on the [[highway]]
+
+chance to find [[vending machine]]
+
+
+:: gas station
+on the [[highway]]
+
+chance for [[artifact]]
+
+
+:: mill
+on the [[highway]]
+
+
+:: junkyard
+on the [[highway]]
+
+chance for [[artifact]]
+
+
+:: refinery [scary]
+on the [[highway]]
+
+
+:: vending machine
+in the [[desert]]
+
+chance for [[artifact]]
+
+nonverbal, makes noises
+
+
+:: armadillo
+
+
+
+:: map-specials
+<<set $map_special to random(1,20)>>
+<<if $map_special eq 1>>
+[[reward]]
+<<elseif $map_special lte 3>>
+[[encounter]]
+<<elseif $map_special lte 5>>
+[[loot]]
+<<elseif $map_special lte 9>>
+[[consume]] meat
+<<elseif $map_special lte 14>>
+[[drink]] water
+<<elseif $map_special gte 15>>
+nothing
+
+<</if>>
+
+
+
+
+
+:: pack
+if completed love quest, option to [[mate]]
+
+
+
+:: resource
+resources
+
+consume: heal, feed.
+
+<<display "water">>
+
+river, lake, stream
+
+utilize: grow, harvest?
+
+
+:: achievement
+<<display "dawg's best friend">>
+<<display "dawg of wasteville">>
+<<display "air dawg">>
+<<display "yo dawg">>
+<<display "ghost dawg">>
+<<display "one dawg plus two">>
+<<display "old dawg new tricks">>
+<<display "rex">>
+<<display "grab your gun and bring in the dawg">>
+<<display "dawg pack">>
+
+
+
+:: artifact
+a special thing.
+
+could be
+<<display "cranium">>
+<<display "jawbone">>
+<<display "joints">>
+<<display "brain">>
+<<display "armor">>
+<<display "pack">>
+<<display "teeth">>
+<<display "claws">>
+
+
+
+:: snake
+
+
+
+:: skunk
+
+
+
+:: deer
+
+
+
+:: dog gone [story main]
+<h2>dog gone</h2>
+[[going to see a man about a dog]]
+become the [[once and future dog]]
+[[dog stay, lie down, roll over]]
+they say [[all dogs go to heaven]]
+
+
+
+:: path [region]
+connects
+[[mesa]]
+[[wells]]
+[[battlefield]]
+[[crash]]
+[[bivuac]]
+[[windfarm]]
+[[crater]]
+
+
+:: wells
+on the [[path]]
+
+dry
+
+
+:: windfarm
+on the [[path]]
+still
+
+
+:: crater
+on the [[path]]
+
+[[ruins]]
+
+
+:: old gray tail
+
+
+
+:: crow
+
+
+
+:: lizard
+
+
+
+:: owl
+
+
+
+:: beaver
+
+
+
+:: consume
+ate the meat
+hunger bonus
+health bonus
+
+[[map][$map[$posY][$posX] to -1]]
+
+
+
+:: puppies
+new life in the [[pack]]
+
+neonatal 10 days
+transitional 7 days
+socialization 90 days
+juvenile 90 days
+adolescent 2 years
+adult ++
+
+/%a http://pets.thenest.com/stages-maturity-german-shepherd-6638.html %/
+
+
+:: mate
+chance to [[reproduce]]
+
+
+:: water
+
+
+[[drink]]
+
+
+goes to [[health]]
+
+windmill
+storage tank
+water trough
+
+
+
+:: meat
+[[eat]]
+
+goes to [[health]]
+
+
+:: sticks
+[[gather]] ?
+
+for [[build]]
+
+
+:: cranium
+armored skullcap
+better defense
+
+
+:: jawbone
+exoskeleton
+better attack
+
+
+:: teeth
+titanium grill
+more damage
+
+
+:: yo dawg
+reproduce
+
+
+:: dawg's best friend
+get a human companion
+
+
+:: one dawg plus two equals
+inspire the man at the radio station
+
+
+:: Untitled Passage 211
+
+
+
+:: going to see a man about a dog [story ending]
+<h2>going to see a man about a dog</h2>
+
+leave the wastes on the highway.
+
+
+:: bivuac [settlement]
+on the [[path]]
+
+
+:: mesa [nature]
+on the [[path]]
+
+conceals [[clifftown]]
+
+
+:: battlefield [scary]
+on the [[path]]
+
+recent
+but not fresh
+
+what's left of [[war machine]]
+
+
+:: crash
+on the [[path]]
+
+explore the [[wreckage]]
+
+
+:: ruins [scary exterior]
+in the [[crater]]
+
+conceals the [[hold]]
+
+
+:: eagle
+
+
+
+:: squirrel
+
+
+
+:: marten
+
+
+
+:: excrement
+occasional demand. easily remedied.
+
+[[map][$map[$posY][$posX] to -1]]
+
+
+:: reproduce
+make [[puppies]]
+
+63+-9 days gestation
+
+
+
+
+:: straw
+[[gather]]
+
+
+
+
+:: dirt
+[[dig]]
+
+
+:: joints
+exoskeleton
+better agility
+
+
+:: claws
+titanium claws
+more damage
+
+
+:: old dawg new tricks
+max out a skill after n time
+
+
+:: dawg of wasteville
+terrorize the denizens of the wastes
+
+
+:: grab your gun and bring in the dawg
+find your missing girl
+
+"what do you hear?" "nothing but the rain."
+
+
+
+
+:: grass
+[[gather]]
+[[eat]]
+
+
+
+:: once and future dog [story ending]
+<h2>once and future dog</h2>
+
+dog is lord of all wastes.
+live or die at dog's mercy.
+dog is a warlord with nukes.
+
+
+:: clifftown [interior scary settlement]
+in the [[mesa]]
+
+"paintings left on the walls from thousands of years ago no people ust animals the sun the moon whatever they thought important enough to remember" 
+
+
+:: war machine
+on the [[battlefield]]
+
+
+:: wreckage [scary interior]
+in the [[crash]]
+
+
+:: hold [settlement]
+out to [[ruins]]
+
+one last remaining [[hold dweller]]
+
+
+
+
+:: hold dweller
+in the [[hold]].
+
+has something to say. something about yesterday.
+
+start or maybe finish [[all dogs go to heaven]]
+
+
+
+:: wolf
+
+
+
+:: drink
+drank the water
+thirst bonus
+health bonus
+
+[[map][$map[$posY][$posX] to -1]]
+
+
+
+
+:: feed
+[[eat]]
+
+
+:: saddle bags
+unlocks delivery quests
+
+
+:: armor
+flexible plates
+better defense
+
+
+:: brain
+data port
+improved mental stats
+
+
+:: ghost dawg
+kill your master
+
+"sometimes you gotta stick with the ancient ways, the oldschool ways."
+
+
+:: air dawg
+swish.
+
+get some serious airtime.
+
+
+
+
+:: dawg is always dawg
+ahh, that's better.
+
+piss on everything.
+
+relieve yourself on all unique tiles.
+
+
+
+
+:: clay
+[[dig]]
+
+
+:: dog stay, lie down, roll over [story ending]
+continue on.
+
+
+:: all dogs go to heaven [story ending]
+unlock [[grab your gun and bring in the dawg]]
+
+
+:: traveler
+
+
+
+:: rex
+get all upgrades
+
+
+:: dawg pack
+
+
+
+:: sand
+[[dig]]
+
+
+:: dung
+[[dig]]
+[[eat]]
+[[gather]]
+
+"you can do everything with shit." -m
+
+
+:: like a dawg in the street
+
+
+
+:: foothills [nature]
+on the [[road]]
+
+leads to the [[mountain]] and the [[lake]]
+
+
+
+:: lake [nature]
+in the [[foothills]]
+
+
+
+:: dog day afternoon
+
+
+
+:: mad dog
+
+
+
+:: cafe
+
+
+
+:: wigwam
+
+
+
+:: mountain
+in the [[foothills]]
+the [[lake]] is here
+
+leads to the [[pass]]
+
+
+:: growl
+chance to inflict fear, -boldness
+
+
+:: bark
++/- any mental stat
+depending on known/liked
+
+
+:: bite
+chance to -health
+chance to +aggression
+
+
+:: dig
+related to [[build]]
+
+also [[excrement]]
+
+maybe [[fetch]] too
+
+
+:: gather
+goes to [[build]]
+
+
+:: eat
+goes to [[health]]
+
+( but not really cuz dogs eating grass = ??? )
+
+
+:: vengeful dawg
+
+
+
+:: whine
+chance to + or - aggression
+
+
+:: scratch
+chance to -health -boldness
+
+
+:: cavern
+
+
+
+:: summit
+on the [[mountain]]
+
+
+:: pass
+on the [[road]]
+and the [[mountain]]
+
+
