@@ -1,0 +1,49 @@
+#credits,
+#title,
+#version {
+	display: none;
+}
+
+#init-screen {
+	display: none;
+	z-index: 100000;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	color: #010101;
+	background-color: #f2c313;
+	text-align: center;
+}
+
+#init-loading {
+	text-shadow: none;
+	font-size: 2rem;
+}
+
+#menu {
+	display: none;
+}
+
+#ui-body {
+	background: rgba(22, 124, 123, 0.1);/*#091014*/
+	color: #167C7B;
+	font-family: '';
+	margin: 0 auto;
+	max-width: 20em;
+	text-align: center;
+	top: 0;
+	padding: 1em;
+	position: fixed;
+	z-index: 99;
+}
+
+#ui-body {
+	cursor: default;
+	user-select: none;
+}
+
+#ui-body-close {
+	display: none;
+}

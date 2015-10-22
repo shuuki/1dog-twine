@@ -1,4 +1,4 @@
-﻿:: junkyard dawg
+:: junkyard dawg
 
 
 
@@ -2688,5 +2688,4 @@ on the [[mountain]]
 :: pass
 on the [[road]]
 and the [[mountain]]
-
 
