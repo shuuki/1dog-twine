@@ -1,0 +1,93 @@
+/* you got style dawg */
+
+@import url(reset.css);
+@import url(fonts/library.css);
+@import url(typography.css);
+/*@import url(sugarcube-1x.css);*/
+
+* {
+	-webkit-font-smoothing: none;
+}
+
+::-moz-selection {
+	background-color: #6d95b7;
+}
+
+::selection {
+	background-color: #6d95b7;
+}
+
+body {
+	background-color: #1f1f1f;
+	color: #f2c313;
+	font-family: 'Nokia Cellphone', monospace;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: normal;
+	text-shadow:
+		1px 1px 0 rgba(0, 0, 0, 0.7),
+		2px 2px 0 rgba(0, 0, 0, 0.8);
+}
+
+a:hover {
+	background: none;
+	/*border-bottom: 2px solid;*/
+	text-decoration: none;
+	color: white;
+	padding: 0;
+}
+
+a {
+	color: white;	
+	cursor: pointer;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-transform: capitalize;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 1em;
+	text-align: center;
+}
+
+li {
+		display: inline-block; 
+		margin-right: 1em; 
+}
+
+li:last-child {
+		margin-right: 0;
+}
+
+button {
+	box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7),
+		2px 2px 0 rgba(0, 0, 0, 0.8);
+	border: none;
+	font-family: inherit;
+	font-size: 1em;
+	padding: 0.5em;
+	background: #167C7B;
+	cursor: pointer;
+	text-align: center;
+	-webkit-user-select: none;
+}
+
+button:active {
+	box-shadow: none;
+	left: 2px;
+	outline: none;
+	position: relative;
+	top: 2px;
+}
+
+button:focus {
+	outline: none;
+}
+
+
